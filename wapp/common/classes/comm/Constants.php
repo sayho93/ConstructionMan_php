@@ -1,0 +1,36 @@
+<?php
+if(! class_exists("Constants") )
+{
+	class Constants 
+	{
+	
+		/* 개발서버 */
+		var $excelSavePath			= "D:/workspace_php/kopas/upload_excel" ;
+		var $fileSavePath			= "C:/Users/p/workspace_php/kopas/wapp/upload_img" ;
+		var $fileSavePath_720		= "C:/Users/p/workspace_php/kopas/720" ;
+		var $fileSavePath_640		= "C:/Users/p/workspace_php/kopas/640" ;
+		var $fileSavePath_480		= "C:/Users/p/workspace_php/kopas/480" ;
+		var $fileSavePath_320		= "C:/Users/p/workspace_php/kopas/320" ;
+		var $fileSavePath_100		= "C:/Users/p/workspace_php/kopas/100" ;
+
+
+		var $logPath				= "C:/Users/p/workspace_php/kopas/wapp/log" ;	// simple 로그기록
+		var $documentRoot			= "C:/Users/p/workspace_php/kopas/wapp" ;	// simple 로그기록
+		var $webRoot				= "http://localhost:9880/wapp" ;
+		var $con_domain				= "http://localhost:9880" ;	// 메일에서 사용되는 도메인
+
+
+        var $serverRoot				= "http://localhost:10040";
+				
+		var $fileSaveUrl			= "/upload_img/" ;
+		var $fileSaveUrl_480		= "/480/" ;
+
+
+ 		var $dbHost					= "1.201.142.86" ;
+ 		var $dbName					= "kopas" ;
+ 		var $dbUser					= "root" ;
+ 		var $dbPass					= "$#@!richware7" ;
+ 		var $charset				= "utf8" ;
+	}
+}
+?>

@@ -1,0 +1,200 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
+/* common */
+body{background-color:#f8f8f8}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+body,th,td,input,select,textarea,button{font-size:14px;line-height:1.5;font-family:'Noto Sans KR','돋움',dotum,sans-serif;color:#333}
+fieldset,img{border:0}
+img{vertical-align:top}
+dl,ul,ol,menu,li{list-style:none}
+input,select,textarea,button{vertical-align:middle}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus{outline:none}
+button{cursor:pointer}
+a{color:#333;text-decoration:none}
+address,caption,cite,code,dfn,em,var,i,strong,b{font-style:normal;font-weight:normal}
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0)}
+*{-webkit-tap-highlight-color:rgba(255, 255, 255, 0) !important;-webkit-focus-ring-color:rgba(255, 255, 255, 0) !important;outline:none !important}
+
+/* global */
+.show{display:block}
+.hide{display:none}
+.f_l{float:left}
+.f_r{float:right}
+.tbl{border-collapse:collapse;border-spacing:0}
+.blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;clear:both;content:''}
+.l_tbl{display:table;width:100%}
+.l_tbl_cell{display:table-cell;text-align:center;vertical-align:middle}
+.l_tbl_cell > *{display:inline-block}
+
+/*header*/
+.header{height:57px;background-color:#03a9f4;color:#fff}
+.header > div{float:left}
+.header .back{width:16%}
+.header .back a{display:block;width:100%;text-align:center}
+.header .back a img{margin-top:20px}
+.header .title{width:68%;text-align:center}
+.header .title h1{margin-top:12px;font-size:20px;font-weight:500}
+.header .title img{margin-top:7px}
+.header .noti{width:16%}
+.header .noti a{display:block;width:100%;text-align:center}
+.header .noti a img{margin-top:20px}
+
+/*main*/
+.main_section1{margin:17px;background-color:#fff;border:1px solid #dcdcdc;border-radius:5px;overflow:hidden}
+.main_section1 .place{padding:10px;border-bottom:1px solid #dcdcdc;font-size:12px}
+.main_section1 .place i,
+.main_section1 .place p{float:left}
+.main_section1 .place i{margin-right:5px}
+.main_section1 .place i img{margin-top:3px}
+.main_section1 .datetime{padding:20px 0;border-bottom:1px solid #dcdcdc;text-align:center}
+.main_section1 .datetime .time{font-size:24px;line-height:1}
+.main_section1 .datetime .time span{color:#03a9f4}
+.main_section1 .datetime .date{font-size:12px;color:#999}
+.main_section1 .state{height:36px;line-height:36px;background-color:#eee;font-size:16px;text-align:center}
+.main_section2{margin:17px;background-color:#fff;border:1px solid #dcdcdc;border-radius:5px;overflow:hidden}
+.main_section2 .commute{padding:17px 0;border-bottom:1px solid #dcdcdc}
+.main_section2 .commute dl{float:left;width:100px;height:100px;background-color:#dcdcdc;border-radius:50px;text-align:center;color:#fff}
+.main_section2 .commute dl.on{background-color:#448aff}
+.main_section2 .commute dl:first-child{margin-right:27px}
+.main_section2 .commute dt{margin:25px 0 4px 0}
+.main_section2 .commute dd{font-size:12px}
+.main_section2 .out{padding:10px}
+.main_section2 .out .btn,
+.main_section2 .out .text{float:left}
+.main_section2 .out .btn{width:66px;margin-right:10px}
+.main_section2 .out .text{width:calc(100% - 80px);height:35px;line-height:35px;border:1px solid #dcdcdc;border-radius:5px;background-color:#f8f8f8;text-align:center;color:#999}
+.main_section2 .out .text span{color:#c78521}
+
+/*nav*/
+.nav{margin-top:17px}
+.nav ul{padding:17px 0;background-color:#e8e8e8;border-top:1px solid #dcdcdc}
+.nav li{float:left;width:20%;text-align:center;font-size:12px}
+.nav li dd{margin-top:4px}
+.nav li a{color:#999}
+.nav li.on a{color:#448aff}
+
+/*intro*/
+.intro{height:100vh;background-color:#03a9f4;text-align:center}
+.intro img{margin-top:200px}
+
+/*로그인*/
+.login{margin:17px}
+.login .logo{margin:150px 0 100px 0;text-align:center}
+
+/*로그인_근무지추가*/
+.employment_search{padding:17px;margin-bottom:17px;background-color:#fff;border-bottom:1px solid #dcdcdc}
+.employment_list{background-color:#fff}
+.employment_list li{padding:17px;border-bottom:1px solid #dcdcdc}
+.employment_list .top{padding-bottom:6px;margin-bottom:6px;border-bottom:1px solid #eee}
+.employment_list .top .name{width:60%;font-weight:500}
+.employment_list .top .tell{width:40%;color:#015174;text-align:right}
+.employment_list .bottom .address{width:70%;font-size:14px;line-height:1.3}
+.employment_list .bottom .add button.btn{width:70px}
+
+/*탭메뉴*/
+.tab{padding:17px 17px 0 17px;background-color:#e8e8e8}
+.tab a{display:block;padding:10px 0;color:#999;line-height:1}
+.tab .f_l,
+.tab .f_r{width:50%;text-align:center}
+.tab .on{background-color:#fff}
+.tab .on a{color:#000}
+
+/*로그인_비밀번호재발급 / 아이디찾기*/
+.find_pw{padding:17px;background-color:#fff;border-bottom:1px solid #dcdcdc}
+.find_pw .col_one{margin-top:17px}
+.find_id{padding:17px;background-color:#fff;border-bottom:1px solid #dcdcdc}
+.find_id .col_one{margin-top:17px}
+.find_id .col_two{margin-top:17px}
+.find_id .text{padding:30px 0 20px 0;text-align:center}
+.find_id .text strong{color:#015174;font-size:16px;font-weight:500}
+
+/*로그인_회원가입*/
+.join_input{padding:17px;margin-bottom:17px;background-color:#fff;border-bottom:1px solid #dcdcdc}
+.join_agree{padding:17px;background-color:#fff;border-top:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc}
+.join_agree .last{margin-top:6px}
+.join_agree span{margin:0 2px 0 7px;color:#c14116}
+
+/*출입문*/
+.door{background-color:#fff}
+.door li{height:50px;line-height:50px;border-bottom:1px solid #dcdcdc}
+.door img{margin-top:14px}
+.door .door_img{width:50px;border-right:1px solid #dcdcdc;text-align:center}
+.door .door_info{width:calc(100% - 51px)}
+.door .door_info .name{padding-left:14px;font-size:16px}
+.door .door_info .star{width:50px;text-align:center}
+
+/*출입문_출입문정상/출입문에러*/
+.door_state .door_btns .f_l{margin:17px 0 0 17px}
+.door_state .door_btns .f_r{margin:17px 17px 0 0}
+.door_state .state{text-align:center}
+.door_state .name{font-size:33px;line-height:1}
+.door_state .image{margin:14px 0 7px 0}
+.door_state .blue{color:#03a9f4}
+.door_state .red{color:#ee2200}
+.door_state .timetable{margin:17px}
+.door_state .timetable th,
+.door_state .timetable td{padding:7px;border:1px solid #dcdcdc}
+.door_state .timetable th{background-color:#f8f8f8;font-weight:normal}
+.door_state .timetable td p{margin-bottom:3px}
+.door_state .timetable td .last{margin-bottom:0}
+.door_state .timetable td .sat{color:#03a9f4}
+.door_state .timetable td .sun{color:#c14116}
+.door_state .timetable td p span{margin-right:7px}
+
+/*출입문_출입문초대장*/
+.date_setting{padding:17px;background-color:#fff;border-bottom:1px solid #dcdcdc}
+.date_setting .f_l{width:calc(100% - 76px)}
+.date_setting .f_l > p{float:left}
+.date_setting .f_l .dash{width:14px;line-height:37px;text-align:center}
+.date_setting .f_l .ipt_text{width:calc(50% - 23px)}
+.date_setting .f_l .ipt_text input{text-align:center}
+.date_setting .f_r{width:70px}
+.card_list li{padding:17px;background-color:#fff;border-bottom:1px solid #dcdcdc}
+.card_list .title{margin-bottom:7px;font-size:16px;line-height:1}
+.card_list dt,
+.card_list dd{float:left;color:#999;font-size:12px;line-height:1}
+.card_list dt{margin-right:7px}
+.card_list i img{margin-top:2px}
+
+/*공통*/
+body.white{background-color:#fff}
+.mg16{margin-bottom:16px}
+.guide{margin-bottom:6px;font-size:12px;color:#999}
+.strapline{margin-bottom:8px;font-weight:bold}
+.strapline.mg16{margin-top:16px}
+.gray_title{padding:5px 0;background-color:#b5b5b5;text-align:center;color:#fff;font-size:15px;line-height:1}
+
+/*input*/
+.ipt_text{height:35px;line-height:35px;padding:0 7px;margin-bottom:6px;background:#fff;border:1px solid #dcdcdc;border-radius:5px}
+.ipt_text.last{margin-bottom:0}
+.ipt_text input{width:100%;margin-top:-4px;border:none;background:none;line-height:1}
+.select{margin:6px 0}
+.select > div{width:calc(50% - 5px);height:35px;line-height:35px;border:1px solid #dcdcdc;border-radius:5px;background:url(../image/ipt_select.png)no-repeat 100% 0}
+.select span{padding-left:7px}
+.search .f_l{width:calc(100% - 92px)}
+.search .f_r button.btn{width:70px}
+
+/*button*/
+.btn_area{margin:17px}
+.btn_area_bg{margin:0;padding:17px;background-color:#fff}
+.btn_area > div{margin-bottom:6px}
+.btn_area > div.last{margin-bottom:0}
+button.btn{
+	display:block;width:100%;height:37px;line-height:37px;
+	border:none;border:1px solid #dcdcdc;border-radius:5px;background:none;background:url(../image/btn_gradation.png)repeat-x 0 0;
+	overflow:hidden
+}
+button.btn.blue{background:#448aff;border:1px solid #448aff;color:#fff}
+.col_one .btn{width:100%}
+.col_two .btn{width:calc(50% - 3px)}
+
+/*아이콘*/
+i.ic{display:inline-block;margin-right:4px}
+i.ic_search img{margin-top:13px}

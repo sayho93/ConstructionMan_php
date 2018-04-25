@@ -1,0 +1,32 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
+/* common */
+*{margin:0;padding:0}
+body,th,td,input,select,textarea,button{font-size:13px;line-height:1.5;font-family:'Noto Sans KR', sans-serif;color:#333}
+fieldset,img{border:0}
+dl,ul,ol,menu,li{list-style:none}
+input,select,textarea,button{vertical-align:middle}
+button{cursor:pointer}
+a{color:#333;text-decoration:none}
+a:hover,a:active,a:focus{color:#777773}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+
+/* global */
+.Ngothic{font-family: 'Nanum Gothic', sans-serif;}
+.show{display:block}
+.hide{display:none}
+.f_l{float:left}
+.f_r{float:right}
+.tbl{border-collapse:collapse;border-spacing:0} /* 테이블 초기화 */
+.ir_pm {display:block;overflow:hidden;font-size:0px;line-height:0;text-indent:-9999px} /* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir_wa {display:block;overflow:hidden;position:relative;z-index:-10;width:100%;height:100%} /* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.screen_out {overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px} /* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;clear:both;content:''}
+.skip a{overflow:hidden;position:absolute;left:-9999px;width:0;height:1px;margin:0;padding:0}
+.skip a:hover,.skip a:active,.skip a:focus{top:0}
+
+.jPopSection {border:1px solid #000; -webkit-box-shadow:3px 3px 10px #151515 ; -ms-box-shadow:3px 3px 10px #151515 ; box-shadow:3px 3px 10px #151515}

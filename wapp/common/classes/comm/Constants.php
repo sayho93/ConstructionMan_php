@@ -26,10 +26,10 @@ if(! class_exists("Constants") )
 		var $fileSaveUrl_480		= "/480/" ;
 
 
- 		var $dbHost					= "1.201.142.86" ;
- 		var $dbName					= "kopas" ;
+ 		var $dbHost					= "picklecode.co.kr" ;
+ 		var $dbName					= "ConstructionMan" ;
  		var $dbUser					= "root" ;
- 		var $dbPass					= "$#@!richware7" ;
+ 		var $dbPass					= "pickle!@#$" ;
  		var $charset				= "utf8" ;
 	}
 }

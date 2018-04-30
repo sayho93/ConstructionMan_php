@@ -28,6 +28,36 @@ if(! class_exists("WebUser") ){
             return $retVal;
         }
 
+        function verifyCode(){
+            $retVal = $this->get("/web/user/verify/{$_REQUEST["phone"]}", Array("code" => $_REQUEST["code"]));
+            return $retVal;
+        }
+
+        function getSidoList(){
+            $retVal = $this->get("/info/region", null);
+            return $retVal;
+        }
+
+        function getGugunList(){
+            $retVal = $this->get("/info/region/{$_REQUEST["sidoID"]}", null);
+            return $retVal;
+        }
+
+        function getWorkInfo(){
+            $retVal = $this->get("/info/work", Array("work" => $_REQUEST["work"]));
+            return $retVal;
+        }
+
+        function joinUser(){
+            $retVal = $this->post("/web/user/join", Array("name" => $_REQUEST["name"], "account" => $_REQUEST["account"],
+                "password" => $_REQUEST["password"], "phone" => $_REQUEST["phone"], "age" => $_REQUEST["age"], "type" => $_REQUEST["type"],
+                "pushKey" => $_REQUEST["pushKey"], "region" => $_REQUEST["regionArr"], "work" => $_REQUEST["workArr"],
+                "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "gearId" => $_REQUEST["gearIdArr"],
+                "attachment" => $_REQUEST["attachmentArr"]));
+
+            LoginUtil::doWebLogin(json_decode($retVal)->data);
+            return $retVal;
+        }
 
 
 

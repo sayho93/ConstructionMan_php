@@ -423,7 +423,7 @@ input[type=number]:focus {
     margin-top: 4vh;
     margin-left: 6vw;
     margin-right: 6vw;
-    height: 40vh;
+    height: 51vh;
 }
 
 .region p{
@@ -754,7 +754,7 @@ div .align_center{
     margin-top: 2vh;
     margin-left: 6vw;
     margin-right: 6vw;
-    height: 65vh;
+    /*height: 65vh;*/
 }
 
 .career p{
@@ -771,22 +771,33 @@ div .align_center{
 }
 
 .list select{
-    margin: 2vh 6vw 2vh 6vw;
+    margin: 2vh 0vw 2vh 6vw;
     -webkit-appearance: menulist-button;
     height: 6vh;
-    width: 50vw;
+    width: 25vw;
     font-size: 30px;
 }
 
-.career input[type="button"]{
+.end{
     margin-top: 10vh;
-    width: 100%;
+    width: 85%;
     height: 6vh;
     font-size: 35px;
     color: white;
     background-color: #027494;
     border: 4px solid #027494;
+    margin-bottom: 10vh;
 }
+
+/*.career input[type="button"]{*/
+    /*margin-top: 10vh;*/
+    /*width: 100%;*/
+    /*height: 6vh;*/
+    /*font-size: 35px;*/
+    /*color: white;*/
+    /*background-color: #027494;*/
+    /*border: 4px solid #027494;*/
+/*}*/
 
 .headerLess{
     margin-top: 6vh;
@@ -985,3 +996,79 @@ td.content{
     margin-left: 6vw;
     font-weight: bold;
 }
+
+.popBG{
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+
+}
+
+.popArea{
+    position: fixed;
+    width: 70vw;
+    height: 40vh;
+    z-index: 9999;
+    background: transparent;
+    margin-left: 15vw;
+    margin-top: 1vh;
+}
+
+.popIcon{
+    background: url("../img/btn_nonono.png");
+    height: 85px;
+    width: 85px;
+    margin-top: 14vh;
+    margin-left: 75vw;
+}
+
+.popHeaderWrap{
+    display: table;
+    width: 100%;
+}
+
+.popHeader{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 9vh;
+    width: 100%;
+    background: #848E90;
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.popBody{
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    background: white;
+    height: 31vh;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    overflow: scroll;
+}
+
+.popBody > .listItem{
+    width: 100%;
+    height: 6vh;
+    border-bottom: 1px solid #848E90;
+    text-align: center;
+}
+
+.listItem > span{
+    color: black;
+    font-size: 2.0em;
+    vertical-align: middle;
+    line-height: 6vh;
+    text-align: center;
+}
+

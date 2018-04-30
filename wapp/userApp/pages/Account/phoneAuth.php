@@ -11,6 +11,8 @@
 
 <script>
     $(document).ready(function(){
+        var type = "<?=$_REQUEST["type"]?>";
+
         $("#privacy").click(function(){
             location.href = "/userApp/pages/Account/privacy.php";
         });
@@ -58,6 +60,8 @@
                                 if(data.returnCode == 1){
                                     alert("인증번호를 입력해 주세요");
                                     $(".authNumber").show();
+                                    $("#next").show();
+                                    $(".jSubmit").hide();
                                 }
                                 else
                                     alert("인증문자 발송 실패! 관리자에게 연락 바랍니다.");
@@ -73,6 +77,39 @@
         });
 
         $("#next").click(function(){
+            var str = $("[name='form']").serialize();
+            var phone = $("[name='phone']").val();
+            var authNum = $(".authNumber").val();
+            var params = new sehoMap().put("phone", phone).put("code", authNum);
+
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.verifyCode", false, "json", params);
+            ajax.send(function(data){
+                if(data.returnCode === 1){
+                    if(type ==="M"){
+                        location.href = "/userApp/pages/Account/joinManStep1.php?" + str;
+                    }
+                    else if(type === "G"){
+                        location.href = "/userApp/pages/Account/joinGearStep1.php?" + str;
+                    }
+                    else if(type === "N"){
+                        //TODO 일반 회원가입
+                        $("[name='type']").val("N");
+                        str = $("[name='form']").serialize();
+                        var ajax = new AjaxSender("/action_front.php?cmd=Webuser.joinUser", false, "json", str);
+                        ajax.send(function(data){
+                            if(data.returnCode == 1){
+                                alert("가입 완료되었습니다.");
+                                location.href = "/userApp/pages/search/searchMain.php";
+                            }
+                            else
+                                alert("가입 실패! 다시 시도해 주세요");
+
+                        });
+                    }
+                }
+                else
+                    alert("인증 실패. 다시 시도해 주세요")
+            });
 
         });
     });
@@ -84,14 +121,17 @@
 <div class="body">
     <div class="form">
         <p>기본정보</p>
-        <input type="text" name="account" placeholder="  아이디"/>
-        <input type="text" name="password" placeholder="  비밀번호"/>
-        <input type="text" name="name" placeholder="  본인 이름"/>
-        <input type="number" name="age" placeholder="  나이"/>
-        <input type="text" name="residence" placeholder="  거주지"/>
-        <input type="number" name="phone" placeholder="  휴대폰번호"/>
-        <input type="text" placeholder="  인증번호" class="authNumber" style="display: none;"/>
-        <input type="button" value="휴대폰 본인인증" class="jSubmit"/>
+        <form name="form">
+            <input type="text" name="account" placeholder="  아이디"/>
+            <input type="text" name="password" placeholder="  비밀번호"/>
+            <input type="text" name="name" placeholder="  본인 이름"/>
+            <input type="number" name="age" placeholder="  나이"/>
+            <input type="text" name="residence" placeholder="  거주지"/>
+            <input type="number" name="phone" placeholder="  휴대폰번호"/>
+            <input type="text" placeholder="  인증번호" class="authNumber" style="display: none;"/>
+            <input type="button" value="휴대폰 본인인증" class="jSubmit"/>
+            <input type="hidden" name="type"/>
+        </form>
         <div class="line"></div>
         <div class="left">
             <input type="checkbox" id="chk"/>

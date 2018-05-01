@@ -58,28 +58,29 @@
         });
 
         function getPushKey(){
-            location.href = "native://getPushKey";
+            location.href = "pickle://getPushKey";
         }
 
-        function getPushKeyCallBack(pushKey){
-            $("[name='pushKey']").val(pushKey);
-
-            var params = $("[name='form']").serialize();
-            $.ajax({
-                url: "/action_front.php?cmd=WebUser.joinUser",
-                async: false,
-                cache: false,
-                dataType: "json",
-                data: params,
-                success: function(data){
-                    console.log(data.data);
-                    alert("가입 완료되었습니다.");
-                    location.href = "/userApp/pages/search/searchMain.php";
-                }
-            });
-        }
 
     });
+
+    function getPushKeyCallBack(pushKey){
+        console.log("getPushKeyCallBack called :::::::::::::::::::::::::");
+        $("[name='pushKey']").val(decodeURI(pushKey));
+        var params = $("[name='form']").serialize();
+        $.ajax({
+            url: "/action_front.php?cmd=WebUser.joinUser",
+            async: false,
+            cache: false,
+            dataType: "json",
+            data: params,
+            success: function(data){
+                console.log(data.data);
+                alert("가입 완료되었습니다.");
+                location.href = "/userApp/pages/search/searchMain.php";
+            }
+        });
+    }
 </script>
 
 <div class="template" style="display:none;">
@@ -147,7 +148,7 @@
         <p>대표 : 이화수 / 사업자등록번호 : 111-222-3333333</p>
         <p>주소 : 대전광역시 유성구 봉명동 1111</p>
         <p>TEL : 1644-1111 / MAIL : geonseolin@geonseolin.com</p>
-        <br><br>
+        <br>
         <p>ⓒ휴넵스 All rights reserved.</p>
     </div>
 

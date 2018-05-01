@@ -153,7 +153,7 @@
         <p>대표 : 이화수 / 사업자등록번호 : 111-222-3333333</p>
         <p>주소 : 대전광역시 유성구 봉명동 1111</p>
         <p>TEL : 1644-1111 / MAIL : geonseolin@geonseolin.com</p>
-        <br><br>
+        <br>
         <p>ⓒ휴넵스 All rights reserved.</p>
     </div>
 

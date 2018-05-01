@@ -59,6 +59,15 @@ if(! class_exists("WebUser") ){
             return $retVal;
         }
 
+        function getGearOption1(){
+            $retVal = $this->get("/info/gearOption1", Array("name" => $_REQUEST["name"]));
+            return $retVal;
+        }
+
+
+
+
+
 
 
 

@@ -10,9 +10,9 @@
 <? include $_SERVER["DOCUMENT_ROOT"] . "/userApp/php/header.php" ;?>
 <? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/WebUser.php";?>
 <?
-    $obj = new WebUser($_REQUEST);
-    $regionList = $obj->getRegionList();
-    $regionList = json_decode($regionList)->data;
+$obj = new WebUser($_REQUEST);
+$regionList = $obj->getRegionList();
+$regionList = json_decode($regionList)->data;
 ?>
 <script>
     var regionArr = [];
@@ -31,7 +31,7 @@
                 else{
                     $(".regionItem").removeClass("on");
                     $(".regionItem").attr("gugunId", "");
-                    $(".regionItem").find("#box").html("").hide();
+                    $(".regionItem").find("#box").html("-");
 
                     $(this).addClass("on");
                     regionArr.push("0");
@@ -47,7 +47,7 @@
                     if($(this).hasClass("on")){
                         $(this).removeClass("on");
                         $(this).attr("gugunId", "");
-                        $(this).find("#box").html("").hide();
+                        $(this).find("#box").html("-");
                         regionArr.splice(regionArr.indexOf(regionID), 1);
                     }
                     else{
@@ -198,18 +198,8 @@
         <div id="table">
             <ul>
                 <li class="regionItem" no="0" gugunId=""><text>전국</text></li>
-                <?for($i=0; $i<4; $i++){?>
-                <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box" style="display: none;"></div></li>
-                <?}?>
-            </ul>
-            <ul>
-                <?for($i=4; $i<9; $i++){?>
-                    <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box" style="display: none;"></div></li>
-                <?}?>
-            </ul>
-            <ul>
-                <?for($i=9; $i<16; $i++){?>
-                    <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box" style="display: none;"></div></li>
+                <?for($i=0; $i<sizeof($regionList); $i++){?>
+                    <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box">-</div></li>
                 <?}?>
             </ul>
         </div>
@@ -309,7 +299,7 @@
         <p>대표 : 이화수 / 사업자등록번호 : 111-222-3333333</p>
         <p>주소 : 대전광역시 유성구 봉명동 1111</p>
         <p>TEL : 1644-1111 / MAIL : geonseolin@geonseolin.com</p>
-        <br><br>
+        <br>
         <p>ⓒ휴넵스 All rights reserved.</p>
     </div>
 </div>

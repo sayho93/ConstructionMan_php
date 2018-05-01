@@ -12,13 +12,14 @@ html, body{
 .main_page{
     background:url('../img/intro_1.png');
     height:100%;
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 .main{text-align:center; padding-top:65vh}
 
 .main a.join{
     margin-top:3.12vh;
-    width:55vw;
+    width:57vw;
     height:7.0vh;
     background: url("../img/intro_1_bt1.png");
     display:inline-block;
@@ -27,7 +28,7 @@ html, body{
 }
 
 .main a.login{
-    width:55vw;
+    width:57vw;
     height:7.0vh;
     background: url("../img/intro_1_bt2.png");
     display:inline-block;
@@ -109,7 +110,7 @@ html, body{
 }
 
 .header h2{
-    font-size:45px;
+    font-size:1.5em;
     color:#fff;
     line-height:9vh;
     font-weight:normal;
@@ -118,18 +119,24 @@ html, body{
 
 .header > .tool_left{
     position:absolute;
-    top:80px;
-    left:50px;
-    width:30px;
+    top:4vh;
+    left:6vw;
+    width:4vh;
     display: inline-block;
 }
 
 .header > .tool_right{
     position:absolute;
-    top:80px;
-    right:50px;
-    width:30px;
+    top:3vh;
+    right:6vw;
+    width:4vh;
     display: inline-block;
+}
+
+.back{
+    background-size: cover;
+    width: 2vh;
+    height: 4vh;
 }
 
 .hide {
@@ -144,7 +151,7 @@ html, body{
 
 .body{
     z-index: 9998;
-    margin-top: 212px;
+    margin-top: 12vh;
     height: 89vh;
     overflow: scroll;
 }
@@ -245,7 +252,7 @@ a#normal{
 }
 
 .footer span{
-    font-size:30px;
+    font-size:1.0em;
     color: white;
     padding-top: 3vh;
     padding-bottom: 1vh;
@@ -257,7 +264,7 @@ a#normal{
     padding-top: 0;
     margin-top: 0.2vh;
     margin-bottom: 0.2vh;
-    font-size: 25px;
+    font-size: 0.5em;
     display: block;
     color: white;
 }
@@ -270,7 +277,7 @@ a#normal{
 }
 
 .form p{
-    font-size: 35px;
+    font-size: 1.3em;
     color: black;
     display: inline-block;
     font-weight: normal;
@@ -282,7 +289,7 @@ a#normal{
     margin-top: 2vh;
     width: 100%;
     height: 6vh;
-    font-size: 35px;
+    font-size: 1.0em;
     border: 2px solid #a4a4a4;
 }
 
@@ -295,7 +302,7 @@ input[type=text]:focus {
     margin-top: 2vh;
     width: 100%;
     height: 6vh;
-    font-size: 35px;
+    font-size: 1.0em;
     border: 2px solid #a4a4a4;
 }
 input[type=number]:focus {
@@ -307,7 +314,7 @@ input[type=number]:focus {
     margin-top: 2vh;
     width: 100%;
     height: 6vh;
-    font-size: 35px;
+    font-size: 1.0em;
     color: white;
     background-color: #027494;
     border: 4px solid #027494;
@@ -319,16 +326,18 @@ input[type=number]:focus {
 
 .form input[type="checkbox"] + label{
     background:url('../img/toggle_check_false.png') no-repeat;
-    height: 60px;
-    width: 60px;
+    background-size: cover;
+    height: 4vh;
+    width: 4vh;
     display:inline-block;
     padding: 0 0 0 0px;
 }
 
 .form input[type="checkbox"]:checked + label{
     background:url('../img/toggle_check_true.png') no-repeat;
-    height: 60px;
-    width: 60px;
+    background-size: cover;
+    height: 4vh;
+    width: 4vh;
     display:inline-block;
     padding: 0 0 0 0px;
 }
@@ -343,13 +352,13 @@ input[type=number]:focus {
 }
 
 .form .left{
-    font-size: 23px;
+    font-size: 0.8em;
     margin-top: 1.5vh;
     float: left;
 }
 
 .form .left h3{
-    font-size: 30px;
+    font-size: 0.9em;
     color: black;
     display: inline-block;
     margin: 0.5vh 0 0 0;
@@ -358,7 +367,7 @@ input[type=number]:focus {
 
 .form .right{
     color: gray;
-    font-size: 23px;
+    font-size: 0.8em;
     margin-top: 2vh;
     float: right;
     display: inline-block;
@@ -413,8 +422,8 @@ input[type=number]:focus {
 
 .center a#next{
     background: url("../img/btn_next.png");
-    width: 80px;
-    height: 80px;
+    width: 6vh;
+    height: 6vh;
     display: inline-block;
     background-size: cover;
 }
@@ -423,11 +432,11 @@ input[type=number]:focus {
     margin-top: 4vh;
     margin-left: 6vw;
     margin-right: 6vw;
-    height: 51vh;
+    height: auto;
 }
 
 .region p{
-    font-size: 35px;
+    font-size: 1em;
     color: black;
     display: inline-block;
     font-weight: normal;
@@ -436,7 +445,7 @@ input[type=number]:focus {
 }
 
 .region span{
-    font-size: 35px;
+    font-size: 1em;
     color: red;
     display: inline-block;
     font-weight: normal;
@@ -454,21 +463,24 @@ input[type=number]:focus {
 #table ul li {
     float: left;
     background: url("../img/toggle_region_false.png");
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
     box-sizing: border-box;
-    width: 130px;
-    height: 130px;
+    display: table;
+    width: 13vw;
+    height: 13vw;
     text-align: center;
-    margin: 40px 20px 40px 20px;
+    margin: 2vh 1vh 2vh 1vh;
     position: relative;
     vertical-align: middle;
 }
 
 #table ul li.on{
     background: url("../img/toggle_region_true.png");
+    background-repeat: no-repeat;
     background-size: cover;
-    width: 130px;
-    height: 130px;
+    width: 13vw;
+    height: 13vw;
 }
 
 #table ul li.on > text{
@@ -477,31 +489,44 @@ input[type=number]:focus {
 
 #table ul li > text{
     color: gray;
-    font-size: 30px;
-    line-height: 130px;
+    font-size: 0.8em;
+    display: table-cell;
     vertical-align: middle;
     text-align: center;
 }
 
 #table ul li > #box{
-    margin-top: 10px;
+    margin-top: 0.5vh;
+    border: 2px solid #FFFFFF;
+    color: white;
+    font-size: 0.8em;
+    display: table-caption;
+    caption-side: bottom;
+    height: auto;
+    line-height: 3.8vw;
+}
+
+#table ul li.on > #box{
+    margin-top: 0.5vh;
     border: 2px solid #027494;
     color: black;
-    font-size: 30px;
-    float: bottom;
-    height: 40px;
-    line-height: 40px;
+    font-size: 0.8em;
+    display: table-caption;
+    caption-side: bottom;
+    height: auto;
+    line-height: 3.8vw;
 }
 
 .jobClass{
+    height: auto;
     margin-top: 4vh;
     margin-left: 6vw;
     margin-right: 6vw;
-    height: 50vh;
+    /*height: 50vh;*/
 }
 
 .jobClass p{
-    font-size: 35px;
+    font-size: 1em;
     color: black;
     display: inline-block;
     font-weight: normal;
@@ -511,6 +536,9 @@ input[type=number]:focus {
 
 .jobClass #itemWrapper{
     margin-top: 1vh;
+    text-align: center;
+    display: table;
+    width: auto;
 }
 
 .item{
@@ -518,11 +546,11 @@ input[type=number]:focus {
     background: url("../img/toggle_class_false.png");
     background-size: cover;
     box-sizing: border-box;
-    width: 150px;
-    height: 150px;
+    width: 14.5vw;
+    height: 14.5vw;
     text-align: center;
     display:table;
-    margin: 40px 10px 40px 10px;
+    margin: 2vw 1vw 2vw 1vh;
     position: relative;
     vertical-align: middle;
 }
@@ -530,26 +558,28 @@ input[type=number]:focus {
 .item.on{
     background: url("../img/toggle_class_true.png");
     background-size: cover;
-    width: 150px;
-    height: 150px;
+    width: 14.5vw;
+    height: 14.5vw;
 }
 
 .item > text{
     color: gray;
-    font-size: 1.8em;
+    font-size: 0.8em;
     display:table-cell;
-    line-height: 30px;
     vertical-align: middle;
     text-align: center;
 }
 
 .item.on > text{
     color: #09A2CC;
-    font-size: 1.8em;
+    font-size: 0.8em;
     display:table-cell;
-    line-height: 30px;
     vertical-align: middle;
     text-align: center;
+}
+
+.tabContent{
+    display: table;
 }
 
 div .align_center{
@@ -562,8 +592,8 @@ div .align_center{
     text-align: center;
     background: url("../img/depressing_triangle.png");
     background-size: cover;
-    width: 80px;
-    height: 70px;
+    width: 8vw;
+    height: 7vw;
     display: inline-block;
 }
 
@@ -576,11 +606,11 @@ div .align_center{
     background: url("../img/toggle_job_false.png");
     background-size: cover;
     box-sizing: border-box;
-    width: 150px;
-    height: 150px;
+    width: 14.5vw;
+    height: 14.5vw;
     text-align: center;
     display: table;
-    margin: 10px 10px 10px 10px;
+    margin: 1vh 1vw 1vh 1vw;
     position: relative;
     vertical-align: middle;
 }
@@ -588,24 +618,22 @@ div .align_center{
 .jobItem.on{
     background: url("../img/toggle_job_true.png");
     background-size: cover;
-    width: 150px;
-    height: 150px;
+    width: 14.5vw;
+    height: 14.5vw;
 }
 
 .jobItem > text{
     color: gray;
-    font-size: 1.8em;
+    font-size: 0.8em;
     display:table-cell;
-    line-height: 30px;
     vertical-align: middle;
     text-align: center;
 }
 
 .jobItem.on > text{
     color: white;
-    font-size: 1.8em;
+    font-size: 0.8em;
     display:table-cell;
-    line-height: 30px;
     vertical-align: middle;
     text-align: center;
 }
@@ -618,7 +646,7 @@ div .align_center{
 }
 
 .gear p{
-    font-size: 35px;
+    font-size: 1.0em;
     color: black;
     display: inline-block;
     font-weight: normal;
@@ -635,11 +663,11 @@ div .align_center{
     background: url("../img/toggle_region_false.png");
     background-size: cover;
     box-sizing: border-box;
-    width: 150px;
-    height: 150px;
+    width: 14.5vw;
+    height: 14.5vw;
     text-align: center;
     display: table;
-    margin: 40px 10px 40px 10px;
+    margin: 1vh 1.5vw 1vh 1.5vw;
     position: relative;
     vertical-align: middle;
 }
@@ -648,8 +676,8 @@ div .align_center{
 .gearItem.on{
     background: url("../img/toggle_region_true.png");
     background-size: cover;
-    width: 150px;
-    height: 150px;
+    width: 14.5vw;
+    height: 14.5vw;
 }
 
 .gearItem.on > text{
@@ -658,9 +686,8 @@ div .align_center{
 
 .gearItem > text{
     color: gray;
-    font-size: 1.8em;
+    font-size: 0.8em;
     display:table-cell;
-    line-height: 30px;
     vertical-align: middle;
     text-align: center;
 }
@@ -679,17 +706,17 @@ div .align_center{
     margin-top: 4vh;
     width:100%;
     height: 6vh;
-    font-size: 1.8em;
+    font-size: 0.8em;
     color: white;
     background: url("../img/background_weird.png");
+    background-size: cover;
     display: table;
 
 }
 
 .gearType > span{
-    margin-left: 10vw;
     display: table-cell;
-    width: 37%;
+    width: 35%;
     height: 6vh;
     color: white;
     text-align: center;
@@ -700,11 +727,10 @@ div .align_center{
     margin-top:4vh;
     margin-left: 6vw;
     margin-right: 6vw;
-    /*height: 40vh;*/
 }
 
 .attachment p{
-    font-size: 35px;
+    font-size: 1.0em;
     color: black;
     font-weight: normal;
     margin-top: 0;
@@ -716,20 +742,19 @@ div .align_center{
     background: url("../img/toggle_class_false.png");
     background-size: cover;
     box-sizing: border-box;
-    width: 150px;
-    height: 150px;
+    width: 14.5vw;
+    height: 14.5vw;
     text-align: center;
     display: table;
-    margin: 40px 10px 40px 10px;
+    margin: 1vh 1vw 1vh 1vw;
     position: relative;
     vertical-align: middle;
 }
 
 .attachmentItem > text{
     color: gray;
-    font-size: 1.8em;
+    font-size: 0.8em;
     display:table-cell;
-    line-height: 30px;
     vertical-align: middle;
     text-align: center;
 }
@@ -737,28 +762,27 @@ div .align_center{
 .attachmentItem.on{
     background: url("../img/toggle_class_true.png");
     background-size: cover;
-    width: 150px;
-    height: 150px;
+    width: 14.5vw;
+    height: 14.5vw;
 }
 
 .attachmentItem.on > text{
     color: #09A2CC;
-    font-size: 1.8em;
+    font-size: 0.8em;
     display:table-cell;
-    line-height: 30px;
     vertical-align: middle;
     text-align: center;
 }
 
 .career{
+    display: inline-grid;
     margin-top: 2vh;
     margin-left: 6vw;
     margin-right: 6vw;
-    /*height: 65vh;*/
 }
 
 .career p{
-    font-size: 35px;
+    font-size: 1em;
     color: black;
     display: inline-block;
     font-weight: normal;
@@ -775,14 +799,14 @@ div .align_center{
     -webkit-appearance: menulist-button;
     height: 6vh;
     width: 25vw;
-    font-size: 30px;
+    font-size: 0.8em;
 }
 
 .end{
     margin-top: 10vh;
     width: 85%;
     height: 6vh;
-    font-size: 35px;
+    font-size: 1em;
     color: white;
     background-color: #027494;
     border: 4px solid #027494;
@@ -1018,8 +1042,9 @@ td.content{
 
 .popIcon{
     background: url("../img/btn_nonono.png");
-    height: 85px;
-    width: 85px;
+    background-size: cover;
+    height: 5vh;
+    width: 5vh;
     margin-top: 14vh;
     margin-left: 75vw;
 }
@@ -1036,7 +1061,7 @@ td.content{
     width: 100%;
     background: #848E90;
     color: white;
-    font-size: 2.5em;
+    font-size: 1.4em;
     text-align: center;
     vertical-align: middle;
     display: table-cell;
@@ -1066,7 +1091,7 @@ td.content{
 
 .listItem > span{
     color: black;
-    font-size: 2.0em;
+    font-size: 1.0em;
     vertical-align: middle;
     line-height: 6vh;
     text-align: center;

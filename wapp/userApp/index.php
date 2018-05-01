@@ -16,18 +16,29 @@
 
 <script>
     $(document).ready(function(){
+        $(".test").click(function(){
+            alert("");
+            location.href = "pickle://cropImage";
+        });
+
         $(".join").click(function(){location.href = "/userApp/pages/Account/memberJoin.php";});
-        $(".login").click(function(){location.href = "/userApp/login.php";});
+        // $(".login").click(function(){location.href = "/userApp/login.php";});
     });
+
+    function recvImageMeta(imagePath){
+        alert("recvImageMeta called");
+        alert(imagePath);
+    }
 
 
 </script>
 
-<body>
+<body style="background-color: #222222">
 <div class="main_page">
     <div class="main">
         <a href="#" class="join"></a>
         <a href="#" class="login"></a>
+        <a class="login test"></a>
     </div>
 </div>
 </body>

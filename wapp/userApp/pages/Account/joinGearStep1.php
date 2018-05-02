@@ -89,6 +89,16 @@ $regionList = json_decode($regionList)->data;
             return toRet;
         }
 
+        function collectAttachment(){
+            var attachmentArr = $(".attachmentItem.on");
+            var toRet = [];
+            for(var i=0; i<attachmentArr.length; i++){
+                var value = attachmentArr.eq(i).find("text").html();
+                toRet.push(value);
+            }
+            return toRet;
+        }
+
         $(document).on("click", ".regionListItem", function(){
             var text = $(this).find("span").html();
 
@@ -133,7 +143,9 @@ $regionList = json_decode($regionList)->data;
         });
 
         $(".addGear").click(function(){
-            addForm(0, "");
+            showForm();
+
+            // addForm(0, "");
         });
 
         $(document).on("click", ".gearItem1", function(){
@@ -167,10 +179,22 @@ $regionList = json_decode($regionList)->data;
             }
         });
 
+        $(document).on("click", ".delGearList", function(){
+            globalArray.splice($(this).attr("no"), 1);
+            notifyDataSetChanged();
+        });
+
+        function isDuplicateGear(gid){
+            for(var e = 0; e < globalArray.length; e++){
+                if(globalArray[e].id == gid) return true;
+            }
+            return false;
+        }
+
         function getGearOption1(name){
             $(".popBody").empty();
             var params = new sehoMap().put("name", name);
-            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.getGearOption1", true, "json", params);
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.getGearOption1", false, "json", params);
             ajax.send(function(data){
                 if(data.returnCode === 1){
                     $(".popHeader").html("옵션 선택");
@@ -196,7 +220,7 @@ $regionList = json_decode($regionList)->data;
         function getGearOption2(name, detail){
             $(".popBody").empty();
             var params = new sehoMap().put("name", name).put("detail", detail);
-            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.getGearOption2", true, "json", params);
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.getGearOption2", false, "json", params);
             ajax.send(function(data){
                 if(data.returnCode === 1){
                     $(".popHeader").html("옵션 선택");
@@ -243,50 +267,84 @@ $regionList = json_decode($regionList)->data;
             this.name = "";
             this.detail = "";
             this.size = "";
-            this.attachment = "";
         }
 
         var globalArray = [];
 
         function resetForm(){
             $(".gearItem").removeClass("on");
-            
-            // TOOO
+            setFirst("");
+            setSecond("");
+            setThird("");
+            $(".third").attr("no", "");
         }
 
         function showForm(){
             resetForm();
-            // TODO
+            $(".gearWrapper").fadeIn();
         }
 
         function hideForm(){
-            // TODO
+            $(".gearWrapper").fadeOut();
         }
+
+        $(".jAdd").click(function(){
+            var name = $(".first").html();
+            var detail = $(".second").html();
+            var size = $(".third").html();
+            var no = $(".third").attr("no");
+            var attachment = collectAttachment();
+            attachment = attachment.join();
+
+            console.log(name + "::" + detail + "::" + size + "::" + no + "::" + attachment);
+
+            var added = addForm(name, detail, size, no, attachment);
+            if(added) hideForm();
+        });
 
         function notifyDataSetChanged(){
             var gearList = $(".gearList");
             gearList.empty();
             for(var e = 0; e < globalArray.length; e++){
                 var tmp = gearList.html();
-                gearList.html(tmp + globalArray[e].id + "<br/>")
+                var toAdd = convert(".gearListItemTemplate",
+                    ["#{number}", "#{name}", "#{detail}", "#{size}", "#{attachment}"],
+                    [e, globalArray[e].name, globalArray[e].detail, globalArray[e].size, globalArray[e].attach]
+                );
+                gearList.html(tmp + toAdd)
             }
         }
 
-        function addForm(id, att){
+        function addForm(name, detail, size, id, att){
+            if(isDuplicateGear(id)){
+                alert("중복된 장비가 존재합니다.");
+                return false;
+            }
+
             var gBody = new GearBody(id, att);
-            alert(JSON.stringify(gBody));
+            gBody.name = name;
+            gBody.detail = detail;
+            gBody.size = size;
             globalArray.push(gBody);
             notifyDataSetChanged();
+            return true;
+        }
+
+        function convert(selector, marks, contents){
+            var origin = $(selector).html();
+            for(var e = 0; e < marks.length; e++){
+                origin = origin.replace(marks[e], contents[e]);
+            }
+
+            return origin;
         }
 
         function setFirst(text){$(".first").html(text);}
         function setSecond(text){$(".second").html(text);}
         function setThird(text){$(".third").html(text);}
-
     });
 
 </script>
-
 
 <div class="header">
     <h2>회원가입</h2>
@@ -303,6 +361,15 @@ $regionList = json_decode($regionList)->data;
         <div class="popBody">
 
         </div>
+    </div>
+</div>
+
+<div class="gearListItemTemplate" style="display: none;">
+    <div>
+        <p><text style="color:#00BCD4;">■</text> #{name}[#{detail}] - #{size} /
+            <text style="color: #777777; font-size: 0.5em">#{attachment}</text>
+            <a href="#" no="#{number}" class="delGearList"><img src="../../img/btn_del.png" width="20px"/></a>
+        </p>
     </div>
 </div>
 
@@ -334,46 +401,48 @@ $regionList = json_decode($regionList)->data;
         </div>
     </div>
 
-    <div class="gear">
-
-
-        <a href="#" class="addGear" >장비추가</a><br/>
+    <div class="addGearForm">
+        <div style="text-align: center; vertical-align:middle;border: 1px solid #777777;">
+            <p class="addGear">+ 장비추가</p>
+        </div>
         <div class="gearList">
-
         </div>
-
-
-        <p style="margin-top: 4vh;">장비선택</p>
-        <div class="table">
-            <div class="gearItem"><text>굴삭기</text></div>
-            <div class="gearItem"><text>미니<br>굴삭기</text></div>
-            <div class="gearItem"><text>크레인</text></div>
-            <div class="gearItem"><text>스카이</text></div>
-            <div class="gearItem"><text>지게차</text></div>
-
-            <div class="gearItem"><text>바브캣</text></div>
-            <div class="gearItem"><text>사다리<br>차</text></div>
-            <div class="gearItem"><text>덤프<br>트럭</text></div>
-            <div class="gearItem"><text>펌프카</text></div>
-            <div class="gearItem"><text>살수차</text></div>
-
-            <div class="gearItem"><text>롤러</text></div>
-            <div class="gearItem"><text>불도저</text></div>
-        </div>
-
-        <div class="gearType">
-            <span class="first"></span>
-            <span class="second"></span>
-            <span class="third" no=""></span>
-        </div>
-
-        <!--<input type="button" value="가입하기"/>-->
     </div>
 
-    <div class="attachment">
-        <p>어태치먼트</p>
-    </div>
+    <div class="gearWrapper" style="display:none;">
+        <div class="gear">
+            <p style="margin-top: 4vh;">장비선택</p>
+            <div class="table">
+                <div class="gearItem"><text>굴삭기</text></div>
+                <div class="gearItem"><text>미니<br>굴삭기</text></div>
+                <div class="gearItem"><text>크레인</text></div>
+                <div class="gearItem"><text>스카이</text></div>
+                <div class="gearItem"><text>지게차</text></div>
 
+                <div class="gearItem"><text>바브캣</text></div>
+                <div class="gearItem"><text>사다리<br>차</text></div>
+                <div class="gearItem"><text>덤프<br>트럭</text></div>
+                <div class="gearItem"><text>펌프카</text></div>
+                <div class="gearItem"><text>살수차</text></div>
+
+                <div class="gearItem"><text>롤러</text></div>
+                <div class="gearItem"><text>불도저</text></div>
+            </div>
+
+            <div class="gearType">
+                <span class="first"></span>
+                <span class="second"></span>
+                <span class="third" no=""></span>
+            </div>
+        </div>
+
+        <div class="attachment" str="">
+            <p>어태치먼트</p>
+        </div>
+
+        <input class="recButton jAdd" type="button" value="추가"/>
+
+    </div>
 
     <div class="career">
         <p>경력정보 등록</p>

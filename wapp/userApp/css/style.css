@@ -44,7 +44,6 @@ html, body{
     height:14vh;
     background: url("../img/top_wave_alpha.png");
     background-size:cover;
-    border-bottom:1px solid white !important;
     text-align:center;
 }
 
@@ -638,6 +637,12 @@ div .align_center{
     text-align: center;
 }
 
+.addGearForm{
+    margin-top: 4vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+
 .gear{
     margin-top: 4vh;
     margin-left: 6vw;
@@ -803,6 +808,7 @@ div .align_center{
 }
 
 .end{
+    margin-left: 7.5%;
     margin-top: 10vh;
     width: 85%;
     height: 6vh;
@@ -1095,5 +1101,16 @@ td.content{
     vertical-align: middle;
     line-height: 6vh;
     text-align: center;
+}
+
+.recButton{
+    margin-left: 7.5%;
+    margin-top: 2vh;
+    width: 85%;
+    height: 6vh;
+    font-size: 1.0em;
+    color: white;
+    background-color: #027494;
+    border: 4px solid #027494;
 }
 

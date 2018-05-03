@@ -11,7 +11,7 @@
 <? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/WebUser.php";?>
 <?
 $obj = new WebUser($_REQUEST);
-$regionList = $obj->getRegionList();
+$regionList = $obj->getSidoList();
 $regionList = json_decode($regionList)->data;
 ?>
 <script>

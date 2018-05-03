@@ -21,6 +21,11 @@
             location.href = "/userApp/pages/Account/policy.php";
         });
 
+        $("#age").change(function(){
+           var age = $("#age").val();
+           $("[name='age']").val(age);
+        });
+
         $(".jSubmit").click(function(){
             var account = $("[name='account']").val();
             var password = $("[name='password']").val();
@@ -94,16 +99,19 @@
                     else if(type === "N"){
                         //TODO 일반 회원가입
                         $("[name='type']").val("N");
-                        str = $("[name='form']").serialize();
-                        var ajax = new AjaxSender("/action_front.php?cmd=Webuser.joinUser", false, "json", str);
-                        ajax.send(function(data){
-                            if(data.returnCode == 1){
+
+                        var params = $("[name='form']").serialize();
+                        $.ajax({
+                            url: "/action_front.php?cmd=WebUser.joinUser",
+                            async: false,
+                            cache: false,
+                            dataType: "json",
+                            data: params,
+                            success: function(data){
+                                console.log(data.data);
                                 alert("가입 완료되었습니다.");
                                 location.href = "/userApp/pages/search/searchMain.php";
                             }
-                            else
-                                alert("가입 실패! 다시 시도해 주세요");
-
                         });
                     }
                 }
@@ -125,7 +133,19 @@
             <input type="text" name="account" placeholder="  아이디"/>
             <input type="text" name="password" placeholder="  비밀번호"/>
             <input type="text" name="name" placeholder="  본인 이름"/>
-            <input type="number" name="age" placeholder="  나이"/>
+            <input type="hidden" name="age" placeholder="  나이"/>
+
+            <select id="age">
+                <option value="">나이 선택</option>
+                <option value="10">10대</option>
+                <option value="20">20대</option>
+                <option value="30">30대</option>
+                <option value="40">40대</option>
+                <option value="50">50대</option>
+                <option value="60">60대</option>
+                <option value="70">70대</option>
+            </select>
+
             <input type="text" name="residence" placeholder="  거주지"/>
             <input type="number" name="phone" placeholder="  휴대폰번호"/>
             <input type="text" placeholder="  인증번호" class="authNumber" style="display: none;"/>

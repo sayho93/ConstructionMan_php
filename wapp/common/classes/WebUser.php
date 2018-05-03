@@ -52,8 +52,7 @@ if(! class_exists("WebUser") ){
             $retVal = $this->post("/web/user/join", Array("name" => $_REQUEST["name"], "account" => $_REQUEST["account"],
                 "password" => $_REQUEST["password"], "phone" => $_REQUEST["phone"], "age" => $_REQUEST["age"], "type" => $_REQUEST["type"],
                 "pushKey" => $_REQUEST["pushKey"], "region" => $_REQUEST["regionArr"], "work" => $_REQUEST["workArr"],
-                "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "gearId" => $_REQUEST["gearIdArr"],
-                "attachment" => $_REQUEST["attachmentArr"]));
+                "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "gearInfo" => $_REQUEST["gearInfo"]));
 
             LoginUtil::doWebLogin(json_decode($retVal)->data);
             return $retVal;
@@ -69,7 +68,14 @@ if(! class_exists("WebUser") ){
             return $retVal;
         }
 
-
+        function registerSearch(){
+            $retVal = $this->post("/web/register/search/{$this->webUser->id}", Array("type" => $_REQUEST["type"], "work" => $_REQUEST["workArr"],
+                "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "sidoId" => $_REQUEST["sidoId"],
+                "gugunId" => $_REQUEST["gugunId"], "name" => $_REQUEST["name"], "startDate" => $_REQUEST["startDate"], "endDate" => $_REQUEST["endDate"],
+                "lodging" => $_REQUEST["lodging"], "price" => $_REQUEST["price"], "discussLater" => $_REQUEST["discussLater"], "gearId" => $_REQUEST["gearId"],
+                "attachment" => $_REQUEST["attachment"]));
+            return $retVal;
+        }
 
 
 

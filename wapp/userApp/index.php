@@ -22,7 +22,7 @@
         });
 
         $(".join").click(function(){location.href = "/userApp/pages/Account/memberJoin.php";});
-        // $(".login").click(function(){location.href = "/userApp/login.php";});
+        $(".login").click(function(){location.href = "/userApp/login.php";});
     });
 
     function recvImageMeta(imagePath){

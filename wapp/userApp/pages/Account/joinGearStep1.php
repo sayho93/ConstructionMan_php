@@ -132,7 +132,7 @@ $regionList = json_decode($regionList)->data;
                 $(".gearItem").removeClass("on");
                 $(this).addClass("on");
                 var text = $(this).find("text").html();
-                // getGearOption1(text);
+                text = text.replace("<br>", "");
                 setFirst(text);
             }
         });
@@ -144,8 +144,6 @@ $regionList = json_decode($regionList)->data;
 
         $(".addGear").click(function(){
             showForm();
-
-            // addForm(0, "");
         });
 
         $(document).on("click", ".gearItem1", function(){
@@ -342,7 +340,41 @@ $regionList = json_decode($regionList)->data;
         function setFirst(text){$(".first").html(text);}
         function setSecond(text){$(".second").html(text);}
         function setThird(text){$(".third").html(text);}
+
+        function getPushKey(){
+            location.href = "pickle://getPushKey";
+        }
+
+        $(".end").click(function(){
+            var regionArr = collectGugunId();
+            var gearInfo = JSON.stringify(globalArray);
+            regionArr = regionArr.join();
+            $("[name='regionArr']").val(regionArr);
+            $("[name='gearInfo']").val(gearInfo);
+
+            var pushKey = getPushKey();
+        });
     });
+
+
+
+    function getPushKeyCallBack(pushKey){
+        console.log("getPushKeyCallBack called :::::::::::::::::::::::::");
+        $("[name='pushKey']").val(decodeURI(pushKey));
+        var params = $("[name='form']").serialize();
+        $.ajax({
+            url: "/action_front.php?cmd=WebUser.joinUser",
+            async: false,
+            cache: false,
+            dataType: "json",
+            data: params,
+            success: function(data){
+                console.log(data.data);
+                alert("가입 완료되었습니다.");
+                location.href = "/userApp/pages/search/searchMain.php";
+            }
+        });
+    }
 
 </script>
 
@@ -390,6 +422,18 @@ $regionList = json_decode($regionList)->data;
 </div>
 
 <div class="body">
+    <form name="form">
+        <input type="hidden" name="account" value="<?=$_REQUEST["account"]?>"/>
+        <input type="hidden" name="password" value="<?=$_REQUEST["password"]?>"/>
+        <input type="hidden" name="name" value="<?=$_REQUEST["name"]?>"/>
+        <input type="hidden" name="age" value="<?=$_REQUEST["age"]?>"/>
+        <input type="hidden" name="residence" value="<?=$_REQUEST["residence"]?>"/>
+        <input type="hidden" name="phone" value="<?=$_REQUEST["phone"]?>"/>
+        <input type="hidden" name="type" value="G"/>
+        <input type="hidden" name="regionArr"/>
+        <input type="hidden" name="gearInfo"/>
+    </form>
+
     <div class="region">
         <p>희망지역<span>(중복선택가능)</span></p>
         <div id="table">
@@ -441,30 +485,6 @@ $regionList = json_decode($regionList)->data;
         </div>
 
         <input class="recButton jAdd" type="button" value="추가"/>
-
-    </div>
-
-    <div class="career">
-        <p>경력정보 등록</p>
-        <div class="list">
-            <div class="jobItem"><text>콘크리트공</text></div>
-            <select>
-                <option>근로년수 선택</option>
-                <option>5년 이하</option>
-                <option>5년 이상</option>
-                <option>10년 이상</option>
-            </select>
-        </div>
-
-        <div class="list">
-            <div class="jobItem"><text>콘크리트공</text></div>
-            <select>
-                <option>근로년수 선택</option>
-                <option>5년 이하</option>
-                <option>5년 이상</option>
-                <option>10년 이상</option>
-            </select>
-        </div>
 
     </div>
 

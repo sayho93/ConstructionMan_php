@@ -26,17 +26,31 @@
 
     $(document).ready(function(){
         var userRegion = '<?=json_encode($regionInfo)?>';
+        var userWork = '<?=json_encode($workInfo)?>';
         userRegion = JSON.parse(userRegion);
+        userWork = JSON.parse(userWork);
 
-        for(var i=0; i<userRegion.length; i++){
-            if(userRegion[i].gugunId === 0){
-                $(".regionItem[no='0']").addClass("on");
+        //유저 지역정보 표시
+        if(userRegion != null){
+            for(var i=0; i<userRegion.length; i++){
+                if(userRegion[i].gugunId === 0){
+                    $(".regionItem[no='0']").addClass("on");
+                }
+                else{
+                    var target = $(".regionItem[no='" + userRegion[i].sidoId + "']");
+                    target.addClass("on");
+                    target.attr("gugunId", userRegion[i].gugunId);
+                    target.find("#box").html(userRegion[i].gugunTxt);
+                }
             }
-            else{
-                var target = $(".regionItem[no='" + userRegion[i].sidoId + "']");
+        }
+
+        //유저 직종 표시
+        console.log(userWork);
+        if(userWork != null){
+            for(var i=0; i<userWork.length; i++){
+                var target = $(".jobItem[no='" + userWork[i].id + "']");
                 target.addClass("on");
-                target.attr("gugunId", userRegion[i].gugunId);
-                target.find("#box").html(userRegion[i].gugunTxt);
             }
         }
 
@@ -164,23 +178,109 @@
                 $(this).addClass("on");
         });
 
+        function getWorkList(workArr){
+            var param = new sehoMap().put("work", workArr);
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.getWorkInfo", false, "json", param);
+            ajax.send(function(data){
+                if(data.returnCode === 1){
+                    console.log(data.data);
+                    for(var i=0; i<data.data.length; i++){
+                        var template = $(".template").html();
+                        if(data.data[i].id === 16) template = $(".specialTemplate").html();
+
+                        template = template.replace("#{no}", data.data[i].id);
+                        template = template.replace("#{text}", data.data[i].name);
+                        $(".career").append(template);
+                    }
+                }
+                else{
+                    alert("");
+                }
+            });
+        }
 
         //경력정보 버튼 선택시
         $(".jCareer").click(function(){
             var workArr = collectWorkId();
-            console.log(workArr);
-
-            for(var i=0; i<workArr.length; i++){
-                //TODO
-            }
-
+            workArr = workArr.join();
+            getWorkList(workArr);
 
             $(".career").show();
-            $(".jSubmit").show();
+            $(".jSubmitMan").show();
             $(this).hide();
         });
+
+        function collectCareer(){
+            var careerArr = $(".list");
+            var toRet = [];
+
+            for(var i=2; i<careerArr.length; i++){
+                var no = $(".jobItemC").eq(i).attr("no");
+                console.log(no);
+                var value = $(".listValue").eq(i).val();
+                toRet.push(value);
+
+                if(no == "16"){
+                    $("[name='welderType']").val($(".welderType").eq(1).val());
+                }
+            }
+            return toRet;
+        }
+
+        $(".jSubmitMan").click(function(){
+            var regionArr = collectGugunId();
+            var workArr = collectWorkId();
+            var career = collectCareer();
+
+            regionArr = regionArr.join();
+            workArr = workArr.join();
+            career = career.join();
+
+            $("[name='regionArr']").val(regionArr);
+            $("[name='workArr']").val(workArr);
+            $("[name='careerArr']").val(career);
+
+            console.log(regionArr);
+            console.log(workArr);
+            console.log(career);
+        });
+
+
+        ////////////////////end of manType
+
+        
     });
 </script>
+
+<div class="template" style="display:none;">
+    <div class="list">
+        <div class="jobItem jobItemC" no="#{no}"><text>#{text}</text></div>
+        <select class="listValue">
+            <option value="0">근로년수 선택</option>
+            <option value="1">5년 이하</option>
+            <option value="2">5년 이상</option>
+            <option value="3">10년 이상</option>
+        </select>
+    </div>
+</div>
+
+<div class="specialTemplate" style="display:none;">
+    <div class="list">
+        <div class="jobItem jobItemC" no="#{no}"><text>#{text}</text></div>
+        <select class="listValue">
+            <option value="0">근로년수 선택</option>
+            <option value="1">5년 이하</option>
+            <option value="2">5년 이상</option>
+            <option value="3">10년 이상</option>
+        </select>
+        <select class="welderType">
+            <option value="">선택</option>
+            <option value="알곤">알곤</option>
+            <option value="전기">전기</option>
+            <option value="산소">산소</option>
+        </select>
+    </div>
+</div>
 
 <div class="popBG" style="display: none;">
     <div class="popIcon jClose"></div>
@@ -228,6 +328,13 @@
 </div>
 
 <?if($_REQUEST["type"] == "M"){?>
+
+<form name="form">
+    <input type="hidden" name="regionArr"/>
+    <input type="hidden" name="workArr"/>
+    <input type="hidden" name="careerArr" value=""/>
+    <input type="hidden" name="welderType" value=""/>
+</form>
 
 <div class="mypageBody">
     <div class="region">
@@ -330,49 +437,12 @@
 
     <div class="career" style="display: none;">
         <p>경력정보 등록</p>
-        <div class="list">
-            <div class="jobItem"><text>콘크리트공</text></div>
-            <select>
-                <option>근로년수 선택</option>
-                <option>5년 이하</option>
-                <option>5년 이상</option>
-                <option>10년 이상</option>
-            </select>
-        </div>
-
-        <div class="list">
-            <div class="jobItem"><text>콘크리트공</text></div>
-            <select>
-                <option>근로년수 선택</option>
-                <option>5년 이하</option>
-                <option>5년 이상</option>
-                <option>10년 이상</option>
-            </select>
-        </div>
-        <div class="list">
-            <div class="jobItem"><text>콘크리트공</text></div>
-            <select>
-                <option>근로년수 선택</option>
-                <option>5년 이하</option>
-                <option>5년 이상</option>
-                <option>10년 이상</option>
-            </select>
-        </div>
-        <div class="list">
-            <div class="jobItem"><text>콘크리트공</text></div>
-            <select>
-                <option>근로년수 선택</option>
-                <option>5년 이하</option>
-                <option>5년 이상</option>
-                <option>10년 이상</option>
-            </select>
-        </div>
     </div>
     <?}else if($_REQUEST["type"] == "G"){?>
 <!--        TODO 장비타입 -->
     <?}?>
 
-    <input type="button" class="end jSubmit" value="저장하기" style="margin-top: 2vh!important; display: none;"/>
+    <input type="button" class="end jSubmitMan" value="저장하기" style="margin-top: 2vh!important; display: none;"/>
 
     <div class="footer">
         <span>휴넵스/건설인</span>

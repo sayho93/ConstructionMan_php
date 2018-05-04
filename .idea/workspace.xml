@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a8eb9b7-06e9-4845-aa3b-c394c4333abb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/applyInfo.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentInfo.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/setting.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/css/style.css" afterPath="$PROJECT_DIR$/wapp/userApp/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep1.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep1.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php" />
+      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,61 +16,9 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wapp/userApp/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="568" column="23" lean-forward="true" selection-start-line="568" selection-start-column="23" selection-end-line="568" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="joinGearStep1.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/joinGearStep1.php">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="258">
-              <caret line="91" column="37" lean-forward="true" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#text#0;n#p#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#text#1;n#p#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#7;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#7;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#div#7;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchGearType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/search/searchGearType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="236" column="9" lean-forward="true" selection-start-line="236" selection-start-column="9" selection-end-line="236" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#5;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#5;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchGear.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/search/searchGear.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-              <folding>
-                <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+              <caret line="655" column="2" lean-forward="false" selection-start-line="655" selection-start-column="1" selection-end-line="655" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,49 +42,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mypageInfo.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="joinManStep2.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="132" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mypageInfo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-704">
-              <caret line="266" column="54" lean-forward="false" selection-start-line="266" selection-start-column="54" selection-end-line="266" selection-end-column="54" />
+            <state relative-caret-position="487">
+              <caret line="250" column="8" lean-forward="false" selection-start-line="250" selection-start-column="8" selection-end-line="250" selection-end-column="8" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#1;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#2;n#tr#0;n#table#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#td#2;n#tr#0;n#table#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#6;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#6;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#6;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="joinManStep2.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="38" column="39" lean-forward="true" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="joinManStep1.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="joinManStep1.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="77" column="15" lean-forward="false" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wapp/userApp/php/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="47" column="67" lean-forward="false" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
+            <state relative-caret-position="136">
+              <caret line="183" column="8" lean-forward="false" selection-start-line="183" selection-start-column="8" selection-end-line="190" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -171,9 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>regionItem</find>
-      <find>itemWrapper</find>
-      <find>button</find>
       <find>addG</find>
       <find>addGear</find>
       <find>end</find>
@@ -201,6 +129,9 @@
       <find />
       <find>width: 85</find>
       <find>table ul l</find>
+      <find>template</find>
+      <find>welderType</find>
+      <find>ale</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -264,8 +195,8 @@
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/setting.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/css/style.css" />
-        <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep1.php" />
+        <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php" />
       </list>
     </option>
   </component>
@@ -449,12 +380,12 @@
       <workItem from="1517292709381" duration="18496000" />
       <workItem from="1517474855841" duration="33252000" />
       <workItem from="1520575982380" duration="23000" />
-      <workItem from="1524458488673" duration="80267000" />
+      <workItem from="1524458488673" duration="82050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132038000" />
+    <option name="totallyTimeSpent" value="133821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -858,14 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="568" column="23" lean-forward="true" selection-start-line="568" selection-start-column="23" selection-end-line="568" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -883,35 +806,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php">
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-704">
-          <caret line="266" column="54" lean-forward="false" selection-start-line="266" selection-start-column="54" selection-end-line="266" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#2;n#tr#0;n#table#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#4;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="183" column="8" lean-forward="false" selection-start-line="183" selection-start-column="8" selection-end-line="190" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="38" column="39" lean-forward="true" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+        <state relative-caret-position="409">
+          <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="132" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep1.php">
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="77" column="15" lean-forward="false" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
+        <state relative-caret-position="258">
+          <caret line="655" column="2" lean-forward="false" selection-start-line="655" selection-start-column="1" selection-end-line="655" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="250" column="8" lean-forward="false" selection-start-line="250" selection-start-column="8" selection-end-line="250" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#2;n#tr#0;n#table#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#6;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

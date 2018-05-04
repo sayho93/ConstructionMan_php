@@ -55,7 +55,7 @@ html, body{
 }
 
 .mypageTitleHeader table{
-    padding : 0 8vw 0 8vw;
+    padding : 1vw 8vw 1vw 8vw;
     font-size: 0.8em;
     text-align: left;
     vertical-align: middle;
@@ -106,11 +106,29 @@ html, body{
     background-size: cover;
 }
 
+.ok_btn{
+    width: 7vw;
+    height: 7vw;
+    background-size: cover;
+}
+
+.img_btn{
+    width: 6vw;
+    height: 6vw;
+    background-size: cover;
+}
+
+.mod_btn{
+    width: 3vw;
+    height: 3vw;
+    background-size: cover;
+}
+
 .tool_right{
     position:absolute;
-    top:80px;
-    right:50px;
-    width:30px;
+    top:4vh;
+    right:3vw;
+    width:10vw;
     display: inline-block;
 }
 
@@ -118,7 +136,7 @@ html, body{
     width: 23vw;
     height: 23vw;
     background-size: cover;
-    margin-bottom : 1vh;
+    /*margin-bottom : 1vh;*/
 }
 
 .header h2{
@@ -537,7 +555,7 @@ input[type=number]:focus {
     display: table-caption;
     caption-side: bottom;
     height: auto;
-    line-height: 3.8vw;
+    /*line-height: 3.8vw;*/
 }
 
 #table ul li.on > #box{

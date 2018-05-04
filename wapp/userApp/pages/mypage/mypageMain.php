@@ -12,40 +12,80 @@
 <?
     $obj = new WebUser($_REQUEST);
     $userInfo = $obj->getUserInfo();
-    echo $userInfo;
     $userInfo = json_decode($userInfo)->data;
     $regionInfo = $userInfo->userRegion;
     $workInfo = $userInfo->workInfo;
     $name = $userInfo->name;
-    echo json_encode($regionInfo);
-
 ?>
 <script>
     $(document).ready(function(){
-
+        $(".jBack").click(function(){history.go(-1);})
+        $(".jInfo").click(function(){location.href = "/userApp/pages/mypage/mypageInfo.php";});
+        $(".jApply").click(function(){location.href = "/userApp/pages/mypage/applyInfo.php";});
+        $(".jPaid").click(function(){location.href = "/userApp/pages/mypage/paymentInfo.php";});
+        $(".jSetting").click(function(){location.href = "/userApp/pages/mypage/setting.php";});
     });
 </script>
 
 <div class="mypageHeader">
     <h2>마이페이지</h2>
-    <a class="tool_left"><img src="../../img/btn_prev.png" class="back_btn"/></a>
+    <a class="tool_left"><img src="../../img/btn_prev.png" class="back_btn jBack"/></a>
     <div>
         <img src="../../img/person_head.png" class="profileImg"/>
     </div>
-    <h3>홍길동</h3>
+    <h3><?=$name?></h3>
 </div>
 
 <div class="mypageTitleHeader">
     <table width="100%" height="100%">
         <tr class="tableRowInfo">
             <td width="20%"><a class="subject">희망지역</a></td>
-            <td width="30%"><a class="content">서울, 대전</a></td>
+            <td width="30%">
+                <a class="content">
+                    <?
+                        for($i=0; $i<sizeof($regionInfo); $i++){
+                            echo $regionInfo[$i]->gugunTxt;
+                            if($i != sizeof($regionInfo) - 1) echo ", ";
+                        }
+                    ?>
+
+                </a>
+            </td>
             <td width="20%"><a class="subject">직종</a></td>
-            <td width="30%"><a class="content">건축/콘크리트공, 철근공</a></td>
+            <td width="30%">
+                <a class="content">
+                    <?
+                        for($i=0; $i<sizeof($workInfo); $i++){
+                            echo $workInfo[$i]->name;
+                            if($i != sizeof($workInfo) - 1) echo ", ";
+                        }
+                    ?>
+                </a>
+            </td>
         </tr>
         <tr class="tableRowInfo">
             <td><a class="subject">경력정보</a></td>
-            <td><a class="content">12년</a></td>
+            <td>
+                <a class="content">
+                    <?
+                    for($i=0; $i<sizeof($workInfo); $i++){
+                        switch($workInfo[$i]->career){
+                            case 1:
+                                echo "5년 이하";
+                                break;
+                            case 2:
+                                echo "5년 이상";
+                                break;
+                            case 3:
+                                echo "10년 이상";
+                                break;
+                        }
+
+                        if($i != sizeof($workInfo) - 1) echo ", ";
+                    }
+                    ?>
+                </a>
+            </td>
             <td></td>
         </tr>
     </table>
@@ -53,28 +93,28 @@
 
 <div class="mypageBody">
     <table class="listTable">
-        <tr class="row">
+        <tr class="row jInfo">
             <td width="20%" class="gray"><img src="../../img/ico_info.png" style="width: 8vw; height: 8vw;"></td>
             <td width="80%" class="txt">
                 개인정보
                 <img src="../../img/btn_go_detail.png" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw;">
             </td>
         </tr>
-        <tr class="row">
+        <tr class="row jApply">
             <td width="20%" class="gray"><img src="../../img/ico_list.png" style="width: 8vw; height: 8vw;"></td>
             <td width="80%" class="txt">
                 구인리스트
                 <img src="../../img/btn_go_detail.png" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw;">
             </td>
         </tr>
-        <tr class="row">
+        <tr class="row jPaid">
             <td width="20%" class="gray"><img src="../../img/ico_history.png" style="width: 8vw; height: 8vw;"></td>
             <td width="80%" class="txt">
                 근로이력
                 <img src="../../img/btn_go_detail.png" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw;">
             </td>
         </tr>
-        <tr class="row">
+        <tr class="row jSetting">
             <td width="20%" class="gray"><img src="../../img/ico_setting.png" style="width: 8vw; height: 8vw;"></td>
             <td width="80%" class="txt">
                 설정

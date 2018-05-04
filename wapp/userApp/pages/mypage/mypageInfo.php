@@ -2,24 +2,49 @@
 /**
  * Created by PhpStorm.
  * User: sayho
- * Date: 2018. 4. 25.
- * Time: PM 2:03
+ * Date: 2018. 5. 4.
+ * Time: PM 3:17
  */
 ?>
 
 <? include $_SERVER["DOCUMENT_ROOT"] . "/userApp/php/header.php" ;?>
 <? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/WebUser.php";?>
 <?
-$obj = new WebUser($_REQUEST);
-$regionList = $obj->getSidoList();
-$regionList = json_decode($regionList)->data;
+    $obj = new WebUser($_REQUEST);
+    $userInfo = $obj->getUserInfo();
+    $userInfo = json_decode($userInfo)->data;
+    $regionInfo = $userInfo->userRegion;
+    $workInfo = $userInfo->workInfo;
+    $name = $userInfo->name;
+
+    $regionList = $obj->getSidoList();
+    $regionList = json_decode($regionList)->data;
 ?>
+
 <script>
     var regionArr = [];
-    var workArr = [];
-
 
     $(document).ready(function(){
+        var userRegion = '<?=json_encode($regionInfo)?>';
+        userRegion = JSON.parse(userRegion);
+
+        for(var i=0; i<userRegion.length; i++){
+            if(userRegion[i].gugunId === 0){
+                $(".regionItem[no='0']").addClass("on");
+            }
+            else{
+                var target = $(".regionItem[no='" + userRegion[i].sidoId + "']");
+                target.addClass("on");
+                target.attr("gugunId", userRegion[i].gugunId);
+                target.find("#box").html(userRegion[i].gugunTxt);
+            }
+        }
+
+
+        $(".jBack").click(function(){
+            history.go(-1);
+        });
+
         $(".regionItem").click(function(){
             var regionID = $(this).attr("no");
 
@@ -117,7 +142,6 @@ $regionList = json_decode($regionList)->data;
             $(".popBG").hide();
         });
 
-
         $(".jClose").click(function(){
             $(".popBG").hide();
         });
@@ -140,26 +164,23 @@ $regionList = json_decode($regionList)->data;
                 $(this).addClass("on");
         });
 
-        $("#next").click(function(){
-            var regionArr = collectGugunId();
+
+        //경력정보 버튼 선택시
+        $(".jCareer").click(function(){
             var workArr = collectWorkId();
+            console.log(workArr);
 
-            regionArr = regionArr.join();
-            workArr = workArr.join();
-            $("[name='regionArr']").val(regionArr);
-            $("[name='workArr']").val(workArr);
+            for(var i=0; i<workArr.length; i++){
+                //TODO
+            }
 
-            var str = $("[name='form']").serialize();
 
-            location.href = "joinManStep2.php?" + str;
+            $(".career").show();
+            $(".jSubmit").show();
+            $(this).hide();
         });
     });
-
 </script>
-
-<div class="header">
-    <h2>회원가입</h2>
-</div>
 
 <div class="popBG" style="display: none;">
     <div class="popIcon jClose"></div>
@@ -179,19 +200,36 @@ $regionList = json_decode($regionList)->data;
     <div class="listItem" no="#{no}" parentId="#{prt}"><span>#{text}</span></div>
 </div>
 
-<div class="body">
-    <form name="form">
-        <input type="hidden" name="account" value="<?=$_REQUEST["account"]?>"/>
-        <input type="hidden" name="password" value="<?=$_REQUEST["password"]?>"/>
-        <input type="hidden" name="name" value="<?=$_REQUEST["name"]?>"/>
-        <input type="hidden" name="age" value="<?=$_REQUEST["age"]?>"/>
-        <input type="hidden" name="residence" value="<?=$_REQUEST["residence"]?>"/>
-        <input type="hidden" name="phone" value="<?=$_REQUEST["phone"]?>"/>
-        <input type="hidden" name="regionArr"/>
-        <input type="hidden" name="workArr"/>
-    </form>
+<div class="mypageHeader">
+    <h2>개인정보</h2>
+    <a class="tool_left"><img src="../../img/btn_prev.png" class="back_btn jBack"/></a>
+<!--    <a class="tool_right"><img src="../../img/btn_confirm.png" class="ok_btn"/></a>-->
 
+    <div style="text-align: center">
+        <img src="../../img/person_head.png" class="profileImg"/>
+        <br>
+        <img src="../../img/btn_photo.png" class="img_btn" style="margin-bottom: 2vh">
+    </div>
+</div>
 
+<div class="mypageTitleHeader">
+    <table width="100%" height="100%">
+        <tr class="tableRowInfo">
+            <td width="20%"><a class="subject">이름</a></td>
+            <td width="70%"><a class="content"><?=$name?></a></td>
+            <td width="10%"><img src="../../img/btn_edit.png" class="mod_btn" style="float: right"></td>
+        </tr>
+        <tr class="tableRowInfo">
+            <td><a class="subject">전화번호</a></td>
+            <td><a class="content"><?=$userInfo->phone?></a></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+<?if($_REQUEST["type"] == "M"){?>
+
+<div class="mypageBody">
     <div class="region">
         <p>희망지역<span>(중복선택가능)</span></p>
         <div id="table">
@@ -288,9 +326,53 @@ $regionList = json_decode($regionList)->data;
         </div>
     </div>
 
-    <div class="center" style="margin-top: 10vh;">
-        <a href="#" id="next"></a>
+    <input type="button" class="end jCareer" value="경력정보 선택" style="margin-top: 2vh!important;"/>
+
+    <div class="career" style="display: none;">
+        <p>경력정보 등록</p>
+        <div class="list">
+            <div class="jobItem"><text>콘크리트공</text></div>
+            <select>
+                <option>근로년수 선택</option>
+                <option>5년 이하</option>
+                <option>5년 이상</option>
+                <option>10년 이상</option>
+            </select>
+        </div>
+
+        <div class="list">
+            <div class="jobItem"><text>콘크리트공</text></div>
+            <select>
+                <option>근로년수 선택</option>
+                <option>5년 이하</option>
+                <option>5년 이상</option>
+                <option>10년 이상</option>
+            </select>
+        </div>
+        <div class="list">
+            <div class="jobItem"><text>콘크리트공</text></div>
+            <select>
+                <option>근로년수 선택</option>
+                <option>5년 이하</option>
+                <option>5년 이상</option>
+                <option>10년 이상</option>
+            </select>
+        </div>
+        <div class="list">
+            <div class="jobItem"><text>콘크리트공</text></div>
+            <select>
+                <option>근로년수 선택</option>
+                <option>5년 이하</option>
+                <option>5년 이상</option>
+                <option>10년 이상</option>
+            </select>
+        </div>
     </div>
+    <?}else if($_REQUEST["type"] == "G"){?>
+<!--        TODO 장비타입 -->
+    <?}?>
+
+    <input type="button" class="end jSubmit" value="저장하기" style="margin-top: 2vh!important; display: none;"/>
 
     <div class="footer">
         <span>휴넵스/건설인</span>
@@ -298,7 +380,9 @@ $regionList = json_decode($regionList)->data;
         <p>대표 : 이화수 / 사업자등록번호 : 111-222-3333333</p>
         <p>주소 : 대전광역시 유성구 봉명동 1111</p>
         <p>TEL : 1644-1111 / MAIL : geonseolin@geonseolin.com</p>
-        <br>
+        <br><br>
         <p>ⓒ휴넵스 All rights reserved.</p>
     </div>
+
 </div>
+

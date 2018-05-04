@@ -17,7 +17,7 @@
 <div class="body">
     <div class="typeWrapper">
         <a href="/userApp/pages/search/searchManType.php" id="manf"></a>
-        <a href="#" id="gearf"></a>
+        <a href="/userApp/pages/search/searchGearType.php" id="gearf"></a>
     </div>
 
     <div class="footer">

@@ -55,8 +55,8 @@ html, body{
 }
 
 .mypageTitleHeader table{
-    padding : 20px 60px 20px 60px;
-    font-size: 1.8em;
+    padding : 0 8vw 0 8vw;
+    font-size: 0.8em;
     text-align: left;
     vertical-align: middle;
 }
@@ -78,7 +78,7 @@ html, body{
 }
 
 .mypageHeader h2{
-    font-size:45px;
+    font-size:1.2em;
     color:#fff;
     line-height:9vh;
     font-weight:normal;
@@ -86,7 +86,7 @@ html, body{
 }
 
 .mypageHeader h3{
-    font-size: 2.5em;
+    font-size: 1.0em;
     color:#fff;
     font-weight: normal;
     display: inline-block;
@@ -94,10 +94,16 @@ html, body{
 
 .tool_left{
     position:absolute;
-    top:80px;
-    left:50px;
-    width:30px;
+    top:4vh;
+    left:3vw;
+    width:10vw;
     display: inline-block;
+}
+
+.back_btn{
+    width: 4vw;
+    height: 7vw;
+    background-size: cover;
 }
 
 .tool_right{
@@ -106,6 +112,13 @@ html, body{
     right:50px;
     width:30px;
     display: inline-block;
+}
+
+.profileImg{
+    width: 23vw;
+    height: 23vw;
+    background-size: cover;
+    margin-bottom : 1vh;
 }
 
 .header h2{
@@ -173,7 +186,7 @@ html, body{
 }
 
 .listTable{
-    font-size: 2.3em;
+    font-size: 1.0em;
     width: 100%;
     padding: 0;
     /*margin-bottom: 3vh;*/
@@ -187,6 +200,7 @@ html, body{
 td.gray{
     padding: 0;
     background: #F2F2F2;
+    background-size: cover;
     text-align: center;
     border-bottom: 1px solid #DEDEDE;
 }
@@ -399,6 +413,7 @@ input[type=number]:focus {
 }
 
 .center{
+    text-align: center;
     height: 4vh;
     text-align: center;
     margin-top: 8vh;
@@ -667,7 +682,6 @@ div .align_center{
     margin-top: 4vh;
     margin-left: 6vw;
     margin-right: 6vw;
-    /*height: 60vh;*/
 }
 
 .gear p{

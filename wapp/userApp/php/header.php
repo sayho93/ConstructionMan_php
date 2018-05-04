@@ -43,6 +43,10 @@
     var designedAlert = "/userApp/popupCollection/designedAlert.php";
     $(document).ready(function(){
         $(".jHeaderBack").click(function(){window.history.back();});
+
+        $(".leftLogo").click(function(){
+            location.href = "/userApp/pages/mypage/mypageMain.php";
+        });
     });
 </script>
 

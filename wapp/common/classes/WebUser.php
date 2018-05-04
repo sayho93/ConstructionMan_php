@@ -77,6 +77,11 @@ if(! class_exists("WebUser") ){
             return $retVal;
         }
 
+        function getUserInfo(){
+            $retVal = $this->get("/web/user/info/{$this->webUser->id}", null);
+            return $retVal;
+        }
+
 
 
 

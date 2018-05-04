@@ -226,6 +226,7 @@ $regionList = json_decode($regionList)->data;
                         if(data.data[i].size == "-"){
                             alert("선택할 항목이 없습니다.");
                             setThird("-");
+                            $(".third").attr("no",data.data[i].id);
                             return;
                         }
                         else{

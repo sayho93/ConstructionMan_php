@@ -119,6 +119,16 @@ if(! class_exists("WebUser") ){
             return $retVal;
         }
 
+        function findPW(){
+            $retVal = $this->get("/web/user/findPW", Array("name" => $_REQUEST["name"], "phone" => $_REQUEST["phone"], "account" => $_REQUEST["account"]));
+            return $retVal;
+        }
+
+        function changePW(){
+            $retVal = $this->post("/web/user/changePW/{$_REQUEST["id"]}", Array("password" => $_REQUEST["password"]));
+            return $retVal;
+        }
+
 
 
 

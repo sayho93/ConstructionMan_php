@@ -17,6 +17,7 @@
     $workInfo = $userInfo->workInfo;
     $name = $userInfo->name;
     $type = $userInfo->type;
+    $gearInfo = $userInfo->gearInfo;
 ?>
 <script>
     $(document).ready(function(){
@@ -53,6 +54,8 @@
 
                 </a>
             </td>
+
+            <?if($type == "M"){?>
             <td width="20%"><a class="subject">직종</a></td>
             <td width="30%">
                 <a class="content">
@@ -64,31 +67,52 @@
                     ?>
                 </a>
             </td>
+            <?}else if($type == "G"){?>
+                <td width="20%"></td>
+                <td width="30%">
+                </td>
+            <?}?>
+
         </tr>
         <tr class="tableRowInfo">
+            <?if($type == "M"){?>
             <td><a class="subject">경력정보</a></td>
             <td>
                 <a class="content">
                     <?
-                    for($i=0; $i<sizeof($workInfo); $i++){
-                        switch($workInfo[$i]->career){
-                            case 1:
-                                echo "5년 이하";
-                                break;
-                            case 2:
-                                echo "5년 이상";
-                                break;
-                            case 3:
-                                echo "10년 이상";
-                                break;
-                        }
+                        for($i=0; $i<sizeof($workInfo); $i++){
+                            switch($workInfo[$i]->career){
+                                case 1:
+                                    echo "5년 이하";
+                                    break;
+                                case 2:
+                                    echo "5년 이상";
+                                    break;
+                                case 3:
+                                    echo "10년 이상";
+                                    break;
+                            }
 
-                        if($i != sizeof($workInfo) - 1) echo ", ";
-                    }
+                            if($i != sizeof($workInfo) - 1) echo ", ";
+                        }
                     ?>
                 </a>
             </td>
-            <td></td>
+            <?}else if($type == "G"){?>
+                <td><a class="subject">장비</a></td>
+                <td colspan="2">
+                    <a class="content">
+                        <?
+                            for($i=0; $i<sizeof($gearInfo); $i++){
+                                echo $gearInfo[$i]->name . "/" . $gearInfo[$i]->detail . "/" . $gearInfo[$i]->size;
+
+                                if($i != sizeof($gearInfo) - 1) echo ", ";
+                            }
+                        ?>
+                    </a>
+                </td>
+            <?}?>
+<!--            <td></td>-->
         </tr>
     </table>
 </div>

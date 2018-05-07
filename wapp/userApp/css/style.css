@@ -427,7 +427,7 @@ input[type=number]:focus {
 .mid{
     margin-top: 8vh;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.0em;
 }
 
 .center{
@@ -440,19 +440,19 @@ input[type=number]:focus {
 
 .toPW{
     text-align: center;
-    margin-bottom: 24vh;
+    margin-bottom: 20vh;
 }
 
 .toPW > p{
     margin-top: 4vh;
     color: gray;
-    font-size: 1.4em;
+    font-size: 0.8em;
 }
 
 .toPW > a{
     color: #027494;
     text-decoration: underline;
-    font-size: 1.4em;
+    font-size: 0.8em;
 }
 
 .toID{
@@ -463,13 +463,13 @@ input[type=number]:focus {
 .toID > p{
     margin-top: 4vh;
     color: gray;
-    font-size: 1.4em;
+    font-size: 0.8em;
 }
 
 .toID > a{
     color: #027494;
     text-decoration: underline;
-    font-size: 1.4em;
+    font-size: 0.8em;
 }
 
 .center a#next{
@@ -905,11 +905,14 @@ div .align_center{
 }
 
 .logoBlue{
+    background-size: cover;
     text-align: center;
     display: block;
     margin: 0 auto;
     margin-top: 10vh;
     margin-bottom: 5vh;
+
+    width: 40vw;
 }
 
 .finishMsg{

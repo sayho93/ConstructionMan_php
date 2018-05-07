@@ -12,15 +12,11 @@
 <script>
     $(document).ready(function(){
         $("#findID").click(function(){
-
+            location.href = "/userApp/pages/Account/findID.php"
         });
 
-        $("#findPW").click(function(){
-
-        });
-
-        $("#join").click(function(){
-
+        $(".jFind").click(function(){
+            
         });
     });
 </script>
@@ -39,22 +35,22 @@
         <input type="text" placeholder="  이름"/>
         <input type="number" placeholder="  휴대폰 번호(- 제외)"/>
 
-        <input type="button" value="확인"/>
+        <input type="button" class="jFind" value="확인"/>
         <div class="line"></div>
 
         <div class="toID">
             <p>아이디를 모르시나요?</p>
-            <a>아이디 찾기 바로가기▶</a>
+            <a id="findID">아이디 찾기 바로가기▶</a>
         </div>
     </div>
 
-    <div class="footer" style="margin-top: 15vh;">
+    <div class="footer" style="margin-top: 10vh;">
         <span>휴넵스/건설인</span>
         <br>
         <p>대표 : 이화수 / 사업자등록번호 : 111-222-3333333</p>
         <p>주소 : 대전광역시 유성구 봉명동 1111</p>
         <p>TEL : 1644-1111 / MAIL : geonseolin@geonseolin.com</p>
-        <br><br>
+        <br>
         <p>ⓒ휴넵스 All rights reserved.</p>
     </div>
 

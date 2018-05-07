@@ -114,6 +114,11 @@ if(! class_exists("WebUser") ){
             return $retVal;
         }
 
+        function findID(){
+            $retVal = $this->get("/web/user/findID", Array("name" => $_REQUEST["name"], "phone" => $_REQUEST["phone"]));
+            return $retVal;
+        }
+
 
 
 

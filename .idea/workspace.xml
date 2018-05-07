@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7a8eb9b7-06e9-4845-aa3b-c394c4333abb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/wapp/common/classes/WebUser.php" afterPath="$PROJECT_DIR$/wapp/common/classes/WebUser.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/mypage/setting.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/setting.php" />
+      <change beforePath="$PROJECT_DIR$/wapp/userApp/css/style.css" afterPath="$PROJECT_DIR$/wapp/userApp/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/wapp/userApp/login.php" afterPath="$PROJECT_DIR$/wapp/userApp/login.php" />
+      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/findID.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/findID.php" />
+      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/findPW.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/findPW.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,63 +20,53 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wapp/userApp/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="1096" column="18" lean-forward="false" selection-start-line="1096" selection-start-column="18" selection-end-line="1096" selection-end-column="18" />
+            <state relative-caret-position="552">
+              <caret line="459" column="18" lean-forward="true" selection-start-line="459" selection-start-column="18" selection-end-line="459" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mypageMain.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php">
+      <file leaf-file-name="findPW.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/findPW.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="125" column="67" lean-forward="false" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setting.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/setting.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+            <state relative-caret-position="195">
+              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
               <folding>
-                <element signature="n#style#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#0;n#tr#2;n#table#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#0;n#tr#3;n#table#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#0;n#tr#4;n#table#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="joinManStep2.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep2.php">
+      <file leaf-file-name="findID.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/findID.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+            <state relative-caret-position="515">
+              <caret line="50" column="23" lean-forward="false" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wapp/userApp/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="86" column="12" lean-forward="true" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="joinGearStep1.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/joinGearStep1.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wapp/userApp/php/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="434" column="8" lean-forward="false" selection-start-line="434" selection-start-column="8" selection-end-line="434" selection-end-column="46" />
-              <folding>
-                <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="73" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,8 +106,8 @@
       <file leaf-file-name="WebUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wapp/common/classes/WebUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="110" column="29" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="29" />
+            <state relative-caret-position="509">
+              <caret line="117" column="60" lean-forward="true" selection-start-line="117" selection-start-column="60" selection-end-line="117" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -201,9 +193,6 @@
         <option value="$PROJECT_DIR$/wapp/userApp/main.php" />
         <option value="$PROJECT_DIR$/wapp/modules/ajaxCall/ajaxClass.js" />
         <option value="$PROJECT_DIR$/wapp/common/classes/comm/Common.php" />
-        <option value="$PROJECT_DIR$/wapp/userApp/login.php" />
-        <option value="$PROJECT_DIR$/wapp/userApp/pages/Account/findPW.php" />
-        <option value="$PROJECT_DIR$/wapp/userApp/pages/Account/findID.php" />
         <option value="$PROJECT_DIR$/wapp/modules/utils/PValidation.js" />
         <option value="$PROJECT_DIR$/wapp/common/classes/comm/Constants.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/joinManStep2.php" />
@@ -224,10 +213,13 @@
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentInfo.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep1.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php" />
-        <option value="$PROJECT_DIR$/wapp/userApp/css/style.css" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php" />
-        <option value="$PROJECT_DIR$/wapp/common/classes/WebUser.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/setting.php" />
+        <option value="$PROJECT_DIR$/wapp/userApp/login.php" />
+        <option value="$PROJECT_DIR$/wapp/common/classes/WebUser.php" />
+        <option value="$PROJECT_DIR$/wapp/userApp/pages/Account/findID.php" />
+        <option value="$PROJECT_DIR$/wapp/userApp/css/style.css" />
+        <option value="$PROJECT_DIR$/wapp/userApp/pages/Account/findPW.php" />
       </list>
     </option>
   </component>
@@ -420,12 +412,12 @@
       <workItem from="1517474855841" duration="33252000" />
       <workItem from="1520575982380" duration="23000" />
       <workItem from="1524458488673" duration="82122000" />
-      <workItem from="1525434669889" duration="11252000" />
+      <workItem from="1525434669889" duration="12904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145145000" />
+    <option name="totallyTimeSpent" value="146797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -436,6 +428,7 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -447,7 +440,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -507,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/findPW.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/findAccount.php" />
     <entry file="file://$USER_HOME$/Downloads/privacy.html" />
     <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/door/doorList.php">
@@ -524,13 +509,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Downloads/policy.html" />
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/findID.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wapp/common/js/validation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -649,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -674,13 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="189" column="12" lean-forward="false" selection-start-line="189" selection-start-column="12" selection-end-line="194" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/php/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="47" column="67" lean-forward="false" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -738,14 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="1096" column="18" lean-forward="false" selection-start-line="1096" selection-start-column="18" selection-end-line="1096" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
@@ -754,10 +710,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#2;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#3;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#4;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="86" column="12" lean-forward="true" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
           <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/php/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="73" />
           <folding />
         </state>
       </provider>
@@ -784,28 +776,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wapp/common/classes/WebUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="110" column="29" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="29" />
+        <state relative-caret-position="509">
+          <caret line="117" column="60" lean-forward="true" selection-start-line="117" selection-start-column="60" selection-end-line="117" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/setting.php">
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        <state relative-caret-position="552">
+          <caret line="459" column="18" lean-forward="true" selection-start-line="459" selection-start-column="18" selection-end-line="459" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/findID.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="50" column="23" lean-forward="false" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
           <folding>
-            <element signature="n#style#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#2;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#3;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#4;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/Account/findPW.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

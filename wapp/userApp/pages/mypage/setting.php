@@ -8,10 +8,37 @@
 ?>
 
 <? include $_SERVER["DOCUMENT_ROOT"] . "/userApp/php/header.php" ;?>
+<? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/WebUser.php";?>
+<?
+    $obj = new WebUser($_REQUEST);
+    $userInfo = $obj->getUserInfo();
+    $userInfo = json_decode($userInfo)->data;
+    $pushFlag = $userInfo->pushFlag;
+?>
+
 <script>
     $(document).ready(function(){
         $(".jPrivacy").click(function(){location.href = "/userApp/pages/Account/privacy.php";})
         $(".jPolicy").click(function(){location.href = "/userApp/pages/Account/policy.php";})
+
+        $(".jPush").click(function(){
+            var currentFlag = $("#pushFlag").attr("status");
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.updatePushFlag", false, "json", new sehoMap());
+            ajax.send(function(data){
+                if(data.returnCode === 1){
+                    location.reload();
+                }
+            });
+        });
+
+        $(".jWithdraw").click(function(){
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.withdrawUser", false, "json", new sehoMap());
+            ajax.send(function(data){
+                if(data.returnCode === 1){
+                    location.href = "/userApp";
+                }
+            });
+        });
     });
 </script>
 
@@ -40,16 +67,21 @@
                 <img src="../../img/btn_go_detail.png" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw;">
             </td>
         </tr>
-        <tr class="row">
+        <tr class="row jPush">
             <td width="20%" class="gray"><img src="../../img/ico_mylist_sound.png" style="width:8vw; height:8vw;"></td>
             <td width="80%" class="txt">
                 푸쉬 알림설정
-                <div id="pushFlag" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw; font-size: 1.0em;">
-                    ON
+                <div id="pushFlag" status="<?=$pushFlag?>" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw; font-size: 1.0em;">
+                    <?
+                        if($pushFlag == 1)
+                            echo "ON";
+                        else
+                            echo "OFF";
+                    ?>
                 </div>
             </td>
         </tr>
-        <tr class="row">
+        <tr class="row jWithdraw">
             <td width="20%" class="gray"><img src="../../img/ico_mylist_withdraw.png" style="width:8vw; height:8vw;"></td>
             <td width="80%" class="txt">
                 회원탈퇴

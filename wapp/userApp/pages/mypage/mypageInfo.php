@@ -11,6 +11,8 @@
 <? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/WebUser.php";?>
 <?
     $obj = new WebUser($_REQUEST);
+
+    echo json_encode($obj->webUser);
     $userInfo = $obj->getUserInfo();
     $userInfo = json_decode($userInfo)->data;
     $regionInfo = $userInfo->userRegion;

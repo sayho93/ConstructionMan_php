@@ -99,6 +99,22 @@ if(! class_exists("WebUser") ){
             return $retVal;
         }
 
+        function updatePushFlag(){
+            if($this->webUser->pushFlag  == 1)
+                $result = $this->post("/web/user/push/off/{$this->webUser->id}", null);
+            else
+                $result = $this->post("/web/user/push/on/{$this->webUser->id}", null);
+            LoginUtil::doWebLogin(json_decode($result)->data);
+            return $result;
+        }
+
+        function withdrawUser(){
+            $retVal = $this->post("/web/user/withdraw/{$this->webUser->id}", null);
+            LoginUtil::doWebLogout();
+            return $retVal;
+        }
+
+
 
 
 
@@ -189,13 +205,6 @@ if(! class_exists("WebUser") ){
 
         function updatePhone(){
             $result = $this->post("/web/user/update/phone/{$this->req["id"]}", Array("phone" => $this->req["phone"]));
-            LoginUtil::doWebLogin(json_decode($result)->data);
-            return $result;
-        }
-
-        function updatePushFlag(){
-            if($this->webUser->flagPush  == 0) $result = $this->post("/web/user/push/off/{$this->req["id"]}", null);
-            else $result = $this->post("/web/user/push/on/{$this->req["id"]}", null);
             LoginUtil::doWebLogin(json_decode($result)->data);
             return $result;
         }

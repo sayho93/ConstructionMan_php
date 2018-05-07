@@ -536,7 +536,29 @@
         }
 
         $(".jSubmitGear").click(function(){
-            //TODO 장비 저장
+            var regionArr = collectGugunId();
+            var gearInfo = JSON.stringify(globalArray);
+
+            regionArr = regionArr.join();
+
+            $("[name='regionArr']").val(regionArr);
+            $("[name='gearInfo']").val(gearInfo);
+
+            console.log(regionArr);
+
+            var params = $("[name='form']").serialize();
+            $.ajax({
+                url: "/action_front.php?cmd=WebUser.updateUserInfo",
+                async: false,
+                cache: false,
+                dataType: "json",
+                data: params,
+                success: function(data){
+                    console.log(data.data);
+                    alert("변경되었습니다.");
+                    location.href = "/userApp/pages/mypage/mypageMain.php";
+                }
+            });
         })
 
     });
@@ -754,6 +776,11 @@
         <p>경력정보 등록</p>
     </div>
     <?}else if($_REQUEST["type"] == "G"){?>
+    <form name="form">
+        <input type="hidden" name="type" value="G"/>
+        <input type="hidden" name="regionArr" value=""/>
+        <input type="hidden" name="gearInfo"/>
+    </form>
 
     <div class="mypageBody">
         <div class="region">

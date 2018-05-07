@@ -68,6 +68,11 @@ if(! class_exists("WebUser") ){
             return $retVal;
         }
 
+        function getGearInfo(){
+            $retVal = $this->get("/info/gear/{$_REQUEST["gearId"]}", null);
+            return $retVal;
+        }
+
         function registerSearch(){
             $retVal = $this->post("/web/register/search/{$this->webUser->id}", Array("type" => $_REQUEST["type"], "work" => $_REQUEST["workArr"],
                 "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "sidoId" => $_REQUEST["sidoId"],
@@ -81,6 +86,24 @@ if(! class_exists("WebUser") ){
             $retVal = $this->get("/web/user/info/{$this->webUser->id}", null);
             return $retVal;
         }
+
+        function updateUserInfo(){
+            $retVal = $this->post("/web/user/update/info/{$this->webUser->id}", Array("type" => $_REQUEST["type"], "region" => $_REQUEST["regionArr"],
+                "work" => $_REQUEST["workArr"], "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "gearInfo" => $_REQUEST["gearInfo"]));
+            return $retVal;
+        }
+
+        function updateUserName(){
+            $retVal = $this->post("/web/user/update/name/{$this->webUser->id}", Array("name" => $_REQUEST["name"]));
+            LoginUtil::doWebLogin(json_decode($retVal)->data);
+            return $retVal;
+        }
+
+
+
+
+
+
 
 
 
@@ -158,12 +181,6 @@ if(! class_exists("WebUser") ){
 
         function getBoardInfo(){
             return $this->get("/info/board/detail/{$this->req["id"]}",Array());
-        }
-
-        function updateUserName(){
-            $result = $this->post("/web/user/update/name/{$this->req["id"]}", Array("name" => $this->req["name"]));
-            LoginUtil::doWebLogin(json_decode($result)->data);
-            return $result;
         }
 
         function updateUserPwd(){

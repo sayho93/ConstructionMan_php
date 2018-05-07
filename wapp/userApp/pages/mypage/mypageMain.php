@@ -16,11 +16,13 @@
     $regionInfo = $userInfo->userRegion;
     $workInfo = $userInfo->workInfo;
     $name = $userInfo->name;
+    $type = $userInfo->type;
 ?>
 <script>
     $(document).ready(function(){
+        var type = "<?=$type?>";
         $(".jBack").click(function(){history.go(-1);})
-        $(".jInfo").click(function(){location.href = "/userApp/pages/mypage/mypageInfo.php";});
+        $(".jInfo").click(function(){location.href = "/userApp/pages/mypage/mypageInfo.php?type=" + type;});
         $(".jApply").click(function(){location.href = "/userApp/pages/mypage/applyInfo.php";});
         $(".jPaid").click(function(){location.href = "/userApp/pages/mypage/paymentInfo.php";});
         $(".jSetting").click(function(){location.href = "/userApp/pages/mypage/setting.php";});

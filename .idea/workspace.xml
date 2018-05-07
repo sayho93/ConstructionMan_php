@@ -68,8 +68,8 @@
       <file leaf-file-name="mypageInfo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="549" column="20" lean-forward="true" selection-start-line="549" selection-start-column="20" selection-end-line="549" selection-end-column="20" />
+            <state relative-caret-position="541">
+              <caret line="808" column="97" lean-forward="false" selection-start-line="808" selection-start-column="97" selection-end-line="808" selection-end-column="97" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
@@ -77,10 +77,11 @@
                 <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#8;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#1;n#div#0;n#div#8;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#10;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#10;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#3;n#div#10;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#3;n#div#10;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#3;n#div#10;n#!!top" expanded="true" />
+                <marker date="1525682046578" expanded="false" signature="28890:28916" ph="..." />
               </folding>
             </state>
           </provider>
@@ -108,10 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>중복된</find>
-      <find>setFirst</find>
-      <find>ajax</find>
-      <find>regionArr</find>
       <find>GearBo</find>
       <find>ri</find>
       <find>tool_right</find>
@@ -138,6 +135,10 @@
       <find>convert</find>
       <find>type</find>
       <find>end</find>
+      <find>init</find>
+      <find>workList</find>
+      <find>jobItem</find>
+      <find>listValue</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -395,12 +396,12 @@
       <workItem from="1517474855841" duration="33252000" />
       <workItem from="1520575982380" duration="23000" />
       <workItem from="1524458488673" duration="82122000" />
-      <workItem from="1525434669889" duration="5876000" />
+      <workItem from="1525434669889" duration="7926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139769000" />
+    <option name="totallyTimeSpent" value="141819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -754,8 +755,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="549" column="20" lean-forward="true" selection-start-line="549" selection-start-column="20" selection-end-line="549" selection-end-column="20" />
+        <state relative-caret-position="541">
+          <caret line="808" column="97" lean-forward="false" selection-start-line="808" selection-start-column="97" selection-end-line="808" selection-end-column="97" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
@@ -763,10 +764,11 @@
             <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#8;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#1;n#div#0;n#div#8;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#10;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#10;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#3;n#div#10;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#3;n#div#10;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#3;n#div#10;n#!!top" expanded="true" />
+            <marker date="1525682046578" expanded="false" signature="28890:28916" ph="..." />
           </folding>
         </state>
       </provider>

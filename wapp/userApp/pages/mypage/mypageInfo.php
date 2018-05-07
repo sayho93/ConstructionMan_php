@@ -20,10 +20,7 @@
     $regionList = $obj->getSidoList();
     $regionList = json_decode($regionList)->data;
 
-    if($userInfo->type == "M"){
-//        TODO
-    }
-    else if($userInfo->type == "G"){
+    if($userInfo->type == "G"){
         $gearInfo = json_encode($userInfo->gearInfo);
     }
 ?>
@@ -75,6 +72,25 @@
             }
         }
 
+        if(type === "M"){
+            var workList = '<?=json_encode($workInfo)?>';
+            workList = JSON.parse(workList);
+            initWork(workList);
+        }
+
+        function initWork(workList){
+            var workArr = collectWorkId();
+            workArr = workArr.join();
+            getWorkList(workArr);
+
+            for(var i=0; i<workList.length; i++){
+                $(".listValue").eq(i + 2).find("[value='" + workList[i].career + "']").prop("selected", true);
+
+                if(workList[i].id === 16){
+                    $(".welderType").eq(1).val(workList[i].welderType);
+                }
+            }
+        }
 
         $(".jBack").click(function(){
             history.go(-1);
@@ -197,9 +213,23 @@
                 $(this).removeClass("on");
             else
                 $(this).addClass("on");
+
+
+            var workArr = collectWorkId();
+            workArr = workArr.join();
+            getWorkList(workArr);
+
+            $(".career").show();
+            $(".jSubmitMan").show();
+            // $(this).hide();
+
+
         });
 
         function getWorkList(workArr){
+            $(".career").empty();
+            $(".career").append("<p>경력정보 등록</p>")
+
             var param = new sehoMap().put("work", workArr);
             var ajax = new AjaxSender("/action_front.php?cmd=WebUser.getWorkInfo", false, "json", param);
             ajax.send(function(data){
@@ -221,15 +251,15 @@
         }
 
         //경력정보 버튼 선택시
-        $(".jCareer").click(function(){
-            var workArr = collectWorkId();
-            workArr = workArr.join();
-            getWorkList(workArr);
-
-            $(".career").show();
-            $(".jSubmitMan").show();
-            $(this).hide();
-        });
+        // $(".jCareer").click(function(){
+        //     var workArr = collectWorkId();
+        //     workArr = workArr.join();
+        //     getWorkList(workArr);
+        //
+        //     $(".career").show();
+        //     $(".jSubmitMan").show();
+        //     $(this).hide();
+        // });
 
         function collectCareer(){
             var careerArr = $(".list");
@@ -284,7 +314,7 @@
         ////////////////////end of manType
         var globalArray = [];
 
-        if(type == "G"){
+        if(type === "G"){
             var gearList = '<?=$gearInfo?>';
             gearList = JSON.parse(gearList);
             initGear(gearList);
@@ -770,11 +800,13 @@
         </div>
     </div>
 
-    <input type="button" class="end jCareer" value="경력정보 선택" style="margin-top: 2vh!important;"/>
+<!--    <input type="button" class="end jCareer" value="경력정보 선택" style="margin-top: 2vh!important;"/>-->
 
-    <div class="career" style="display: none;">
+    <div class="career">
         <p>경력정보 등록</p>
     </div>
+
+    <input type="button" class="end jSubmitMan" value="저장하기" style="margin-top: 2vh!important;"/>
     <?}else if($_REQUEST["type"] == "G"){?>
     <form name="form">
         <input type="hidden" name="type" value="G"/>
@@ -838,9 +870,6 @@
 
         <input type="button" class="end jSubmitGear" value="저장하기" style="margin-top: 2vh!important;"/>
     <?}?>
-
-    <input type="button" class="end jSubmitMan" value="저장하기" style="margin-top: 2vh!important; display: none;"/>
-
 
     <div class="footer">
         <span>휴넵스/건설인</span>

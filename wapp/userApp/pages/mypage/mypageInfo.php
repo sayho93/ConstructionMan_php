@@ -11,8 +11,6 @@
 <? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/WebUser.php";?>
 <?
     $obj = new WebUser($_REQUEST);
-
-    echo json_encode($obj->webUser);
     $userInfo = $obj->getUserInfo();
     $userInfo = json_decode($userInfo)->data;
     $regionInfo = $userInfo->userRegion;
@@ -25,6 +23,8 @@
     if($userInfo->type == "G"){
         $gearInfo = json_encode($userInfo->gearInfo);
     }
+
+    $imgPath = $userInfo->imgPath;
 ?>
 
 <script>
@@ -76,7 +76,13 @@
 
         if(type === "M"){
             var workList = '<?=json_encode($workInfo)?>';
+            var indexedWorkList = [];
             workList = JSON.parse(workList);
+
+            for(var q = 0; q < workList.length; q++){
+                indexedWorkList[workList[q].id] = workList[q].career;
+            }
+
             initWork(workList);
         }
 
@@ -236,15 +242,20 @@
             var ajax = new AjaxSender("/action_front.php?cmd=WebUser.getWorkInfo", false, "json", param);
             ajax.send(function(data){
                 if(data.returnCode === 1){
-                    console.log(data.data);
+                    // console.log(data.data);
                     for(var i=0; i<data.data.length; i++){
+
                         var template = $(".template").html();
                         if(data.data[i].id === 16) template = $(".specialTemplate").html();
-
-                        template = template.replace("#{no}", data.data[i].id);
+                        template = template.replace(/#{no}/gi, data.data[i].id);
                         template = template.replace("#{text}", data.data[i].name);
-                        $(".career").append(template);
+                        var eee = $(".career").append(template);
+
+                        console.log(eee.find('.listValue').eq(i).val(indexedWorkList[data.data[i].id]).prop("selected", true));
+
+                        // inserted.find('option [value=' + indexedWorkList[data.data[i].id] + ']').prop("selected", true);
                     }
+
                 }
                 else{
                     alert("");
@@ -593,13 +604,30 @@
             });
         })
 
+        //--------------------------img
+        $(".jImg").click(function(){
+            location.href = "pickle://cropImage";
+        });
+
     });
+
+    function recvImageMeta(imagePath){
+        var params = new sehoMap().put("imgPath", imagePath);
+        var ajax = new AjaxSender("/action_front.php?cmd=WebUser.updateUserImg", true, "json", params);
+        ajax.send(function(data){
+            if(data.returnCode === 1){
+                location.reload();
+            }
+        });
+    }
+
+
 </script>
 
 <div class="template" style="display:none;">
     <div class="list">
         <div class="jobItem jobItemC" no="#{no}"><text>#{text}</text></div>
-        <select class="listValue">
+        <select class="listValue" no="#{no}">
             <option value="0">근로년수 선택</option>
             <option value="1">5년 이하</option>
             <option value="2">5년 이상</option>
@@ -611,7 +639,7 @@
 <div class="specialTemplate" style="display:none;">
     <div class="list">
         <div class="jobItem jobItemC" no="#{no}"><text>#{text}</text></div>
-        <select class="listValue">
+        <select class="listValue" no="#{no}">
             <option value="0">근로년수 선택</option>
             <option value="1">5년 이하</option>
             <option value="2">5년 이상</option>
@@ -674,9 +702,13 @@
 <!--    <a class="tool_right"><img src="../../img/btn_confirm.png" class="ok_btn"/></a>-->
 
     <div style="text-align: center">
-        <img src="../../img/person_head.png" class="profileImg"/>
+        <? if($imgPath == ""){ ?>
+            <img src="../../img/person_head.png" class="profileImg"/>
+        <? }else{ ?>
+            <img src="<?=$obj->IMG_DIR.$imgPath?>" class="profileImg"/>
+        <? } ?>
         <br>
-        <img src="../../img/btn_photo.png" class="img_btn" style="margin-bottom: 2vh">
+        <img src="../../img/btn_photo.png" class="img_btn jImg" style="margin-bottom: 2vh">
     </div>
 </div>
 

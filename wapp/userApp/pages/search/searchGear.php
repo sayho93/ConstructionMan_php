@@ -62,6 +62,18 @@
         $(".jAdd").click(function(){
             var params = $("[name='form']").serialize();
             alert(params);
+            $.ajax({
+                url: "/action_front.php?cmd=WebUser.registerSearch",
+                async: false,
+                cache: false,
+                dataType: "json",
+                data: params,
+                success: function(data){
+                    console.log(data.data);
+                    alert("공고가 등록되었습니다.");
+                    location.href = "/userApp/pages/search/searchMain.php";
+                }
+            });
         })
     });
 </script>
@@ -76,6 +88,7 @@
     <form name="form">
         <input type="hidden" name="gearId" value="<?=$_REQUEST["gearId"]?>"/>
         <input type="hidden" name="attachment" value="<?=$_REQUEST["attachment"]?>"/>
+        <input type-="hidden" name="type" value="G"/>
 
         <div class="career">
             <p>현장위치</p>

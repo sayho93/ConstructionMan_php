@@ -132,6 +132,22 @@ html, body{
     display: inline-block;
 }
 
+.tool_right.wide{
+    position:absolute;
+    top:4vh;
+    right:3vw;
+    width:15vw;
+    display: inline-block;
+}
+
+.tool_right p{
+    size : 1.0em;
+    color : #FFFFFF;
+    font-weight: bold;
+    margin-top: 0.3vh;
+    width: auto;
+}
+
 .profileImg{
     width: 23vw;
     height: 23vw;
@@ -402,6 +418,15 @@ input[type=number]:focus {
     border-bottom: 2px solid #a4a4a4;
 }
 
+.line.lightGray{
+    margin-top: 2vh;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.line.slim{
+    height: 1px;
+}
+
 .form .left{
     font-size: 0.8em;
     margin-top: 1.5vh;
@@ -520,9 +545,9 @@ input[type=number]:focus {
     box-sizing: border-box;
     display: table;
     width: 13vw;
-    height: 13vw;
+    height: 18vw;
     text-align: center;
-    margin: 2vh 1vh 2vh 1vh;
+    margin: 0vh 1vh 0vh 1vh;
     position: relative;
     vertical-align: middle;
 }
@@ -530,7 +555,7 @@ input[type=number]:focus {
 #table ul li.on{
     background: url("../img/toggle_region_true.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     width: 13vw;
     height: 13vw;
 }
@@ -543,8 +568,9 @@ input[type=number]:focus {
     color: gray;
     font-size: 0.8em;
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     text-align: center;
+    padding-top: 5vw;
 }
 
 #table ul li > #box{
@@ -555,7 +581,6 @@ input[type=number]:focus {
     display: table-caption;
     caption-side: bottom;
     height: auto;
-    /*line-height: 3.8vw;*/
 }
 
 #table ul li.on > #box{
@@ -566,7 +591,6 @@ input[type=number]:focus {
     display: table-caption;
     caption-side: bottom;
     height: auto;
-    line-height: 3.8vw;
 }
 
 .jobClass{
@@ -1082,12 +1106,12 @@ input[type='radio']:checked:after {
 }
 
 td.subject{
-    font-size: 1.8em;
+    font-size: 0.8em;
     color : black !important;
 }
 
 td.content{
-    font-size: 1.8em;
+    font-size: 0.8em;
     color : #666666 !important;
 }
 
@@ -1189,3 +1213,8 @@ td.content{
     border: 4px solid #027494;
 }
 
+.profileImg{
+    border-radius: 50%;
+}
+
+.profile-image { visibility: hidden; } /* prevent a flash of giant image before the image is wrapped by jQuery */

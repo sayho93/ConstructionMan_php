@@ -7,3 +7,74 @@
  */
 ?>
 
+<? include $_SERVER["DOCUMENT_ROOT"] . "/userApp/php/header.php" ;?>
+<? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/WebUser.php";?>
+<?
+    $obj = new WebUser($_REQUEST);
+    $userInfo = $obj->webUser;
+
+    $list = $obj->getPointHistory();
+    $list = json_decode($list)->data;
+?>
+
+<script>
+    $(document).ready(function(){
+        $(".jBack").click(function(){history.go(-1);});
+    });
+</script>
+
+<div class="header">
+    <a class="tool_left"><img src="../../img/btn_prev.png" class="back_btn jBack"/></a>
+    <h2>결제내역</h2>
+</div>
+
+<div class="body">
+    <br/><br/>
+    <div style="margin:0vw 5vw 0vw 5vw">
+        <div style="position:absolute; left:5vw">
+            <text style="color:#03A0CB; font-size: 1.0em;"><?=$userInfo->name?></text>
+            <text style="color:#333333; font-size: 0.8em;">님의 결제내역입니다.</text>
+        </div>
+        <div style="position:absolute; right:5vw">
+            <text style="color:#333333; font-size: 0.8em;">총 </text>
+            <text style="color:#03A0CB; font-size: 0.8em;"><?=sizeof($list)?></text>
+            <text style="color:#333333; font-size: 0.8em;"> 건</text>
+        </div>
+    </div>
+
+    <?foreach($list as $item){?>
+        <div class="listWrapper">
+            <div style="display:table-cell; border-top: 1px solid #CCCCCC; border-bottom: 1px solid #CCCCCC; width: 100vw; height: 5vh; vertical-align: middle;">
+                <div style="float:left; left:5vw;">
+                    <table>
+                        <tr>
+                            <td>
+                                <text style="color:#AAAAAA; font-size: 0.5em;"><?=$item->regDate?></text>
+                            </td>
+                            <td>
+                                <div style="padding: 4px 9px 4px 9px; text-align:center; color:#03A0CB; font-size: 0.5em; border: 1px solid #AAAAAA; background-color: #CCCCCC; border-radius: 5%">
+                                    &nbsp;결제완료&nbsp;
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="float:right; right:5vw">
+                    <a href="#"><img src="../../img/btn_del.png" style="height:7vw; width: 7vw;" /></a>
+                </div>
+            </div>
+            <p><?=$item->comment?></p>
+        </div>
+    <?}?>
+
+    <div class="footer">
+        <span>휴넵스/건설인</span>
+        <br>
+        <p>대표 : 이화수 / 사업자등록번호 : 111-222-3333333</p>
+        <p>주소 : 대전광역시 유성구 봉명동 1111</p>
+        <p>TEL : 1644-1111 / MAIL : geonseolin@geonseolin.com</p>
+        <br>
+        <p>ⓒ휴넵스 All rights reserved.</p>
+    </div>
+
+</div>

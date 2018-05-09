@@ -38,7 +38,7 @@
     <div class="main">
         <a href="#" class="join"></a>
         <a href="#" class="login"></a>
-        <a class="login test"></a>
+<!--        <a class="login test"></a>-->
     </div>
 </div>
 </body>

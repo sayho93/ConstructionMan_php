@@ -31,6 +31,8 @@ if(! class_exists("Constants") )
  		var $dbUser					= "root" ;
  		var $dbPass					= "pickle!@#$" ;
  		var $charset				= "utf8" ;
+
+ 		var $IMG_DIR                = "http://localhost:9000/";
 	}
 }
 ?>

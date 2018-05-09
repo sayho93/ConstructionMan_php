@@ -18,6 +18,8 @@
     $name = $userInfo->name;
     $type = $userInfo->type;
     $gearInfo = $userInfo->gearInfo;
+
+    $imgPath = $userInfo->imgPath;
 ?>
 <script>
     $(document).ready(function(){
@@ -27,14 +29,35 @@
         $(".jApply").click(function(){location.href = "/userApp/pages/mypage/applyInfo.php";});
         $(".jPaid").click(function(){location.href = "/userApp/pages/mypage/paymentInfo.php";});
         $(".jSetting").click(function(){location.href = "/userApp/pages/mypage/setting.php";});
+
+        getUserPoint("#point");
+
+        function getUserPoint(selector){
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.getUserPoint", true, "json", new sehoMap());
+            ajax.send(function(data){
+                if(data.returnCode === 1){
+                    $(selector).html(data.data + " P");
+                    console.log(data);
+                }
+            })
+        }
+
+        $("#point").click(function(){alert("< 포인트 충전 정보 안내 > \n 계좌번호(입금주 이행수(휴넵스))\n" +
+            "- 국민은행 770601-00-1019919\n" +
+            "- 농협 301-0231-1507-91");})
     });
 </script>
 
 <div class="mypageHeader">
     <h2>마이페이지</h2>
     <a class="tool_left"><img src="../../img/btn_prev.png" class="back_btn jBack"/></a>
+    <a class="tool_right wide"><p id="point"></p></a>
     <div>
-        <img src="../../img/person_head.png" class="profileImg"/>
+        <? if($imgPath == ""){ ?>
+            <img src="../../img/person_head.png" class="profileImg"/>
+        <? }else{ ?>
+            <img src="<?=$obj->IMG_DIR.$imgPath?>" class="profileImg"/>
+        <? } ?>
     </div>
     <h3><?=$name?></h3>
 </div>
@@ -136,7 +159,7 @@
         <tr class="row jPaid">
             <td width="20%" class="gray"><img src="../../img/ico_history.png" style="width: 8vw; height: 8vw;"></td>
             <td width="80%" class="txt">
-                근로이력
+                결제내역
                 <img src="../../img/btn_go_detail.png" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw;">
             </td>
         </tr>

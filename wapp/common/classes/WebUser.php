@@ -129,6 +129,22 @@ if(! class_exists("WebUser") ){
             return $retVal;
         }
 
+        function updateUserImg(){
+            $retVal = $this->post("/web/user/updateImg/{$this->webUser->id}", Array("imgPath" => $_REQUEST["imgPath"]));
+            LoginUtil::doWebLogin(json_decode($retVal)->data);
+            return $retVal;
+        }
+
+        function getUserPoint(){
+            $retVal = $this->get("/web/user/point/{$this->webUser->id}", null);
+            return $retVal;
+        }
+
+        function getPointHistory(){
+            $retVal = $this->get("/web/user/pointList/{$this->webUser->id}", null);
+            return $retVal;
+        }
+
 
 
 

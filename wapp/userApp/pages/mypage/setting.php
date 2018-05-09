@@ -39,12 +39,15 @@
                 }
             });
         });
+
+        $(".jBack").click(function(){history.go(-1);});
     });
 </script>
 
 
 <div class="header">
-    <h2>구인 리스트</h2>
+    <a class="tool_left"><img src="../../img/btn_prev.png" class="back_btn jBack"/></a>
+    <h2>설정</h2>
 </div>
 
 <div class="body">

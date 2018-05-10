@@ -12,8 +12,9 @@
 <?
     $obj = new WebUser($_REQUEST);
     $list = $obj->getApplicationList();
+    echo $list;
     $list = json_decode($list)->data;
-//    echo $list;
+
 ?>
 
 <script>

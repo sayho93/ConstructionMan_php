@@ -8,6 +8,27 @@
 ?>
 <? include $_SERVER["DOCUMENT_ROOT"] . "/userApp/php/header.php" ;?>
 
+<script>
+    $(document).ready(function(){
+        // getPushKey();
+    });
+
+    function getPushKey(){
+        location.href = "pickle://getPushKey";
+    }
+
+    function getPushKeyCallBack(pushKey){
+        console.log("getPushKeyCallBack called :::::::::::::::::::::::::");
+        var pushKey = decodeURI(pushKey);
+        var ajax = new AjaxSender("/action_front.php?cmd=WebUser.updatePushKey", true, "json", new sehoMap().put("pushKey", pushKey));
+        ajax.send(function(data){
+            if(data.data.returnCode === 1){
+                alert("pushKey updated");
+            }
+        });
+    }
+</script>
+
 <div class="header">
     <img src="../../img/top_logo.png" class="headerLogo">
     <a href="/userApp/pages/mypage/mypageMain.php" class="tool_left"><img src="../../img/btn_drawer.png" class="leftLogo"/></a>

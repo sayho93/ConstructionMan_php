@@ -38,7 +38,9 @@
             var ajax = new AjaxSender("/action_front.php?cmd=WebUser.userLogin", false, "json", params);
             ajax.send(function(data){
                 if(data.returnCode == 1){
-                    location.href = "/userApp/pages/search/searchMain.php";
+                    var userId = data.data.id;
+                    location.href = "pickle://loginProcess?auto=" + isAuto + "&id=" + userId;
+                    // location.href = "/userApp/pages/search/searchMain.php";
                     console.log(data);
                 }
                 else{
@@ -64,7 +66,7 @@
         <img src="./img/logo_blue.png" class="logoBlue">
 
         <input type="text" id="account" placeholder="  아이디"/>
-        <input type="text" id="password" placeholder="  비밀번호"/>
+        <input type="password" id="password" placeholder="  비밀번호"/>
 
         <input type="button" value="로그인" class="jLogin"/>
         <div class="line"></div>

@@ -1,5 +1,10 @@
 <? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/Web.php"; ?>
 <? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/WebUser.php" ;?>
+<?
+    $autoFlag = $_REQUEST["auto"];
+    $userId = $_REQUEST["id"];
+
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -16,19 +21,26 @@
 
 <script>
     $(document).ready(function(){
-        $(".test").click(function(){
-            alert("");
-            location.href = "pickle://cropImage";
-        });
+        var autoFlag = "<?=$autoFlag?>";
+        var userId = "<?=$userId?>";
+
+        if(autoFlag === "true"){
+            var params = new sehoMap();
+            params.put("autoFlag", autoFlag).put("userId", userId);
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.autoLogin", true, "json", params);
+            ajax.send(function(data){
+                if(data.returnCode === 1){
+                    location.href = "/userApp/pages/search/searchMain.php";
+                }
+            })
+
+        }
+
 
         $(".join").click(function(){location.href = "/userApp/pages/Account/memberJoin.php";});
         $(".login").click(function(){location.href = "/userApp/login.php";});
     });
 
-    function recvImageMeta(imagePath){
-        alert("recvImageMeta called");
-        alert(imagePath);
-    }
 
 
 </script>
@@ -38,7 +50,6 @@
     <div class="main">
         <a href="#" class="join"></a>
         <a href="#" class="login"></a>
-<!--        <a class="login test"></a>-->
     </div>
 </div>
 </body>

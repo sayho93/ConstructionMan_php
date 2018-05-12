@@ -7,8 +7,8 @@
  */
 ?>
 
+<? include $_SERVER["DOCUMENT_ROOT"] . "/userApp/php/header.php" ;?>
 <? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/WebUser.php";?>
-
 <?
     $obj = new WebUser($_REQUEST);
     $userInfo = $obj->webUser;
@@ -98,18 +98,18 @@
     </script>
 </head>
 
-<body onload="setOid(); onSubmit();" topmargin="0"  leftmargin="0" marginwidth="0" marginheight="0" style="display: none;">
+<body onload="setOid();onSubmit();" topmargin="0"  leftmargin="0" marginwidth="0" marginheight="0" style="display: none;">
 <table width="320" border="0" cellpadding="0" cellspacing="0">
     <form id="form1" name="ini" method="post" action="" >
         <tr>
-            <td height="69" align="center" background="images/title_bg.png" style="color:#ffffff; font-size:16px; font-weight:bold;">INIpay Mobile 결제요청</td>
+            <td height="69" align="center" style="color:#ffffff; font-size:16px; font-weight:bold;">INIpay Mobile 결제요청</td>
         </tr>
         <tr>
             <td height="347" align="center" valign="top"><table border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                        <td width="298" height="296" align="center" background="images/table_bg.png"><table border="0" cellspacing="0" cellpadding="0">
+                        <td width="298" height="296" align="center"><table border="0" cellspacing="0" cellpadding="0">
                                 <tr>
-                                    <td width="95" height="25" align="left" style="background-image:url(images/bullet.png); background-repeat:no-repeat; background-position:0px 40%; padding-left:8px; font-size:12px; color:#607c90;">방식</td>
+                                    <td width="95" height="25" align="left" style="padding-left:8px; font-size:12px; color:#607c90;">방식</td>
                                     <td align="left">
                                         <select name="inipaymobile_type" id="select">
                                             <option value="web">INIpayMobile Web
@@ -117,35 +117,35 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td height="25" align="left" style="background-image:url(images/bullet.png); background-repeat:no-repeat; background-position:0px 40%; padding-left:8px; font-size:12px; color:#607c90;">주문번호</td>
+                                    <td height="25" align="left" style="padding-left:8px; font-size:12px; color:#607c90;">주문번호</td>
                                     <td align="left"><input type="text" name="P_OID" id="textfield2" style="border-color:#cdcdcd; border-width:1px; border-style:solid; color:#555555; height:15px;"/></td>
                                 </tr>
                                 <tr>
-                                    <td height="25" align="left" style="background-image:url(images/bullet.png); background-repeat:no-repeat; background-position:0px 40%; padding-left:8px; font-size:12px; color:#607c90;">상품명</td>
+                                    <td height="25" align="left" style=" padding-left:8px; font-size:12px; color:#607c90;">상품명</td>
                                     <td align="left"><input type="text" name="P_GOODS" value="포인트 충전" id="textfield3" style="border-color:#cdcdcd; border-width:1px; border-style:solid; color:#555555; height:15px;"/></td>
                                 </tr>
                                 <tr>
-                                    <td height="25" align="left" style="background-image:url(images/bullet.png); background-repeat:no-repeat; background-position:0px 40%; padding-left:8px; font-size:12px; color:#607c90;">가격 </td>
+                                    <td height="25" align="left" style=" padding-left:8px; font-size:12px; color:#607c90;">가격 </td>
                                     <td align="left"><input type="text" name="P_AMT" value="1000" id="textfield4" style="border-color:#cdcdcd; border-width:1px; border-style:solid; color:#555555; height:15px;"/></td>
                                 </tr>
                                 <tr>
-                                    <td height="25" align="left" style="background-image:url(images/bullet.png); background-repeat:no-repeat; background-position:0px 40%; padding-left:8px; font-size:12px; color:#607c90;">구매자이름</td>
+                                    <td height="25" align="left" style=" padding-left:8px; font-size:12px; color:#607c90;">구매자이름</td>
                                     <td align="left"><input type="text" name="P_UNAME" value="<?=$userInfo->name?>" id="textfield5" style="border-color:#cdcdcd; border-width:1px; border-style:solid; color:#555555; height:15px;"/></td>
                                 </tr>
                                 <tr>
-                                    <td height="25" align="left" style="background-image:url(images/bullet.png); background-repeat:no-repeat; background-position:0px 40%; padding-left:8px; font-size:12px; color:#607c90;">상점이름 </td>
+                                    <td height="25" align="left" style=" padding-left:8px; font-size:12px; color:#607c90;">상점이름 </td>
                                     <td align="left"><input type="text" name="P_MNAME" value="건설인" id="textfield6" style="border-color:#cdcdcd; border-width:1px; border-style:solid; color:#555555; height:15px;"/></td>
                                 </tr>
                                 <tr>
-                                    <td height="25" align="left" style="background-image:url(images/bullet.png); background-repeat:no-repeat; background-position:0px 40%; padding-left:8px; font-size:12px; color:#607c90;">휴대폰번호</td>
+                                    <td height="25" align="left" style=" padding-left:8px; font-size:12px; color:#607c90;">휴대폰번호</td>
                                     <td align="left"><input type="text" name="P_MOBILE" id="textfield7" value="<?=$userInfo->phone?>" style="border-color:#cdcdcd; border-width:1px; border-style:solid; color:#555555; height:15px;"/></td>
                                 </tr>
                                 <tr>
-                                    <td height="25" align="left" style="background-image:url(images/bullet.png); background-repeat:no-repeat; background-position:0px 40%; padding-left:8px; font-size:12px; color:#607c90;">이메일</td>
+                                    <td height="25" align="left" style=" padding-left:8px; font-size:12px; color:#607c90;">이메일</td>
                                     <td align="left"><input type="text" name="P_EMAIL" value="" id="textfield8" style="border-color:#cdcdcd; border-width:1px; border-style:solid; color:#555555; height:15px;"/></td>
                                 </tr>
                                 <tr>
-                                    <td height="25" align="left" style="background-image:url(images/bullet.png); background-repeat:no-repeat; background-position:0px 40%; padding-left:8px; font-size:12px; color:#607c90;">결제방법 </td>
+                                    <td height="25" align="left" style=" padding-left:8px; font-size:12px; color:#607c90;">결제방법 </td>
                                     <td align="left"><label>
                                             <select name="paymethod" id="select">
                                                 <option value="wcard">신용카드
@@ -159,13 +159,13 @@
                             </table></td>
                     </tr>
                     <tr>
-                        <td height="39" align="center" valign="bottom" onClick="javascript:onSubmit();"><img src="images/btn_confirm.png" width="55" height="29" /></td>
+                        <td height="39" align="center" valign="bottom" onClick="javascript:onSubmit();" style="background-color: #0d3349"></td>
                     </tr>
                 </table></td>
         </tr>
         <input type=hidden name="P_MID" value="INIpayTest">
-        <input type=hidden name="P_NEXT_URL" value="http://localhost:8100/userApp/pages/mypage/paymentNext.php?paymentId=<?=$_REQUEST["paymentId"]?>&userId=<?=$_REQUEST["userId"]?>">
-        <input type=hidden name="P_NOTI_URL" value="http://localhost:8100/userApp/pages/mypage/paymentNoti.php">
+        <input type=hidden name="P_NEXT_URL" value="http://huneps.com:8100/userApp/pages/mypage/paymentNext.php?paymentId=<?=$_REQUEST["paymentId"]?>&userId=<?=$_REQUEST["userId"]?>">
+        <input type=hidden name="P_NOTI_URL" value="http://huneps.com:8100/userApp/pages/mypage/paymentNoti.php">
         <input type=hidden name="P_HPP_METHOD" value="1">
     </form>
 </table>

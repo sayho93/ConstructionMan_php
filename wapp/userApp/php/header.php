@@ -42,6 +42,11 @@
     var action = "/action_front.php?cmd=";
     var designedAlert = "/userApp/popupCollection/designedAlert.php";
     $(document).ready(function(){
+        $(".headerLogo").click(function(){
+            location.href = "/userApp/pages/search/searchMain.php";
+        });
+
+
         $(".jHeaderBack").click(function(){window.history.back();});
 
         $(".leftLogo").click(function(){

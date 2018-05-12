@@ -171,6 +171,23 @@ if(! class_exists("WebUser") ){
             return $retVal;
         }
 
+        function insertPaymentBasic(){
+            $userId = $_REQUEST["userId"];
+
+            $sql = "
+                INSERT INTO tblPayment(`userId`, `regDate`)
+                VALUES(
+                  '{$userId}',
+                  NOW()
+                )
+            ";
+
+            $this->update($sql);
+
+            $lastId = $this->mysql_insert_id();
+            return $lastId;
+        }
+
     }
 }
 ?>

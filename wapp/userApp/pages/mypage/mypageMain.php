@@ -24,7 +24,7 @@
 <script>
     $(document).ready(function(){
         var type = "<?=$type?>";
-        $(".jBack").click(function(){history.go(-1);})
+        $(".jBack").click(function(){location.href = "/userApp/pages/search/searchMain.php"})
         $(".jInfo").click(function(){location.href = "/userApp/pages/mypage/mypageInfo.php?type=" + type;});
         $(".jApply").click(function(){location.href = "/userApp/pages/mypage/applyInfo.php";});
         $(".jPaid").click(function(){location.href = "/userApp/pages/mypage/paymentInfo.php";});
@@ -42,9 +42,20 @@
             })
         }
 
-        $("#point").click(function(){alert("< 포인트 충전 정보 안내 > \n 계좌번호(입금주 이행수(휴넵스))\n" +
-            "- 국민은행 770601-00-1019919\n" +
-            "- 농협 301-0231-1507-91");})
+        $("#point").click(function(){
+            if(confirm("포인트를 충전하시겠습니까?")){
+                var params = new sehoMap().put("userId", "<?=$userInfo->id?>");
+                var ajax = new AjaxSender("/action_front.php?cmd=WebUser.insertPaymentBasic", true, "json", params);
+                ajax.send(function(data){
+                    location.href = "/userApp/pages/mypage/payment.php?paymentId=" + data + "&userId=" + '<?=$userInfo->id?>';
+                });
+            }
+
+
+            // alert("< 포인트 충전 정보 안내 > \n 계좌번호(입금주 이행수(휴넵스))\n" +
+            // "- 국민은행 770601-00-1019919\n" +
+            // "- 농협 301-0231-1507-91");
+        });
     });
 </script>
 

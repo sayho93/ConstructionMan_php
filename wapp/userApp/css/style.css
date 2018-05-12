@@ -134,9 +134,9 @@ html, body{
 
 .tool_right.wide{
     position:absolute;
-    top:4vh;
-    right:3vw;
-    width:15vw;
+    top:4vh!important;
+    right:3vw!important;
+    width:15vw!important;
     display: inline-block;
 }
 
@@ -158,7 +158,7 @@ html, body{
 .header h2{
     font-size:1.5em;
     color:#fff;
-    line-height:9vh;
+    line-height:8vh;
     font-weight:normal;
     display: inline-block;
 }

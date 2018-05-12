@@ -31,7 +31,7 @@ if(! class_exists("Constants") )
  		var $dbPass					= "pickle" ;
  		var $charset				= "utf8" ;
 
- 		var $IMG_DIR                = "http://localhost:9000/";
+ 		var $IMG_DIR                = "http://huneps.com:9000/";
 	}
 }
 ?>

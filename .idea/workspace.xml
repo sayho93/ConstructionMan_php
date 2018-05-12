@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a8eb9b7-06e9-4845-aa3b-c394c4333abb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/wapp/common/classes/comm/Constants.php" afterPath="$PROJECT_DIR$/wapp/common/classes/comm/Constants.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/main.php" afterPath="$PROJECT_DIR$/wapp/userApp/main.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/mypage/payment.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/payment.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentNext.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentNext.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,8 +26,8 @@
       <file leaf-file-name="mypageMain.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="303">
+              <caret line="69" column="38" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -57,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payment.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="payment.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/payment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="100" column="120" lean-forward="false" selection-start-line="100" selection-start-column="120" selection-end-line="100" selection-end-column="120" />
+            <state relative-caret-position="2130">
+              <caret line="147" column="54" lean-forward="false" selection-start-line="147" selection-start-column="54" selection-end-line="147" selection-end-column="54" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#1;n#form#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -132,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Constants.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wapp/common/classes/comm/Constants.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -154,7 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>type</find>
       <find>end</find>
       <find>init</find>
       <find>workList</find>
@@ -184,6 +179,7 @@
       <find>serverRoot</find>
       <find>bull</find>
       <find>background-image:url(images/bullet.png); background-repeat:no-repeat; background-position:0px 40%;</find>
+      <find>$imgPath</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -245,11 +241,11 @@
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/applyInfo.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/css/style.css" />
         <option value="$PROJECT_DIR$/wapp/userApp/main.php" />
-        <option value="$PROJECT_DIR$/wapp/common/classes/comm/Constants.php" />
         <option value="$PROJECT_DIR$/wapp/common/classes/comm/Common.php" />
         <option value="$PROJECT_DIR$/wapp/common/classes/WebUser.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentNext.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/payment.php" />
+        <option value="$PROJECT_DIR$/wapp/common/classes/comm/Constants.php" />
       </list>
     </option>
   </component>
@@ -420,12 +416,12 @@
       <workItem from="1525689392598" duration="1268000" />
       <workItem from="1525756520489" duration="18125000" />
       <workItem from="1525928830936" duration="23914000" />
-      <workItem from="1526123934507" duration="1071000" />
+      <workItem from="1526123934507" duration="1599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191299000" />
+    <option name="totallyTimeSpent" value="191827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -717,14 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/sectional.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -795,22 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/applyInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/common/classes/comm/Constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wapp/common/classes/WebUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -840,14 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentNext.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -872,8 +836,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/payment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="100" column="120" lean-forward="false" selection-start-line="100" selection-start-column="120" selection-end-line="100" selection-end-column="120" />
+        <state relative-caret-position="2130">
+          <caret line="147" column="54" lean-forward="false" selection-start-line="147" selection-start-column="54" selection-end-line="147" selection-end-column="54" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#1;n#form#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -881,6 +845,38 @@
             <element signature="n#style#0;n#td#0;n#tr#8;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#1;n#form#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#1;n#form#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/applyInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="69" column="38" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/common/classes/comm/Constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>

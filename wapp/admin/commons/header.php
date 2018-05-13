@@ -1,5 +1,5 @@
 <? include_once $_SERVER['DOCUMENT_ROOT']."/admin/commons/metaData.php"; ?>
-
+<? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/Admin.php"; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>

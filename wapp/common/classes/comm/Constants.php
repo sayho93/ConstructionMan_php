@@ -25,7 +25,7 @@ if(! class_exists("Constants") )
 //		var $fileSaveUrl			= "/upload_img/" ;
 //		var $fileSaveUrl_480		= "/480/" ;
 
- 		var $dbHost					= "localhost";
+ 		var $dbHost					= "huneps.com";
  		var $dbName					= "ConstructionMan" ;
  		var $dbUser					= "root" ;
  		var $dbPass					= "pickle" ;

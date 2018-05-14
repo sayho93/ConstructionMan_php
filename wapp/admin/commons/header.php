@@ -18,46 +18,28 @@
     <![endif]-->
     <script src="../vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <script src="../vendors/jquery-1.9.1.js"></script>
+
+    <script type="text/javascript" src="/modules/ajaxCall/ajaxClass.js"></script>
+    <script type="text/javascript" src="/modules/sehoMap/sehoMap.js"></script>
 </head>
 
 <?
-    $initFlag = "";
-    if(isset($_REQUEST["initFlag"])) $initFlag = $_REQUEST["initFlag"];
+    $obj = new Admin($_REQUEST);
+    $userInfo = $obj->admUser;
+
+    if($userInfo->id < 0 || $userInfo->id == ""){
+        echo "<script>alert(\"로그인 후 이용이 가능합니다\");</script>";
+        echo "<script>location.href='/admin';</script>";
+    }
 ?>
 
 <script>
-    var initFlag = "<?=$initFlag?>";
-
     $(document).ready(function(){
-
-        if(initFlag == "0"){
-            loadPage($(".leftMenuItemPickle").eq(0).attr("toGo"));
-        }
-
         $(".leftMenuItemPickle").click(function(e){
             e.preventDefault();
             var toGo = $(this).attr("toGo");
-            loadPage(toGo);
+            location.href = toGo;
         });
-
-        function loadPage(uri){
-            $.ajax({
-                method : 'GET',
-                dataType : 'HTML',
-                cache : false,
-                url : uri,
-                beforeSend : function(){
-                    $(".mainLayout").fadeOut();
-                },
-                success : function(data){
-                    $(".mainLayout").html(data);
-                    $(".mainLayout").fadeIn();
-                },
-                error : function(req, res, msg){
-                    $(".mainLayout").hide();
-                }
-            });
-        }
     });
 </script>
 

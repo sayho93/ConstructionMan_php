@@ -10,7 +10,7 @@
 
 <script>
     $(document).ready(function(){
-        // getPushKey();
+
     });
 
     function getPushKey(){

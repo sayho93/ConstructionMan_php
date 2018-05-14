@@ -1,8 +1,11 @@
 <? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/AdminMain.php";?>
+<? include_once $_SERVER['DOCUMENT_ROOT']."/admin/commons/metaData.php"; ?>
 <?
     $obj = new AdminMain($_REQUEST);
     $list = $obj->getUserList();
 //    echo json_encode($list);
+
+    echo json_encode($_REQUEST);
 
 ?>
 <script>
@@ -14,13 +17,24 @@
 
         $(".jSearch").click(function(){
             $("[name=searchTxt]").val($("#searchTxt").val());
-            form.submit();
+            $("[name=form]").submit();
+        });
+
+        $(".jDel").click(function(){
+            var id = $(this).attr("no");
         });
     });
 </script>
 
+<style>
+    .center{
+        text-align:center;
+    }
+</style>
+
 <div class="row-fluid">
     <form name="form">
+        <input type="hidden" name="target" value="<?="/admin/" . $LEFT_MENU_INFO["userList.php"]["전체 회원"]?>"/>
         <input type="hidden" name="searchTxt"/>
         <input type="hidden" name="page"/>
     </form>
@@ -32,7 +46,7 @@
         <div class="block-content collapse in">
             <div class="span12">
                 <div class="searchArea" align="center">
-                    <span>휴내폰번호 검색 </span><input type="text" id="searchTxt"/> <input type="button" class="jSearch" value="검색">
+                    <input type="text" class="search-query" id="searchTxt" placeholder="휴대폰번호 검색" value="<?=$_REQUEST["searchTxt"]?>"> <button class="btn jSearch">검색</button>
                 </div>
                 <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" >
                     <thead>
@@ -43,12 +57,13 @@
                         <th>연령</th>
                         <th>타입</th>
                         <th>가입일시</th>
+                        <th>-</th>
                     </tr>
                     </thead>
                     <tbody>
 
                     <?foreach($list as $row){?>
-                        <tr class="odd gradeX">
+                        <tr class="odd">
                             <td class="center"><?=$row["name"]?></td>
                             <td class="center"><?=$row["account"]?></td>
                             <td class="center"><?=$row["phone"]?></td>
@@ -69,6 +84,7 @@
                                 ?>
                             </td>
                             <td class="center"><?=$row["regDate"]?></td>
+                            <td class="center"><button class="btn jDel" no="<?=$row["id"]?>">삭제</button></td>
                         </tr>
                     <?}?>
                     </tbody>

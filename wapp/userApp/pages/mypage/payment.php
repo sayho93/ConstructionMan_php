@@ -98,7 +98,7 @@
     </script>
 </head>
 
-<body onload="setOid();onSubmit();" topmargin="0"  leftmargin="0" marginwidth="0" marginheight="0" style="display: none;">
+<body onload="setOid();onSubmit();" topmargin="0"  leftmargin="0" marginwidth="0" marginheight="0" >
 <table width="320" border="0" cellpadding="0" cellspacing="0">
     <form id="form1" name="ini" method="post" action="" >
         <tr>

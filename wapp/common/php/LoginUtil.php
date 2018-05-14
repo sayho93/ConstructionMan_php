@@ -14,36 +14,14 @@ if (!class_exists("LoginUtil")) {
 
         static function getAdminUser()
         {
+            $cookieStr = $_COOKIE["admMap"];
             if (LoginUtil::isAdminLogin() == false) {
-                $map['gid'] = "-1";
-            } else {
-                $cookieStr = $_COOKIE["admMap"];
-
-                $cookieStr = pack("H*", $cookieStr);
-
-                $aUser = explode(chr(30), $cookieStr);
-
-                $map['gid'] = $aUser[0];
-                $map['id'] = $aUser[1];
-                $map['name'] = $aUser[2];
-                $map['phone'] = $aUser[3];
-                $map['fax'] = $aUser[4];
-                $map['email'] = $aUser[5];
-                $map['cateCDs'] = $aUser[6];
-                $map['cateCDMains'] = $aUser[7];
-                $map['img'] = $aUser[8];
-                $map['website'] = $aUser[9];
-                $map['addr'] = $aUser[10];
-                $map['intro'] = $aUser[11];
-                $map['subCates'] = $aUser[12];
-                $map['sidoNo'] = $aUser[13];
-                $map['gugunNo'] = $aUser[14];
-                $map['dongNo'] = $aUser[15];
-                $map['ceo'] = $aUser[16];
-                $map['type'] = $aUser[17];
-
+                $map = null;
             }
-
+            else {
+                $cookieStr = pack("H*", $cookieStr);
+                $map = json_decode($cookieStr);
+            }
             return $map;
         }
 
@@ -51,48 +29,17 @@ if (!class_exists("LoginUtil")) {
         static function isAdminLogin()
         {
             $cookieStr = $_COOKIE["admMap"];
-
             return ($cookieStr != "") ? true : false;
         }
 
         //관리자 로그인
-        static function doAdminLogin($row)
-        {
-
+        static function doAdminLogin($row){
             if ($row != null) {
-
-                $cateCDs = (is_array($row->cateCDs)) ? join($row->cateCDs, "@") : $row->cateCDs;
-                $cateCDMains = (is_array($row->cateCDMains)) ? join($row->cateCDMains, "@") : $row->cateCDMains;
-                $subCates = (is_array($row->subCates)) ? join($row->subCates, "@") : $row->subCates;
-
-                $cookieStr =
-                    $row->gid . chr(30) .
-                    $row->id . chr(30) .
-                    $row->name . chr(30) .
-                    $row->phone . chr(30) .
-                    $row->fax . chr(30) .
-                    $row->email . chr(30) .
-                    $cateCDs . chr(30) .
-                    $cateCDMains . chr(30) .
-                    $row->img . chr(30) .
-                    $row->website . chr(30) .
-                    $row->addr1 . chr(30) .
-                    $row->intro . chr(30) .
-                    $subCates . chr(30) .
-                    $row->sidoNo . chr(30) .
-                    $row->gugunNo . chr(30) .
-                    $row->dongNo . chr(30) .
-                    $row->ceo . chr(30) .
-                    $row->type . chr(30);
-
+                $cookieStr = json_encode($row);
                 $cookieStr = bin2hex($cookieStr); // 16진수로 암호화
-
                 setcookie("admMap", $cookieStr, -1, "/", "");
-
                 return true;
-
             } else {
-
                 return false;
             }
         }

@@ -10,23 +10,23 @@
     
     $LEFT_MENU_INFO = array(
         "userList.php" => array(
-            "전체 회원" => "contentsView/contentUser.php",
-            "인력 회원" => "contentsView/contentUser.php",
-            "장비 회원" => "contentsView/contentUser.php",
-            "구인 회원" => "contentsView/contentUser.php",
+            "전체 회원" => "representatives/userList.php?type=0",
+            "인력 회원" => "representatives/userList.php?type=1",
+            "장비 회원" => "representatives/userList.php?type=2",
+            "구인 회원" => "representatives/userList.php?type=3",
         ),
         "recruitList.php" => array(
-            "전체 구인 내역" => "contentsView/contentUser.php",
-            "인력 구인 내역" => "contentsView/contentUser.php",
-            "장비 구인 내역" => "contentsView/contentUser.php",
+            "전체 구인 내역" => "representatives/recruitList.php?type=0",
+            "인력 구인 내역" => "representatives/recruitList.php?type=1",
+            "장비 구인 내역" => "representatives/recruitList.php?type=2",
         ),
         "payList.php" => array(
-            "결제 내역" => "contentsView/contentUser.php",
-            "포인트 수기 지급" => "contentsView/contentUser.php",
+            "결제 내역" => "representatives/payList.php?type=0",
+            "포인트 수기 지급" => "representatives/payList.php?type=1",
         ),
         "accountList.php" => array(
-            "계정 정보" => "contentsView/contentUser.php",
-            "계정 추가" => "contentsView/contentUser.php",
+            "계정 정보" => "representatives/accountList.php?type=0",
+            "계정 추가" => "representatives/accountList.php?type=1",
         )
     );
 

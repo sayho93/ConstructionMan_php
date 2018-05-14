@@ -84,10 +84,13 @@ if($P_STATUS=="00" && chkTid($P_TID)){
 
     $retVal = $obj->post("/web/user/point/inc/{$userId}", Array("inc" => 1000, "payType" => 1, "comment" => "포인트 결제", "paymentId" => $paymentId));
 
-    echo "<script>location.href = '/userApp/pages/mypage/mypageMain.php'</script>";
+    echo "<script>window.opener.location.href = '/userApp/pages/mypage/mypageMain.php'</script>";
+
+//    echo "<script>location.href = 'pickle://closeExtra'</script>";
 
 }else{
     echo "failed : ".$P_STATUS;
+    echo "<script>window.opener.location.href = '/userApp/pages/mypage/mypageMain.php'</script>";
 }
 
 

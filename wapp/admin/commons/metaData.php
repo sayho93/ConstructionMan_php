@@ -25,8 +25,7 @@
             "포인트 수기 지급" => "representatives/payList.php?type=1",
         ),
         "accountList.php" => array(
-            "계정 정보" => "representatives/accountList.php?type=0",
-            "계정 추가" => "representatives/accountList.php?type=1",
+            "계정 정보" => "representatives/accountList.php?type=0"
         )
     );
 

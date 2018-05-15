@@ -251,8 +251,36 @@ if(!class_exists("AdminMain")){
             return $this->getArray($sql);
         }
 
+        function getUserListForPoint(){
+            $searchTxt = $_REQUEST["searchTxt"];
+            if($searchTxt != ""){
+                $sql = "SELECT * FROM tblUser WHERE `name` LIKE '%{$searchTxt}%' AND `status` = 1 ORDER BY regDate DESC";
+                return $this->getArray($sql);
+            }
+        }
 
+        function addPoint(){
+            $noArr = $_REQUEST["no"];
+            $amount = $_REQUEST["amount"];
+            $sql = "INSERT INTO tblPoint(`userId`, `inc`, `comment`, `regDate`) VALUES ";
+            for($e = 0; $e < sizeof($noArr); $e++){
+                $sql .= "({$noArr[$e]}, {$amount}, '관리자 수기 지급', NOW())";
+                if($e + 1 < sizeof($noArr)) $sql .= ", ";
+            }
 
+            $this->update($sql);
+        }
+
+        function changePass(){
+            $password = md5($_REQUEST["password"]);
+
+            $sql = "
+            UPDATE tblAdmin SET `password`='{$password}'
+            ";
+            $this->update($sql);
+
+            return $this->makeResultJson("1", "succ");
+        }
 
     }
 }

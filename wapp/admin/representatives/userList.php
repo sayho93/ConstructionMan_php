@@ -101,7 +101,8 @@ if($type == "3") $list = $obj->getNormalUserList();
                                     ?>
                                 </td>
                                 <td class="center"><?=$row["regDate"]?></td>
-                                <td class="center"><button class="btn jDel" no="<?=$row["id"]?>">삭제</button></td>
+                                <td class="center"><button clas
+                                                           s="btn jDel" no="<?=$row["id"]?>">삭제</button></td>
                             </tr>
                         <?}?>
 

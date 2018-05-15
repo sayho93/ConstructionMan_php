@@ -25,6 +25,11 @@ if(!class_exists("AdminMain")){
             return $this->makeResultJson(1, "succ", $res);
         }
 
+        function logout(){
+            LoginUtil::doAdminLogout();
+            return $this->makeResultJson(1, "succ");
+        }
+
         function getUserList(){
             $searchTxt = $_REQUEST["searchTxt"];
             $query = "";
@@ -134,6 +139,119 @@ if(!class_exists("AdminMain")){
             $sql = "UPDATE tblUser SET `status` = 0 WHERE `id` = {$id}";
             $this->update($sql);
         }
+
+        function getSearchList(){
+            $searchTxt = $_REQUEST["searchTxt"];
+            $query = "";
+            if($searchTxt != "")
+                $query = "AND (SELECT account FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
+
+            $this->initPage();
+            $sql = "
+                SELECT COUNT(*) as rowCnt
+                FROM tblSearch
+                WHERE 1=1 {$query}
+            ";
+            $this->rownum = $this->getValue($sql, "rowCnt");
+            $this->setPage($this->rownum);
+
+            $sql = "
+                SELECT 
+                  *, 
+                  (SELECT account FROM tblUser U WHERE U.id = userId) as account,
+                  (SELECT description FROM tblZipGugun G WHERE G.gugunID = S.gugunId) as gugunTxt
+                FROM tblSearch S
+                WHERE 1=1 {$query}
+                ORDER BY regDate DESC
+                LIMIT {$this->startNum}, {$this->endNum}
+            ";
+            return $this->getArray($sql);
+        }
+
+        function getManSearchList(){
+            $searchTxt = $_REQUEST["searchTxt"];
+            $query = "";
+            if($searchTxt != "")
+                $query = " AND (SELECT account FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
+
+            $this->initPage();
+            $sql = "
+                SELECT COUNT(*) as rowCnt
+                FROM tblSearch
+                WHERE 1=1 AND `type` = 'M' {$query}
+            ";
+            $this->rownum = $this->getValue($sql, "rowCnt");
+            $this->setPage($this->rownum);
+
+            $sql = "
+                SELECT 
+                  *, 
+                  (SELECT account FROM tblUser U WHERE U.id = userId) as account,
+                  (SELECT description FROM tblZipGugun G WHERE G.gugunID = S.gugunId) as gugunTxt
+                FROM tblSearch S
+                WHERE 1=1 AND `type` = 'M' {$query}
+                ORDER BY regDate DESC
+                LIMIT {$this->startNum}, {$this->endNum}
+            ";
+            return $this->getArray($sql);
+        }
+
+        function getGearSearchList(){
+            $searchTxt = $_REQUEST["searchTxt"];
+            $query = "";
+            if($searchTxt != "")
+                $query = " AND (SELECT account FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
+
+            $this->initPage();
+            $sql = "
+                SELECT COUNT(*) as rowCnt
+                FROM tblSearch
+                WHERE 1=1 AND `type` = 'G' {$query}
+            ";
+            $this->rownum = $this->getValue($sql, "rowCnt");
+            $this->setPage($this->rownum);
+
+            $sql = "
+                SELECT 
+                  *, 
+                  (SELECT account FROM tblUser U WHERE U.id = userId) as account,
+                  (SELECT description FROM tblZipGugun G WHERE G.gugunID = S.gugunId) as gugunTxt
+                FROM tblSearch S
+                WHERE 1=1 AND `type` = 'G' {$query}
+                ORDER BY regDate DESC
+                LIMIT {$this->startNum}, {$this->endNum}
+            ";
+            return $this->getArray($sql);
+        }
+
+        function getPaymentList(){
+            $serchTxt = $_REQUEST["searchTxt"];
+            $query = "";
+            if($serchTxt != "") $query = " AND U.phone LIKE '%{$serchTxt}%'";
+
+            $this->initPage();
+            $sql = "
+                SELECT COUNT(*) as rowCnt
+                FROM tblPayment P
+                JOIN tblUser U ON P.userId = U.id 
+                WHERE resCode = '00' {$query}
+            ";
+            $this->rownum = $this->getValue($sql, "rowCnt");
+            $this->setPage($this->rownum);
+
+            $sql = "
+                SELECT *
+                FROM tblPayment P
+                JOIN tblUser U ON P.userId = U.id 
+                WHERE resCode = '00' {$query}
+                ORDER BY P.regDate DESC
+                LIMIT {$this->startNum}, {$this->endNum}
+            ";
+
+            return $this->getArray($sql);
+        }
+
+
 
 
     }

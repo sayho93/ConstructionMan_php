@@ -15,7 +15,7 @@
             }
 
             for($i=$obj->startBlock; $i<=$obj->endBlock; $i++){
-                if( $obj->req["page"] == $i ) echo '<li class="active"><a>'.$i.'</a></li>' ;
+                if( $obj->req["page"] == $i ) echo '<li class="active"><a href="#">'.$i.'</a></li>' ;
                 else echo '<li><a href="#" class="jPage" page="'.$i.'">'.$i.'</a></li>' ;
             }
 

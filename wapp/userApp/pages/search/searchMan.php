@@ -206,8 +206,8 @@
 
         <p>작업기간</p>
         <div class="wrapper">
-            <input type="text" name="startDate" class="datepicker" />
-            <input type="text" name="endDate" class="datepicker" />
+            <input type="text" name="startDate" class="datepicker" readonly/>
+            <input type="text" name="endDate" class="datepicker" readonly/>
         </div>
 
         <p>숙소제공</p>

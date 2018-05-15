@@ -10,10 +10,6 @@ if($type == "0" || $type == "") $list = $obj->getUserList();
 if($type == "1") $list = $obj->getManUserList();
 if($type == "2") $list = $obj->getGearUserList();
 if($type == "3") $list = $obj->getNormalUserList();
-
-
-echo json_encode($_REQUEST);
-
 ?>
     <script>
         $(document).ready(function(){

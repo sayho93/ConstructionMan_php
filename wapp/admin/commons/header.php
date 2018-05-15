@@ -40,6 +40,15 @@
             var toGo = $(this).attr("toGo");
             location.href = toGo;
         });
+
+        $(".jLogOut").click(function(){
+            var ajax = new AjaxSender("/action_front.php?cmd=AdminMain.logout", false, "json", new sehoMap());
+            ajax.send(function(data){
+                if(data.returnCode === 1){
+                    location.href = "/admin";
+                }
+            });
+        });
     });
 </script>
 
@@ -55,13 +64,13 @@
             <div class="nav-collapse collapse">
                 <ul class="nav pull-right">
                     <li class="dropdown">
-                        <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> Vincent Gabriel <i class="caret"></i>
+                        <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> <?=$userInfo->account?> <i class="caret"></i>
                             
                         </a>
                         <ul class="dropdown-menu">
                             <li class="divider"></li>
                             <li>
-                                <a tabindex="-1" href="../login.html">로그아웃</a>
+                                <a tabindex="-1" class="jLogOut">로그아웃</a>
                             </li>
                         </ul>
                     </li>

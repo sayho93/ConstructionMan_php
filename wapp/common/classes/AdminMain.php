@@ -31,10 +31,21 @@ if(!class_exists("AdminMain")){
         }
 
         function getUserList(){
+            $searchType = $_REQUEST["searchType"];
             $searchTxt = $_REQUEST["searchTxt"];
             $query = "";
             if($searchTxt != ""){
-                $query = "AND phone LIKE '%{$searchTxt}%'";
+                switch($searchType){
+                    case 0:
+                        $query = " AND `name` LIKE '%{$searchTxt}%'";
+                        break;
+                    case 1:
+                        $query = " AND `account` LIKE '%{$searchTxt}%'";
+                        break;
+                    case 2:
+                        $query = " AND phone LIKE '%{$searchTxt}%'";
+                        break;
+                }
             }
 
             $this->initPage();
@@ -57,10 +68,21 @@ if(!class_exists("AdminMain")){
         }
 
         function getManUserList(){
+            $searchType = $_REQUEST["searchType"];
             $searchTxt = $_REQUEST["searchTxt"];
             $query = "";
             if($searchTxt != ""){
-                $query = "AND phone LIKE '%{$searchTxt}%'";
+                switch($searchType){
+                    case 0:
+                        $query = " AND `name` LIKE '%{$searchTxt}%'";
+                        break;
+                    case 1:
+                        $query = " AND `account` LIKE '%{$searchTxt}%'";
+                        break;
+                    case 2:
+                        $query = " AND phone LIKE '%{$searchTxt}%'";
+                        break;
+                }
             }
 
             $this->initPage();
@@ -83,10 +105,21 @@ if(!class_exists("AdminMain")){
         }
 
         function getGearUserList(){
+            $searchType = $_REQUEST["searchType"];
             $searchTxt = $_REQUEST["searchTxt"];
             $query = "";
             if($searchTxt != ""){
-                $query = "AND phone LIKE '%{$searchTxt}%'";
+                switch($searchType){
+                    case 0:
+                        $query = " AND `name` LIKE '%{$searchTxt}%'";
+                        break;
+                    case 1:
+                        $query = " AND `account` LIKE '%{$searchTxt}%'";
+                        break;
+                    case 2:
+                        $query = " AND phone LIKE '%{$searchTxt}%'";
+                        break;
+                }
             }
 
             $this->initPage();
@@ -109,10 +142,21 @@ if(!class_exists("AdminMain")){
         }
 
         function getNormalUserList(){
+            $searchType = $_REQUEST["searchType"];
             $searchTxt = $_REQUEST["searchTxt"];
             $query = "";
             if($searchTxt != ""){
-                $query = "AND phone LIKE '%{$searchTxt}%'";
+                switch($searchType){
+                    case 0:
+                        $query = " AND `name` LIKE '%{$searchTxt}%'";
+                        break;
+                    case 1:
+                        $query = " AND `account` LIKE '%{$searchTxt}%'";
+                        break;
+                    case 2:
+                        $query = " AND phone LIKE '%{$searchTxt}%'";
+                        break;
+                }
             }
 
             $this->initPage();

@@ -909,11 +909,11 @@
     <div class="footer">
         <span>휴넵스/건설인</span>
         <br>
-        <p>대표 : 이화수 / 사업자등록번호 : 111-222-3333333</p>
-        <p>주소 : 대전광역시 유성구 봉명동 1111</p>
-        <p>TEL : 1644-1111 / MAIL : geonseolin@geonseolin.com</p>
+        <p>특허 제 10-1705485 호 / 사업자등록번호 461-14-00804</p>
+        <p>직업정보제공사업신고번호 J1700020180005호 / 통신판매업신고 제 2018-대전유성-0240 호</p>
+        <p>Tmail : huneps71@gmail.com / tel : </p>
         <br>
-        <p>ⓒ휴넵스 All rights reserved.</p>
+        <p>ⓒ 휴넵스 All rights reserved.</p>
     </div>
 
 </div>

@@ -65,8 +65,7 @@ if($type == "3") $list = $obj->getNormalUserList();
                 }
             });
 
-            function deleteUser(noArr)
-            {
+            function deleteUser(noArr){
                 $.ajax({
                     url : "/action_front.php?cmd=AdminMain.deleteUserMulti",
                     async : false,
@@ -81,7 +80,9 @@ if($type == "3") $list = $obj->getNormalUserList();
                 });
             }
 
-
+            $("#sType").change(function(){
+                $("[name=searchType]").val($(this).val());
+            });
         });
     </script>
 
@@ -93,7 +94,9 @@ if($type == "3") $list = $obj->getNormalUserList();
 
     <div class="row-fluid">
         <form name="form">
-            <input type="hidden" name="target" value="<?="/admin/" . $LEFT_MENU_INFO["userList.php"]["전체 회원"]?>"/>
+            <input type="hidden" name="type" value="<?=$_REQUEST["type"]?>"/>
+<!--            <input type="hidden" name="target" value="--><?//="/admin/" . $LEFT_MENU_INFO["userList.php"]["전체 회원"]?><!--"/>-->
+            <input type="hidden" name="searchType" value="<?=$_REQUEST["searchType"]?>"/>
             <input type="hidden" name="searchTxt"/>
             <input type="hidden" name="page"/>
         </form>
@@ -105,12 +108,10 @@ if($type == "3") $list = $obj->getNormalUserList();
             <div class="block-content collapse in">
                 <div class="span12">
                     <div class="searchArea" align="center">
-                        <select>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <select id="sType" style="width: 12%; margin-bottom: 0px;">
+                            <option value="0" <?=$_REQUEST["searchType"] == "0" ? "selected" : ""?>>이름</option>
+                            <option value="1" <?=$_REQUEST["searchType"] == "1" ? "selected" : ""?>>ID</option>
+                            <option value="2" <?=$_REQUEST["searchType"] == "2" ? "selected" : ""?>>휴대폰번호</option>
                         </select>
                         <input type="text" class="search-query" id="searchTxt" placeholder="휴대폰번호 검색" value="<?=$_REQUEST["searchTxt"]?>"> <button class="btn jSearch">검색</button>
                         <a class="btn btn-danger excel jDelUserMulti" style="float:right;">선택 삭제</a>

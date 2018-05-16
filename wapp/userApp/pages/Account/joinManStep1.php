@@ -145,6 +145,7 @@ $regionList = json_decode($regionList)->data;
             var workArr = collectWorkId();
 
             regionArr = regionArr.join();
+            if(regionArr == "") regionArr = "0";
             workArr = workArr.join();
             $("[name='regionArr']").val(regionArr);
             $("[name='workArr']").val(workArr);

@@ -297,6 +297,7 @@
             var career = collectCareer();
 
             regionArr = regionArr.join();
+            if(regionArr == "") regionArr = "0";
             workArr = workArr.join();
             career = career.join();
 

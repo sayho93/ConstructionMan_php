@@ -36,14 +36,14 @@
             var ajax = new AjaxSender("/action_front.php?cmd=WebUser.getUserPoint", true, "json", new sehoMap());
             ajax.send(function(data){
                 if(data.returnCode === 1){
-                    $(selector).html(data.data + " P");
+                    $(selector).html(data.data + " 원");
                     console.log(data);
                 }
             })
         }
 
         $("#point").click(function(){
-            if(confirm("포인트를 충전하시겠습니까?")){
+            if(confirm("금액을 충전하시겠습니까?")){
                 var params = new sehoMap().put("userId", "<?=$userInfo->id?>");
                 var ajax = new AjaxSender("/action_front.php?cmd=WebUser.insertPaymentBasic", true, "json", params);
                 ajax.send(function(data){
@@ -52,7 +52,7 @@
             }
 
 
-            // alert("< 포인트 충전 정보 안내 > \n 계좌번호(입금주 이행수(휴넵스))\n" +
+            // alert("< 금액(포인트) 충전 정보 안내 > \n 계좌번호(입금주 이행수(휴넵스))\n" +
             // "- 국민은행 770601-00-1019919\n" +
             // "- 농협 301-0231-1507-91");
         });

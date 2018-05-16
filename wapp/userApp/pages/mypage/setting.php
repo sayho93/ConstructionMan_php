@@ -35,6 +35,7 @@
             var ajax = new AjaxSender("/action_front.php?cmd=WebUser.withdrawUser", false, "json", new sehoMap());
             ajax.send(function(data){
                 if(data.returnCode === 1){
+                    alert("탈퇴되었습니다");
                     location.href = "/userApp";
                 }
             });

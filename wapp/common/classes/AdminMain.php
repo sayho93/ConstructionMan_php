@@ -140,6 +140,18 @@ if(!class_exists("AdminMain")){
             $this->update($sql);
         }
 
+        function deleteUserMulti(){
+            $noArr = $this->req["no"];
+
+            $noStr = implode(',', $noArr);
+            $sql = "
+				UPDATE tblUser
+				SET status = 0
+				WHERE `id` IN({$noStr})
+			";
+            $this->update($sql);
+        }
+
         function getSearchList(){
             $searchTxt = $_REQUEST["searchTxt"];
             $query = "";

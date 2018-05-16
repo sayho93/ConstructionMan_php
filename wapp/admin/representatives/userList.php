@@ -40,6 +40,48 @@ if($type == "3") $list = $obj->getNormalUserList();
                 }
             );
             });
+
+            $("#jCheckAll").change(function(){
+                if($(this).is(":checked"))
+                    $(".jUserNo").prop("checked", true);
+                else
+                    $(".jUserNo").prop("checked", false);
+            });
+
+            $(".jDelUserMulti").click(function(){
+                var noArr = new Array();
+                var noCount = $(".jUserNo:checked").length;
+                if(noCount == 0)
+                {
+                    alert("삭제할 사용자를 하나 이상 선택해주세요.");
+                    return false;
+                }
+                if(confirm("정말 삭제하시겠습니까?")){
+                    for(var i = 0; i < noCount; i++ )
+                    {
+                        noArr[i] = $(".jUserNo:checked:eq(" + i + ")").val();
+                    }
+                    deleteUser(noArr);
+                }
+            });
+
+            function deleteUser(noArr)
+            {
+                $.ajax({
+                    url : "/action_front.php?cmd=AdminMain.deleteUserMulti",
+                    async : false,
+                    cache : false,
+                    data : {
+                        "no"	: noArr
+                    },
+                    success : function(data){
+                        alert("삭제되었습니다");
+                        location.reload();
+                    }
+                });
+            }
+
+
         });
     </script>
 
@@ -63,11 +105,20 @@ if($type == "3") $list = $obj->getNormalUserList();
             <div class="block-content collapse in">
                 <div class="span12">
                     <div class="searchArea" align="center">
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
                         <input type="text" class="search-query" id="searchTxt" placeholder="휴대폰번호 검색" value="<?=$_REQUEST["searchTxt"]?>"> <button class="btn jSearch">검색</button>
+                        <a class="btn btn-danger excel jDelUserMulti" style="float:right;">선택 삭제</a>
                     </div>
                     <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" >
                         <thead>
                         <tr>
+                            <th><input type="checkbox" id="jCheckAll"></th>
                             <th>이름</th>
                             <th>ID</th>
                             <th>휴대폰번호</th>
@@ -81,6 +132,9 @@ if($type == "3") $list = $obj->getNormalUserList();
 
                         <?foreach($list as $row){?>
                             <tr class="odd">
+                                <td>
+                                    <input type="checkbox" class="jUserNo" value="<?=$row["id"]?>" >
+                                </td>
                                 <td class="center"><?=$row["name"]?></td>
                                 <td class="center"><?=$row["account"]?></td>
                                 <td class="center"><?=$row["phone"]?></td>

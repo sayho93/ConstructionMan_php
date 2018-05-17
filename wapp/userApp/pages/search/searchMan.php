@@ -185,7 +185,7 @@
     <div class="searchManWrapper">
         <div class="line"></div>
 
-        <p>현장위치</p>
+        <p style="font-weight: bold">현장위치</p>
         <div class="wrapper">
             <select class="selectBlue" id="sido" name="sidoId">
                 <option value="">시/도</option>
@@ -199,25 +199,25 @@
             </select>
         </div>
 
-        <p>작업내용</p>
+        <p style="font-weight: bold">작업내용</p>
         <div class="wrapper">
             <input type="text" name="name" class="inputBlue" />
         </div>
 
-        <p>작업기간</p>
+        <p style="font-weight: bold">작업기간</p>
         <div class="wrapper">
-            <input type="text" name="startDate" class="datepicker" readonly/>
-            <input type="text" name="endDate" class="datepicker" readonly/>
+            <input type="text" name="startDate" class="datepicker" placeholder="시작일" readonly/>
+            <input type="text" name="endDate" class="datepicker" placeholder="마강일" readonly/>
         </div>
 
-        <p>숙소제공</p>
-        <div class="wrapper">
+        <div class="wrapper" style="width: 40vw;">
+            <p style="width: 15vw; display: inline-block; font-size: 2.0em; margin-right: 1vw; font-weight: bold;">숙소제공</p>
+
             <input type="radio" name="lodging" id="r1" value="1"/> <label for="r1">유</label>
             <input type="radio" name="lodging" id="r2" value="0"/> <label for="r2">무</label>
         </div>
-        <br>
 
-        <p>단가</p>
+        <p style="font-weight: bold">단가</p>
         <div class="wrapper">
             <input type="number" name="price" class="inputBlueSmall"/> 원
             <input type="checkbox" class="discussLater" id="chk" style="margin-left: 8vw;"/>

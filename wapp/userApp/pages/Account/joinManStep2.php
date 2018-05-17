@@ -11,6 +11,7 @@
 
 <script>
     $(document).ready(function(){
+        $(".jBack").click(function(){history.go(-1)});
         var workArr = $("[name='workArr']").val();
         getWorkList();
 
@@ -115,7 +116,7 @@
 </div>
 
 <div class="header">
-
+    <a class="tool_left"><img src="../../img/btn_prev.png" class="back_btn jBack"/></a>
     <h2>회원가입</h2>
 </div>
 

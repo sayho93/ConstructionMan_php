@@ -346,7 +346,7 @@ a#normal{
 .form select{
     margin-top: 2vh;
     width: 70%;
-    height: 6vh;
+    height: 10vw;
     font-size: 1.0em;
     border: 2px solid #a4a4a4;
     background: white;
@@ -355,7 +355,7 @@ a#normal{
 .form input[type="text"]{
     margin-top: 2vh;
     width: 100%;
-    height: 6vh;
+    height: 10vw;
     font-size: 1.0em;
     border: 2px solid #a4a4a4;
 }
@@ -363,7 +363,7 @@ a#normal{
 .form input[type="password"]{
     margin-top: 2vh;
     width: 100%;
-    height: 6vh;
+    height: 10vw;
     font-size: 1.0em;
     border: 2px solid #a4a4a4;
 }
@@ -376,7 +376,7 @@ input[type=text]:focus {
 .form input[type="number"]{
     margin-top: 2vh;
     width: 100%;
-    height: 6vh;
+    height: 10vw;
     font-size: 1.0em;
     border: 2px solid #a4a4a4;
 }
@@ -388,7 +388,7 @@ input[type=number]:focus {
 .form input[type="button"]{
     margin-top: 2vh;
     width: 100%;
-    height: 6vh;
+    height: 10vw;
     font-size: 1.0em;
     color: white;
     background-color: #027494;
@@ -402,8 +402,8 @@ input[type=number]:focus {
 .form input[type="checkbox"] + label{
     background:url('../img/toggle_check_false.png') no-repeat;
     background-size: cover;
-    height: 4vh;
-    width: 4vh;
+    height: 7vw;
+    width: 7vw;
     display:inline-block;
     padding: 0 0 0 0px;
 }
@@ -510,7 +510,8 @@ input[type=number]:focus {
     width: 6vh;
     height: 6vh;
     display: inline-block;
-    background-size: cover;
+    background-size: 100%;
+    /*background-size: cover;*/
 }
 
 .region{
@@ -989,7 +990,7 @@ div .align_center{
 .searchBtn{
     margin-top: 10vh;
     width: 100%;
-    height: 6vh;
+    height: 10vw;
     font-size: 1.0em;
     color: white;
     background-color: #027494;
@@ -999,7 +1000,7 @@ div .align_center{
 .selectBlue{
     display: inline-block;
     width: 40vw;
-    height: 4vh;
+    height: 7vw;
     font-size: 0.5em;
     border: 2px solid #027494;
     outline-color: #027494;
@@ -1008,7 +1009,7 @@ div .align_center{
 .inputBlue{
     display: inline-block;
     width: 100%;
-    height: 4vh;
+    height: 7vw;
     font-size: 0.5em;
     border: 2px solid #027494;
     outline-color: #027494;
@@ -1017,14 +1018,14 @@ div .align_center{
 .inputBlueSmall{
     display: inline-block;
     width: 40vw;
-    height: 3vh;
+    height: 6vw;
     font-size: 1.5em;
     border: 2px solid #027494;
     outline-color: #027494;
 }
 
 input[type="radio"]{
-    margin-left: 10vw;
+    margin-left: 2vw;
 }
 
 input[type="radio"] + label{
@@ -1066,7 +1067,7 @@ input[type='radio']:checked:after {
 }
 
 .wrapper input[type="checkbox"] + label{
-    margin-left: 8vw;
+    margin-left: 6vw;
     background:url('../img/toggle_check_false.png') no-repeat;
     height: 5vw;
     width: 5vw;
@@ -1076,7 +1077,7 @@ input[type='radio']:checked:after {
 }
 
 .wrapper input[type="checkbox"]:checked + label{
-    margin-left: 8vw;
+    margin-left: 4vw;
     background:url('../img/toggle_check_true.png') no-repeat;
     background-size: cover;
     height: 5vw;

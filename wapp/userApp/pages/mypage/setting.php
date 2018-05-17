@@ -44,7 +44,18 @@
         });
 
         $(".jBack").click(function(){history.go(-1);});
+
+        $(".jLogOut").click(function(){
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.logOut", false, "text", new sehoMap());
+            ajax.send(function(data){
+                sendNative();
+            });
+        });
     });
+
+    function sendNative(){
+        location.href = "pickle://logout";
+    }
 </script>
 
 
@@ -99,6 +110,13 @@
             <td width="80%" class="txt">
                 버전정보
                 <div style="float: right; margin-right: 6vw;">1.1.1</div>
+            </td>
+        </tr>
+        <tr class="row jLogOut">
+            <td width="20%" class="gray"><img src="../../img/ico_mylist_withdraw.png" style="width:8vw; height:8vw;"></td>
+            <td width="80%" class="txt">
+                로그아웃
+                <img src="../../img/btn_go_detail.png" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw;">
             </td>
         </tr>
     </table>

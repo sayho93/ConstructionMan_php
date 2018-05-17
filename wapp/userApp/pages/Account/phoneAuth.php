@@ -151,7 +151,7 @@
 
             <input type="text" name="residence" placeholder="  거주지"/>
             <input type="number" name="phone" placeholder="  휴대폰번호"/>
-            <input type="text" placeholder="  인증번호" class="authNumber" style="display: none;"/>
+            <input type="number" placeholder="  인증번호" class="authNumber" style="display: none;"/>
             <input type="button" value="휴대폰 본인인증" class="jSubmit"/>
             <input type="hidden" name="type"/>
         </form>

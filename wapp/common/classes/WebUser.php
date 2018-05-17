@@ -7,6 +7,11 @@ if(! class_exists("WebUser") ){
             parent::__construct($req);
         }
 
+        function logOut(){
+            LoginUtil::doWebLogout();
+            return;
+        }
+
         function updatePushKey(){
             $retVal = $this->get("/web/user/update/pushKey/{$this->webUser->id}", Array("pushKey" => $_REQUEST["pushKey"]));
             return $retVal;

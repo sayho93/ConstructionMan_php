@@ -10,6 +10,11 @@
 <? include $_SERVER["DOCUMENT_ROOT"] . "/userApp/php/header.php" ;?>
 <script>
     $(document).ready(function(){
+
+        $(".jPhone").click(function(){
+            location.href = "tel:010-9719-1105";
+        });
+
         $(".gearItem").click(function(){
             if($(this).hasClass("on"))
                 $(this).removeClass("on");
@@ -169,7 +174,7 @@
 <div class="header">
     <img src="../../img/top_logo.png" class="headerLogo">
     <a class="tool_left"><img src="../../img/btn_drawer.png" class="leftLogo"/></a>
-    <a class="tool_right"><img src="../../img/btn_phone.png" class="rightLogo"/></a>
+    <a class="tool_right"><img src="../../img/btn_phone.png" class="rightLogo jPhone"/></a>
 </div>
 
 <div class="popBG" style="display: none;">

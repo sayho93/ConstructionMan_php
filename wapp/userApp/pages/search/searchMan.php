@@ -39,6 +39,10 @@
     });
 
     $(document).ready(function(){
+        $(".jPhone").click(function(){
+            location.href = "tel:010-9719-1105";
+        });
+
         var workArr = $("[name='workArr']").val();
         getWorkList();
 
@@ -165,7 +169,7 @@
 <div class="header">
     <img src="../../img/top_logo.png" class="headerLogo">
     <a class="tool_left"><img src="../../img/btn_drawer.png" class="leftLogo" /></a>
-    <a class="tool_right"><img src="../../img/btn_phone.png" class="rightLogo" /></a>
+    <a class="tool_right"><img src="../../img/btn_phone.png" class="rightLogo jPhone" /></a>
 </div>
 
 <div class="body">
@@ -206,8 +210,8 @@
 
         <p style="font-weight: bold">작업기간</p>
         <div class="wrapper">
-            <input type="text" name="startDate" class="datepicker" placeholder="시작일" readonly/>
-            <input type="text" name="endDate" class="datepicker" placeholder="마강일" readonly/>
+            <input type="text" name="startDate" class="datepicker" readonly/>
+            <input type="text" name="endDate" class="datepicker" readonly/>
         </div>
 
         <div class="wrapper" style="width: 40vw;">

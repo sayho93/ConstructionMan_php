@@ -38,6 +38,10 @@
     });
 
     $(document).ready(function(){
+        $(".jPhone").click(function(){
+            location.href = "tel:010-9719-1105";
+        });
+
         $("#sido").change(function(){
             var sidoId = $("#sido").val();
             getGugunList(sidoId);
@@ -61,7 +65,6 @@
 
         $(".jAdd").click(function(){
             var params = $("[name='form']").serialize();
-            alert(params);
             $.ajax({
                 url: "/action_front.php?cmd=WebUser.registerSearch",
                 async: false,
@@ -81,7 +84,7 @@
 <div class="header">
     <img src="../../img/top_logo.png" class="headerLogo">
     <a class="tool_left"><img src="../../img/btn_drawer.png" class="leftLogo"/></a>
-    <a class="tool_right"><img src="../../img/btn_phone.png" class="rightLogo"/></a>
+    <a class="tool_right"><img src="../../img/btn_phone.png" class="rightLogo jPhone"/></a>
 </div>
 
 <div class="body">

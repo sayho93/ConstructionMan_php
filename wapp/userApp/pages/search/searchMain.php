@@ -11,6 +11,10 @@
 <script>
     $(document).ready(function(){
         getPushKey();
+
+        $(".jPhone").click(function(){
+            location.href = "tel:010-9719-1105";
+        });
     });
 
     function getPushKey(){
@@ -32,7 +36,7 @@
 <div class="header">
     <img src="../../img/top_logo.png" class="headerLogo">
     <a href="/userApp/pages/mypage/mypageMain.php" class="tool_left"><img src="../../img/btn_drawer.png" class="leftLogo"/></a>
-    <a class="tool_right"><img src="../../img/btn_phone.png" class="rightLogo"/></a>
+    <a class="tool_right"><img src="../../img/btn_phone.png" class="rightLogo jPhone"/></a>
 </div>
 
 <div class="body">

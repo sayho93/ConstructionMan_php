@@ -8,6 +8,7 @@
 
     if($type == "0" || $type == "") $list = $obj->getPaymentList();
     if($type == "1") $list = $obj->getuserListForPoint();
+    if($type == "2") $list = $obj->getSupplyList();
 ?>
     <?if($type == "0" || $type == ""){?>
         <script>
@@ -22,9 +23,19 @@
                     $("[name=form]").submit();
                 });
 
+                $('input').on("keydown", function(event){
+                    if (event.keyCode == 13) {
+                        $(".jSearch").trigger("click");
+                    }
+                });
+
                 $(".excel").click(function(){
                     var sText = "<?=$_REQUEST["searchTxt"]?>";
                     location.href="./excels/excelPayList.php?searchTxt=" + sText;
+                });
+
+                $("#sType").change(function(){
+                    $("[name=searchType]").val($(this).val());
                 });
             });
         </script>
@@ -40,6 +51,7 @@
                 <input type="hidden" name="type" value="<?=$_REQUEST["type"]?>"/>
                 <input type="hidden" name="searchTxt"/>
                 <input type="hidden" name="page"/>
+                <input type="hidden" name="searchType" value="<?=$_REQUEST["searchType"]?>"/>
             </form>
 
             <div class="block">
@@ -49,7 +61,12 @@
                 <div class="block-content collapse in">
                     <div class="span12">
                         <div class="searchArea" align="center">
-                            <input type="text" class="search-query" id="searchTxt" placeholder="구매자 휴대폰번호 검색" value="<?=$_REQUEST["searchTxt"]?>"> <button class="btn jSearch">검색</button>
+                            <select id="sType" style="width: 12%; margin-bottom: 0px;">
+                                <option value="0" <?=$_REQUEST["searchType"] == "0" ? "selected" : ""?>>아이디</option>
+                                <option value="1" <?=$_REQUEST["searchType"] == "1" ? "selected" : ""?>>이름</option>
+                                <option value="2" <?=$_REQUEST["searchType"] == "2" ? "selected" : ""?>>휴대폰번호</option>
+                            </select>
+                            <input type="text" class="search-query" id="searchTxt" placeholder="검색" value="<?=$_REQUEST["searchTxt"]?>"> <button class="btn jSearch">검색</button>
 
                             <a class="btn btn-success excel" style="float:right;">엑셀 출력</a>
                         </div>
@@ -71,7 +88,13 @@
                                     <td class="center"><?=$row["name"]?></td>
                                     <td class="center"><?=$row["phone"]?></td>
                                     <td class="center"><?=$row["amount"]?></td>
-                                    <td class="center"><?=$row["authDate"]?></td>
+                                    <td class="center">
+                                        <?
+                                            $time = strtotime($row["authDate"]);
+                                            $newformat = date('Y-m-d H:i:s',$time);
+                                            echo $newformat;
+                                        ?>
+                                    </td>
                                 </tr>
                             <?}?>
 
@@ -87,7 +110,7 @@
                 </div>
             </div>
         </div>
-    <?}else{?>
+    <?}else if($type == "1"){?>
         <script>
             $(document).ready(function(){
                 $(".jSearch").click(function(){
@@ -133,15 +156,25 @@
                         }
                     });
                 }
+
+                $("#sType").change(function(){
+                    $("[name=searchType]").val($(this).val());
+                });
             });
         </script>
 
         <form class="form-horizontal" name="form" action="#">
             <input type="hidden" name="type" value="<?=$_REQUEST["type"]?>"/>
+            <input type="hidden" name="searchType" value="<?=$_REQUEST["searchType"]?>"/>
             <div class="control-group">
                 <label class="control-label" for="inputEmail">이름</label>
                 <div class="controls">
-                    <input type="text" name="searchTxt" placeholder="유저 이름으로 검색" value="<?=$_REQUEST["searchTxt"]?>">
+                    <select id="sType" style="width: 12%; margin-bottom: 0px;">
+                        <option value="0" <?=$_REQUEST["searchType"] == "0" ? "selected" : ""?>>아이디</option>
+                        <option value="1" <?=$_REQUEST["searchType"] == "1" ? "selected" : ""?>>이름</option>
+                        <option value="2" <?=$_REQUEST["searchType"] == "2" ? "selected" : ""?>>휴대폰번호</option>
+                    </select>
+                    <input type="text" name="searchTxt" placeholder="검색" value="<?=$_REQUEST["searchTxt"]?>">
                     <button class="btn jSearch">검색</button>
 
                     <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" >
@@ -175,16 +208,64 @@
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label" for="inputPassword">지급 포인트</label>
+                <label class="control-label" for="inputPassword">지급 금액</label>
                 <div class="controls">
-                    <input type="number" id="amount" placeholder="포인트">
+                    <input type="number" id="amount" placeholder="금액">
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <a class="btn btn-success jAdd">포인트 지급</a>
+                    <a class="btn btn-success jAdd">금액 지급</a>
                 </div>
             </div>
         </form>
+    <?}else if($type == "2"){?>
+
+    <div class="row-fluid">
+        <form name="form">
+            <input type="hidden" name="type" value="<?=$_REQUEST["type"]?>"/>
+            <input type="hidden" name="searchType" value="<?=$_REQUEST["searchType"]?>"/>
+            <input type="hidden" name="searchTxt"/>
+            <input type="hidden" name="page"/>
+        </form>
+
+        <div class="block">
+            <div class="navbar navbar-inner block-header">
+                <div class="muted pull-left">수기 지급 내역</div>
+            </div>
+            <div class="block-content collapse in">
+                <div class="span12">
+                    <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" >
+                        <thead>
+                        <tr>
+                            <th>유저 아이디</th>
+                            <th>금액</th>
+                            <th>휴대폰번호</th>
+                            <th>지급일시</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <?foreach($list as $row){?>
+                            <tr class="odd">
+                                <td class="center"><?=$row["account"]?></td>
+                                <td class="center"><?=$row["inc"]?></td>
+                                <td class="center"><?=$row["phone"]?></td>
+                                <td class="center"><?=$row["rd"]?></td>
+                            </tr>
+                        <?}?>
+
+                        <?if(sizeof($list) == 0){?>
+                            <tr class="odd">
+                                <td colspan="7" class="">리스트가 없습니다.</td>
+                            </tr>
+                        <?}?>
+                        </tbody>
+                    </table>
+                    <?include $_SERVER["DOCUMENT_ROOT"] . "/admin/commons/pageNavigator.php";?>
+                </div>
+            </div>
+        </div>
+    </div>
     <?}?>
 <? include_once $_SERVER['DOCUMENT_ROOT']."/admin/commons/footer.php"; ?>

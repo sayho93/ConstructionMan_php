@@ -22,7 +22,8 @@
         ),
         "payList.php" => array(
             "결제 내역" => "representatives/payList.php?type=0",
-            "포인트 수기 지급" => "representatives/payList.php?type=1",
+            "금액 수기 지급" => "representatives/payList.php?type=1",
+            "수기 지급 내역" => "representatives/payList.php?type=2",
         ),
         "accountList.php" => array(
             "계정 정보" => "representatives/accountList.php?type=0"

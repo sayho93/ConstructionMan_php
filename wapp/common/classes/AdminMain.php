@@ -215,7 +215,10 @@ if(!class_exists("AdminMain")){
                 SELECT 
                   *, 
                   (SELECT account FROM tblUser U WHERE U.id = userId) as account,
+                  (SELECT `name` FROM tblUser U WHERE U.id = userId) as nm,
                   (SELECT description FROM tblZipGugun G WHERE G.gugunID = S.gugunId) as gugunTxt
+                  ,(SELECT abbreviation FROM tblZipSido ZS WHERE ZS.sidoID = S.sidoId) as sidoTxt
+    
                 FROM tblSearch S
                 WHERE 1=1 {$query}
                 ORDER BY regDate DESC
@@ -243,7 +246,9 @@ if(!class_exists("AdminMain")){
                 SELECT 
                   *, 
                   (SELECT account FROM tblUser U WHERE U.id = userId) as account,
+                  (SELECT `name` FROM tblUser U WHERE U.id = userId) as nm,
                   (SELECT description FROM tblZipGugun G WHERE G.gugunID = S.gugunId) as gugunTxt
+                  ,(SELECT abbreviation FROM tblZipSido ZS WHERE ZS.sidoID = S.sidoId) as sidoTxt
                 FROM tblSearch S
                 WHERE 1=1 AND `type` = 'M' {$query}
                 ORDER BY regDate DESC
@@ -271,7 +276,9 @@ if(!class_exists("AdminMain")){
                 SELECT 
                   *, 
                   (SELECT account FROM tblUser U WHERE U.id = userId) as account,
+                  (SELECT `name` FROM tblUser U WHERE U.id = userId) as nm,
                   (SELECT description FROM tblZipGugun G WHERE G.gugunID = S.gugunId) as gugunTxt
+                  ,(SELECT abbreviation FROM tblZipSido ZS WHERE ZS.sidoID = S.sidoId) as sidoTxt
                 FROM tblSearch S
                 WHERE 1=1 AND `type` = 'G' {$query}
                 ORDER BY regDate DESC
@@ -281,9 +288,24 @@ if(!class_exists("AdminMain")){
         }
 
         function getPaymentList(){
+            $searchType = $_REQUEST["searchType"];
             $serchTxt = $_REQUEST["searchTxt"];
             $query = "";
-            if($serchTxt != "") $query = " AND U.phone LIKE '%{$serchTxt}%'";
+            if($serchTxt != ""){
+                switch(intval($searchType)){
+                    case 0:
+                        $query = " AND U.account LIKE '%{$serchTxt}%'";
+                        break;
+                    case 1:
+                        $query = " AND U.name LIKE '%{$serchTxt}%'";
+                        break;
+                    case 2:
+                        $query = " AND U.phone LIKE '%{$serchTxt}%'";
+                        break;
+                    default:
+                        break;
+                }
+            }
 
             $this->initPage();
             $sql = "
@@ -308,9 +330,26 @@ if(!class_exists("AdminMain")){
         }
 
         function getUserListForPoint(){
-            $searchTxt = $_REQUEST["searchTxt"];
-            if($searchTxt != ""){
-                $sql = "SELECT * FROM tblUser WHERE `name` LIKE '%{$searchTxt}%' AND `status` = 1 ORDER BY regDate DESC";
+
+            $searchType = $_REQUEST["searchType"];
+            $serchTxt = $_REQUEST["searchTxt"];
+            $query = "";
+            if($serchTxt != ""){
+                switch(intval($searchType)){
+                    case 0:
+                        $query = " AND account LIKE '%{$serchTxt}%'";
+                        break;
+                    case 1:
+                        $query = " AND name LIKE '%{$serchTxt}%'";
+                        break;
+                    case 2:
+                        $query = " AND phone LIKE '%{$serchTxt}%'";
+                        break;
+                    default:
+                        break;
+                }
+
+                $sql = "SELECT * FROM tblUser WHERE `status` = 1 {$query} ORDER BY regDate DESC";
                 return $this->getArray($sql);
             }
         }
@@ -336,6 +375,27 @@ if(!class_exists("AdminMain")){
             $this->update($sql);
 
             return $this->makeResultJson("1", "succ");
+        }
+
+        function getSupplyList(){
+            $this->initPage();
+
+            $sql = "
+                SELECT COUNT(*) as rowCnt FROM tblPoint P JOIN tblUser U ON U.id = P.userId
+                WHERE payType = 0
+            ";
+            $this->rownum = $this->getValue($sql, "rowCnt");
+            $this->setPage($this->rownum);
+
+            $sql = "
+                SELECT *, P.regDate as rd 
+                FROM tblPoint P JOIN tblUser U ON U.id = P.userId
+                WHERE payType = 0 
+                ORDER BY P.regDate DESC
+                LIMIT {$this->startNum}, {$this->endNum}
+            ";
+
+            return $this->getArray($sql);
         }
 
     }

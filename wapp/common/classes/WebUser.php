@@ -70,6 +70,7 @@ if(! class_exists("WebUser") ){
                 "pushKey" => $_REQUEST["pushKey"], "region" => $_REQUEST["regionArr"], "work" => $_REQUEST["workArr"],
                 "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "gearInfo" => $_REQUEST["gearInfo"]));
 
+
             LoginUtil::doWebLogin(json_decode($retVal)->data);
             return $retVal;
         }

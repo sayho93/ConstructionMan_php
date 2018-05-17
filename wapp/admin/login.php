@@ -31,6 +31,7 @@
 
 <script>
     $(document).ready(function(){
+        alert();
         $(".jLogin").click(function(){
             var params = new sehoMap();
             params.put("account", $("[name=account]").val());
@@ -42,7 +43,14 @@
                 }
             });
         });
+
+        $('.target').on("keydown", fucntion(){
+            if (event.keyCode == 13) {
+                alert('Entered');
+            }
+        });
     });
+
 </script>
 
 <body id="login">
@@ -50,8 +58,8 @@
 
     <div class="form-signin">
         <h2 class="form-signin-heading">Admin Login</h2>
-        <input type="text" name="account" class="input-block-level" placeholder="Account">
-        <input type="password" name="password" class="input-block-level" placeholder="Password">
+        <input type="text" name="account" class="input-block-level target" placeholder="Account">
+        <input type="password" name="password" class="input-block-level target" placeholder="Password">
 <!--        <label class="checkbox">-->
 <!--            <input type="checkbox" value="remember-me"> Remember me-->
 <!--        </label>-->

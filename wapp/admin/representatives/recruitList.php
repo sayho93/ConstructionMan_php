@@ -9,6 +9,8 @@
     if($type == "0" || $type == "") $list = $obj->getSearchList();
     if($type == "1") $list = $obj->getManSearchList();
     if($type == "2") $list = $obj->getGearSearchList();
+
+//    echo json_encode($list);
 ?>
     <script>
         $(document).ready(function(){
@@ -20,6 +22,12 @@
             $(".jSearch").click(function(){
                 $("[name=searchTxt]").val($("#searchTxt").val());
                 $("[name=form]").submit();
+            });
+
+            $('input').on("keydown", function(event){
+                if (event.keyCode == 13) {
+                    $(".jSearch").trigger("click");
+                }
             });
         });
     </script>
@@ -49,7 +57,7 @@
                     <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" >
                         <thead>
                         <tr>
-                            <th>등록자 아이디</th>
+                            <th>등록자</th>
                             <th>위치</th>
                             <th>작업명</th>
                             <th>시작일~종료일</th>
@@ -63,12 +71,12 @@
 
                         <?foreach($list as $row){?>
                             <tr class="odd">
-                                <td class="center"><?=$row["account"]?></td>
-                                <td class="center"><?=$row["gugunTxt"]?></td>
+                                <td class="center"><?=$row["nm"] . "(" . $row["account"] . ")"?></td>
+                                <td class="center"><?=$row["sidoTxt"] . " " . $row["gugunTxt"]?></td>
                                 <td class="center"><?=$row["name"]?></td>
                                 <td class="center"><?=$row["startDate"] . " ~ " . $row["endDate"]?></td>
                                 <td class="center"><?=$row["lodging"] == "1" ? "Y" : "N"?></td>
-                                <td class="center"><?=$row["price"]?></td>
+                                <td class="center"><?=$row["discussLater"]==0 ? $row["price"] : $row["price"] . "(추후협의)"?></td>
                                 <td class="center"><?=$row["type"] == "M" ? "인력" : "장비"?></td>
                                 <td class="center"><?=$row["regDate"]?></td>
                             </tr>

@@ -32,6 +32,10 @@
 <script>
     $(document).ready(function(){
         $(".jLogin").click(function(){
+            if($("[name=account]").val() == "" || $("[name=password]").val() == ""){
+                alert("계정 정보를 입력하세요.");
+                return;
+            }
             var params = new sehoMap();
             params.put("account", $("[name=account]").val());
             params.put("password", $("[name=password]").val());
@@ -41,6 +45,12 @@
                     location.href = "/admin/representatives/userList.php";
                 }
             });
+        });
+
+        $('input').on("keydown", function(event){
+            if (event.keyCode == 13) {
+                $(".jLogin").trigger("click");
+            }
         });
     });
 </script>

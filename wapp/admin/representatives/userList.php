@@ -83,6 +83,12 @@ if($type == "3") $list = $obj->getNormalUserList();
             $("#sType").change(function(){
                 $("[name=searchType]").val($(this).val());
             });
+
+            $('input').on("keydown", function(event){
+                if (event.keyCode == 13) {
+                    $(".jSearch").trigger("click");
+                }
+            });
         });
     </script>
 
@@ -113,7 +119,7 @@ if($type == "3") $list = $obj->getNormalUserList();
                             <option value="1" <?=$_REQUEST["searchType"] == "1" ? "selected" : ""?>>ID</option>
                             <option value="2" <?=$_REQUEST["searchType"] == "2" ? "selected" : ""?>>휴대폰번호</option>
                         </select>
-                        <input type="text" class="search-query" id="searchTxt" placeholder="휴대폰번호 검색" value="<?=$_REQUEST["searchTxt"]?>"> <button class="btn jSearch">검색</button>
+                        <input type="text" class="search-query" id="searchTxt" placeholder="검색" value="<?=$_REQUEST["searchTxt"]?>"> <button class="btn jSearch">검색</button>
                         <a class="btn btn-danger excel jDelUserMulti" style="float:right;">선택 삭제</a>
                     </div>
                     <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" >
@@ -156,8 +162,7 @@ if($type == "3") $list = $obj->getNormalUserList();
                                     ?>
                                 </td>
                                 <td class="center"><?=$row["regDate"]?></td>
-                                <td class="center"><button clas
-                                                           s="btn jDel" no="<?=$row["id"]?>">삭제</button></td>
+                                <td class="center"><button class="btn jDel" no="<?=$row["id"]?>">삭제</button></td>
                             </tr>
                         <?}?>
 

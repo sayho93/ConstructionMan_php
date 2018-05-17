@@ -335,10 +335,10 @@ a#normal{
 }
 
 .form p{
-    font-size: 1.3em;
+    font-size: 1.0em;
     color: black;
     display: inline-block;
-    font-weight: normal;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -524,7 +524,7 @@ input[type=number]:focus {
     font-size: 1em;
     color: black;
     display: inline-block;
-    font-weight: normal;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -613,7 +613,7 @@ input[type=number]:focus {
     font-size: 1em;
     color: black;
     display: inline-block;
-    font-weight: normal;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -738,7 +738,7 @@ div .align_center{
     font-size: 1.0em;
     color: black;
     display: inline-block;
-    font-weight: normal;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -821,7 +821,7 @@ div .align_center{
 .attachment p{
     font-size: 1.0em;
     color: black;
-    font-weight: normal;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -874,7 +874,7 @@ div .align_center{
     font-size: 1em;
     color: black;
     display: inline-block;
-    font-weight: normal;
+    font-weight: bold;
     margin-top: 4vh;
     margin-bottom: 2vh;
 }

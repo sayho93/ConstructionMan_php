@@ -32,13 +32,15 @@
         });
 
         $(".jWithdraw").click(function(){
-            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.withdrawUser", false, "json", new sehoMap());
-            ajax.send(function(data){
-                if(data.returnCode === 1){
-                    alert("탈퇴되었습니다");
-                    location.href = "/userApp";
-                }
-            });
+            if(confirm("정말 탈퇴하시겠습니까?")){
+                var ajax = new AjaxSender("/action_front.php?cmd=WebUser.withdrawUser", false, "json", new sehoMap());
+                ajax.send(function(data){
+                    if(data.returnCode === 1){
+                        alert("탈퇴되었습니다");
+                        location.href = "/userApp";
+                    }
+                });
+            }
         });
 
         $(".jBack").click(function(){history.go(-1);});
@@ -75,7 +77,7 @@
             <td width="20%" class="gray"><img src="../../img/ico_mylist_sound.png" style="width:8vw; height:8vw;"></td>
             <td width="80%" class="txt">
                 푸쉬 알림설정
-                <div id="pushFlag" status="<?=$pushFlag?>" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw; font-size: 1.0em;">
+                <div id="pushFlag" status="<?=$pushFlag?>" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw; font-size: 1.0em; font-weight: bold">
                     <?
                         if($pushFlag == 1)
                             echo "ON";

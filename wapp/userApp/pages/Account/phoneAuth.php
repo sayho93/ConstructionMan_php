@@ -109,8 +109,9 @@
                             data: params,
                             success: function(data){
                                 console.log(data.data);
-                                alert("가입 완료되었습니다.");
-                                location.href = "/userApp/pages/search/searchMain.php";
+                                location.href = "/userApp/pages/Account/joinComplete.php";
+                                // alert("가입 완료되었습니다.");
+                                // location.href = "/userApp/pages/search/searchMain.php";
                             }
                         });
                     }

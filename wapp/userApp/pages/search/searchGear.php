@@ -88,7 +88,7 @@
     <form name="form">
         <input type="hidden" name="gearId" value="<?=$_REQUEST["gearId"]?>"/>
         <input type="hidden" name="attachment" value="<?=$_REQUEST["attachment"]?>"/>
-        <input type-="hidden" name="type" value="G"/>
+        <input type="hidden" name="type" value="G"/>
 
         <div class="career">
             <p>현장위치</p>
@@ -107,13 +107,13 @@
 
             <p>작업내용</p>
             <div class="wrapper">
-                <input type="text" name="name" class="inputBlue" />
+                <input type="text" name="name" class="inputBlue" style="font-size: 1.8em;"/>
             </div>
 
             <p>작업기간</p>
             <div class="wrapper">
-                <input type="text" name="startDate" class="datepicker" readonly/>
-                <input type="text" name="endDate" class="datepicker" readonly/>
+                <input type="text" name="startDate" class="datepicker" placeholder="시작일" readonly/>
+                <input type="text" name="endDate" class="datepicker" placeholder="마감일" readonly/>
             </div>
 
             <input type="button" class="searchBtn jAdd" value="신청하기"/>

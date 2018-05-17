@@ -11,7 +11,7 @@
 <? include $_SERVER["DOCUMENT_ROOT"] . "/common/classes/WebUser.php";?>
 <?
 $obj = new WebUser($_REQUEST);
-$regionList = $obj->getRegionList();
+$regionList = $obj->getSidoList();
 $regionList = json_decode($regionList)->data;
 ?>
 
@@ -371,8 +371,9 @@ $regionList = json_decode($regionList)->data;
             data: params,
             success: function(data){
                 console.log(data.data);
-                alert("가입 완료되었습니다.");
-                location.href = "/userApp/pages/search/searchMain.php";
+                location.href = "/userApp/pages/Account/joinComplete.php";
+                // alert("가입 완료되었습니다.");
+                // location.href = "/userApp/pages/search/searchMain.php";
             }
         });
     }

@@ -203,20 +203,19 @@
             </select>
         </div>
 
-        <p style="font-weight: bold">작업내용</p>
+        <p style="font-weight: bold">현장명</p>
         <div class="wrapper">
             <input type="text" name="name" class="inputBlue" />
         </div>
 
         <p style="font-weight: bold">작업기간</p>
         <div class="wrapper">
-            <input type="text" name="startDate" class="datepicker" readonly/>
-            <input type="text" name="endDate" class="datepicker" readonly/>
+            <input type="text" name="startDate" placeholder="시작일" class="datepicker" readonly/>
+            <input type="text" name="endDate" placeholder="마감일" class="datepicker" readonly/>
         </div>
 
-        <div class="wrapper" style="width: 40vw;">
-            <p style="width: 15vw; display: inline-block; font-size: 2.0em; margin-right: 1vw; font-weight: bold;">숙소제공</p>
-
+        <div class="wrapper" style="width: 80vw;">
+            <p style="width: 20vw; display: inline-block; font-size: 2.0em; margin-right: 1vw; font-weight: bold;">숙소제공</p>
             <input type="radio" name="lodging" id="r1" value="1"/> <label for="r1">유</label>
             <input type="radio" name="lodging" id="r2" value="0"/> <label for="r2">무</label>
         </div>
@@ -239,7 +238,7 @@
         <br>
         <p>특허 제 10-1705485 호 / 사업자등록번호 461-14-00804</p>
         <p>직업정보제공사업신고번호 J1700020180005호 / 통신판매업신고 제 2018-대전유성-0240 호</p>
-        <p>Tmail : huneps71@gmail.com / tel : </p>
+        <p>mail : huneps71@gmail.com / tel : </p>
         <br>
         <p>ⓒ 휴넵스 All rights reserved.</p>
     </div>

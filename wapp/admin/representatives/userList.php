@@ -20,6 +20,15 @@ if($type == "3") $list = $obj->getNormalUserList();
 
             $(".jSearch").click(function(){
                 $("[name=searchTxt]").val($("#searchTxt").val());
+                $("[name=toSort]").val("regDate");
+                $("[name=sortDirection]").val("DESC");
+                $("[name=form]").submit();
+            });
+
+            $(".sortable").click(function(){
+                $("[name=searchTxt]").val($("#searchTxt").val());
+                $("[name=toSort]").val($(this).attr("toSort"));
+                $("[name=sortDirection]").val($(this).attr("sortDirection"));
                 $("[name=form]").submit();
             });
 
@@ -105,6 +114,8 @@ if($type == "3") $list = $obj->getNormalUserList();
             <input type="hidden" name="searchType" value="<?=$_REQUEST["searchType"]?>"/>
             <input type="hidden" name="searchTxt"/>
             <input type="hidden" name="page"/>
+            <input type="hidden" name="toSort" value="regDate"/>
+            <input type="hidden" name="sortDirection" value="DESC"/>
         </form>
 
         <div class="block">
@@ -126,12 +137,12 @@ if($type == "3") $list = $obj->getNormalUserList();
                         <thead>
                         <tr>
                             <th><input type="checkbox" id="jCheckAll"></th>
-                            <th>이름</th>
-                            <th>ID</th>
-                            <th>휴대폰번호</th>
-                            <th>연령</th>
-                            <th>타입</th>
-                            <th>가입일시</th>
+                            <th class="sortable" toSort="name" sortDirection="ASC">이름</th>
+                            <th class="sortable" toSort="account" sortDirection="ASC">ID</th>
+                            <th class="sortable" toSort="phone" sortDirection="ASC">휴대폰번호</th>
+                            <th class="sortable" toSort="age" sortDirection="ASC">연령</th>
+                            <th class="sortable" toSort="type" sortDirection="ASC">타입</th>
+                            <th class="sortable" toSort="regDate" sortDirection="DESC">가입일시</th>
                             <th>-</th>
                         </tr>
                         </thead>

@@ -28,22 +28,82 @@
 ?>
 
 <script>
+    var id = "<?=$userInfo->id?>";
     var type = "<?=$userInfo->type?>";
     var regionArr = [];
 
     $(document).ready(function(){
-        //이름 변경
-        $(".jModName").click(function(){
-            var inputName = prompt("변경할 이름을 입력해 주세요");
-            var params = new sehoMap().put("name", inputName);
-            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.updateUserName", true, "json", params);
+
+        $(".modifyForm").hide();
+        $(".nm").val("<?=$userInfo->name?>");
+
+        $(".modifyFormPhone").hide();
+        $(".modifyFormPhoneNext").hide();
+        $(".ph").val("<?=$userInfo->phone?>");
+
+        //휴대폰 변경
+        $(".jModPhone").click(function(){
+            $(".modifyFormPhone").fadeIn();
+            $(".alterModifyFormPhone").hide();
+        });
+
+        $(".jHideModifyFormPhone").click(function(){
+            $(".alterModifyFormPhone").fadeIn();
+            $(".modifyFormPhone").hide();
+            $(".modifyFormPhoneNext").hide();
+
+        });
+
+        $(".jSendAuth").click(function(){
+            var phone = $(".ph").val();
+
+            var params = new sehoMap();
+            params.put("phone", phone);
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.sendAuth", false, "json", params);
+            ajax.send(function(data){
+                if(data.returnCode == 1){
+                    alert("인증번호를 입력해 주세요");
+                    $(".modifyFormPhone").hide();
+                    $(".modifyFormPhoneNext").fadeIn();
+                }
+                else
+                    alert("인증문자 발송 실패! 관리자에게 연락 바랍니다.");
+            });
+        });
+
+        $(".jSubmitPhone").click(function(){
+            var phone = $(".ph").val();
+            var id = "<?=$userInfo->id?>";
+            var params =  new sehoMap().put("id", id).put("phone", phone);
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.updatePhone", false, "json", params);
             ajax.send(function(data){
                 if(data.returnCode === 1){
-                    console.log(data);
+                    location.reload();
                 }
             });
         });
 
+        //이름 변경
+        $(".jModName").click(function(){
+            $(".modifyForm").fadeIn();
+            $(".alterModifyForm").hide();
+        });
+
+        $(".jHideModifyForm").click(function(){
+            $(".modifyForm").hide();
+            $(".alterModifyForm").fadeIn();
+        });
+
+        $(".jSubmitName").click(function(){
+            var inputName = $(".border").val();
+            var params = new sehoMap().put("name", inputName);
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.updateUserName", true, "json", params);
+            ajax.send(function(data){
+                if(data.returnCode === 1){
+                    location.reload();
+                }
+            });
+        });
 
         var userRegion = '<?=json_encode($regionInfo)?>';
         var userWork = '<?=json_encode($workInfo)?>';
@@ -607,7 +667,37 @@
 
         //--------------------------img
         $(".jImg").click(function(){
-            location.href = "pickle://cropImage";
+            $(".popHeader").html("프로필 사진 설정");
+            $(".popBody").empty();
+            var template = $(".photoListTemplate").html();
+            template = template.replace("#{type}", "1");
+            template = template.replace("#{text}", "기본 이미지로 변경");
+            $(".popBody").append(template);
+            template = $(".photoListTemplate").html();
+            template = template.replace("#{type}", "2");
+            template = template.replace("#{text}", "이미지 선택");
+            $(".popBody").append(template);
+            $(".popBG").show();
+        });
+
+        $(".popBody").niceScroll({autohidemode:'false'});
+
+        $(document).on("click", ".photoItem", function(){
+            var type = $(this).attr("type");
+            if(type == "1"){
+                var params = new sehoMap().put("id", id);
+                var ajax = new AjaxSender("/action_front.php?cmd=WebUser.deleteImg", true, "json", params);
+                ajax.send(function(data){
+                    if(data.returnCode === 1){
+                        location.reload();
+                    }
+                });
+            }
+            else if(type == "2"){
+                location.href = "pickle://cropImage";
+            }
+
+            $(".popBG").hide();
         });
 
     });
@@ -669,6 +759,10 @@
     </div>
 </div>
 
+<div class="photoListTemplate" style="display: none;">
+    <div class="photoItem" type="#{type}"><span>#{text}</span></div>
+</div>
+
 <div class="gearListItemTemplate" style="display: none;">
     <div>
         <p><text style="color:#00BCD4;">■</text> #{name}[#{detail}] - #{size} /
@@ -717,13 +811,28 @@
     <table width="100%" height="100%">
         <tr class="tableRowInfo">
             <td width="20%"><a class="subject">이름</a></td>
-            <td width="70%"><a class="content"><?=$name?></a></td>
-            <td width="10%"><img src="../../img/btn_edit.png" class="mod_btn jModName" style="float: right"></td>
+            <td width="70%" class="alterModifyForm"><a class="content"><?=$userInfo->name?></a></td>
+            <td width="70%" class="modifyForm"><input type="text" class="border nm" value="<?=$userInfo->name?>" /></td>
+            <td width="10%" class="alterModifyForm"><img src="../../img/btn_edit.png" class="mod_btn jModName" style="float: right"></td>
+            <td width="10%" class="modifyForm">
+                <input type="button" class="jSubmitName" value="확인" style="margin-top: 2vh!important;"/>
+                <input type="button" class="jHideModifyForm" value="취소" style="margin-top: 2vh!important;"/>
+            </td>
         </tr>
         <tr class="tableRowInfo">
             <td><a class="subject">전화번호</a></td>
-            <td><a class="content"><?=$userInfo->phone?></a></td>
-            <td></td>
+            <td class="alterModifyFormPhone"><a class="content"><?=$userInfo->phone?></a></td>
+            <td width="10%" class="alterModifyFormPhone"><img src="../../img/btn_auth.png" class="auth_btn jModPhone" style="float: right"></td>
+            <td width="70%" class="modifyFormPhone"><input type="number" class="border ph" /></td>
+            <td width="70%" class="modifyFormPhoneNext"><input type="number" class="border" placeholder="인증번호" /></td>
+            <td width="10%" class="modifyFormPhone">
+                <input type="button" class="jSendAuth" value="전송" style="margin-top: 2vh!important;"/>
+                <input type="button" class="jHideModifyFormPhone" value="취소" style="margin-top: 2vh!important;"/>
+            </td>
+            <td width="10%" class="modifyFormPhoneNext">
+                <input type="button" class="jSubmitPhone" value="확인" style="margin-top: 2vh!important;"/>
+                <input type="button" class="jHideModifyFormPhone" value="취소" style="margin-top: 2vh!important;"/>
+            </td>
         </tr>
     </table>
 </div>
@@ -758,7 +867,7 @@
             <div class="item" rel="tab2"><text>기계설비</text></div>
             <div class="item" rel="tab3"><text>전기<br>통신<br>소방</text></div>
             <div class="item" rel="tab4"><text>인테리어</text></div>
-            <div class="item" rel="tab5"><text>공통</text></div>
+            <div class="item" rel="tab5"><text>보통인부<br/>안전관리자</text></div>
         </div>
 
         <div class="align_center">
@@ -911,7 +1020,7 @@
         <br>
         <p>특허 제 10-1705485 호 / 사업자등록번호 461-14-00804</p>
         <p>직업정보제공사업신고번호 J1700020180005호 / 통신판매업신고 제 2018-대전유성-0240 호</p>
-        <p>Tmail : huneps71@gmail.com / tel : </p>
+        <p>mail : huneps71@gmail.com / tel : </p>
         <br>
         <p>ⓒ 휴넵스 All rights reserved.</p>
     </div>

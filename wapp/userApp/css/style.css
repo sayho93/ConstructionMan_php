@@ -9,6 +9,10 @@ html, body{
     font-family:'NanumBarunGothicLight';
 }
 
+input[type=text]{
+    font-size: 2.0em;
+}
+
 .main_page{
     background:url('../img/intro_1.png');
     height:100%;
@@ -48,7 +52,7 @@ html, body{
 }
 
 .mypageTitleHeader{
-    height: 18vh;
+    height: 20vh;
     float: bottom;
     background: #F2F2F2;
     text-align: center;
@@ -67,7 +71,7 @@ html, body{
 }
 
 .content{
-    color : #666666 !important;
+    color : #414141 !important;
 }
 
 .mypageHeader{
@@ -122,6 +126,12 @@ html, body{
     width: 3vw;
     height: 3vw;
     background-size: cover;
+}
+
+.auth_btn{
+    height: 4vw;
+    width: auto;
+
 }
 
 .tool_right{
@@ -352,6 +362,15 @@ a#normal{
     background: white;
 }
 
+.border{
+    font-size: 1.2em !important;
+    margin-top: 2vh;
+    width: 85%;
+    height: 8vw;
+    font-size: 1.0em;
+    border: 2px solid #a4a4a4;
+}
+
 .form input[type="text"]{
     margin-top: 2vh;
     width: 100%;
@@ -505,12 +524,23 @@ input[type=number]:focus {
     font-size: 0.8em;
 }
 
+.center a#prevt{
+    background: url("../img/btn_prevt.png");
+    width: 6vh;
+    height: 6vh;
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+}
+
 .center a#next{
     background: url("../img/btn_next.png");
     width: 6vh;
     height: 6vh;
     display: inline-block;
     background-size: 100%;
+    background-repeat: no-repeat;
     /*background-size: cover;*/
 }
 
@@ -1196,6 +1226,21 @@ td.content{
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     overflow: scroll;
+}
+
+.popBody > .photoItem{
+    width: 100%;
+    height: 6vh;
+    border-bottom: 1px solid #848E90;
+    text-align: center;
+}
+
+.photoItem > span{
+    color: black;
+    font-size: 1.0em;
+    vertical-align: middle;
+    line-height: 6vh;
+    text-align: center;
 }
 
 .popBody > .listItem{

@@ -20,6 +20,8 @@ $regionList = json_decode($regionList)->data;
     $(document).ready(function(){
         $(".jBack").click(function(){history.go(-1)});
 
+        $(".popBody").niceScroll({autohidemode:'false'});
+
         $(".regionItem").click(function(){
             var regionID = $(this).attr("no");
 
@@ -169,6 +171,10 @@ $regionList = json_decode($regionList)->data;
             setThird(size);
             $(".popBG").hide();
             setAttachment(attachment);
+        });
+
+        $("#prevt").click(function(){
+            history.go(-1);
         });
 
         $(document).on("click", ".attachmentItem", function(){
@@ -500,7 +506,7 @@ $regionList = json_decode($regionList)->data;
         <br>
         <p>특허 제 10-1705485 호 / 사업자등록번호 461-14-00804</p>
         <p>직업정보제공사업신고번호 J1700020180005호 / 통신판매업신고 제 2018-대전유성-0240 호</p>
-        <p>Tmail : huneps71@gmail.com / tel : </p>
+        <p>mail : huneps71@gmail.com / tel : </p>
         <br>
         <p>ⓒ 휴넵스 All rights reserved.</p>
     </div>

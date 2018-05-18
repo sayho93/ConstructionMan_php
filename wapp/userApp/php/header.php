@@ -35,6 +35,7 @@
 <script type="text/javascript" src="/modules/valueSetter/sayhoValueSetter.js"></script>
 <script type="text/javascript" src="/modules/utils/PValidation.js"></script>
 <script type="text/javascript" src="/userApp/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/userApp/js/jquery.nicescroll.min.js"></script>
 
 
 

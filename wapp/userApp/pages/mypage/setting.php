@@ -88,13 +88,8 @@
             <td width="20%" class="gray"><img src="../../img/ico_mylist_sound.png" style="width:8vw; height:8vw;"></td>
             <td width="80%" class="txt">
                 푸쉬 알림설정
-                <div id="pushFlag" status="<?=$pushFlag?>" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw; font-size: 1.0em; font-weight: bold">
-                    <?
-                        if($pushFlag == 1)
-                            echo "ON";
-                        else
-                            echo "OFF";
-                    ?>
+                <div id="pushFlag" status="<?=$pushFlag?>" style="float: right; width: 4vw; height: 7vw; margin-right: 19vw; font-size: 1.0em; font-weight: bold">
+                    <img src="../../img/push_<?= $pushFlag == 1 ? "on" : "off"?>.png" style="width:auto; height:6vw;"/>
                 </div>
             </td>
         </tr>
@@ -105,18 +100,18 @@
                 <img src="../../img/btn_go_detail.png" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw;">
             </td>
         </tr>
+        <tr class="row jLogOut">
+            <td width="20%" class="gray"><img src="../../img/btn_logout.png" style="width:8vw; height:8vw;"></td>
+            <td width="80%" class="txt">
+                로그아웃
+                <img src="../../img/btn_go_detail.png" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw;">
+            </td>
+        </tr>
         <tr class="row">
             <td width="20%" class="gray"><img src="../../img/ico_mylist_info.png" style="width:8vw; height:8vw;"></td>
             <td width="80%" class="txt">
                 버전정보
                 <div style="float: right; margin-right: 6vw;">1.1.1</div>
-            </td>
-        </tr>
-        <tr class="row jLogOut">
-            <td width="20%" class="gray"><img src="../../img/ico_mylist_withdraw.png" style="width:8vw; height:8vw;"></td>
-            <td width="80%" class="txt">
-                로그아웃
-                <img src="../../img/btn_go_detail.png" style="float: right; width: 4vw; height: 7vw; margin-right: 4vw;">
             </td>
         </tr>
     </table>
@@ -126,7 +121,7 @@
         <br>
         <p>특허 제 10-1705485 호 / 사업자등록번호 461-14-00804</p>
         <p>직업정보제공사업신고번호 J1700020180005호 / 통신판매업신고 제 2018-대전유성-0240 호</p>
-        <p>Tmail : huneps71@gmail.com / tel : </p>
+        <p>mail : huneps71@gmail.com / tel : </p>
         <br>
         <p>ⓒ 휴넵스 All rights reserved.</p>
     </div>

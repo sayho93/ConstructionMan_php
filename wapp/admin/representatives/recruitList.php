@@ -21,6 +21,8 @@
 
             $(".jSearch").click(function(){
                 $("[name=searchTxt]").val($("#searchTxt").val());
+                $("[name=toSort]").val("regDate");
+                $("[name=sortDirection]").val("DESC");
                 $("[name=form]").submit();
             });
 
@@ -28,6 +30,17 @@
                 if (event.keyCode == 13) {
                     $(".jSearch").trigger("click");
                 }
+            });
+
+            $(".sortable").click(function(){
+                $("[name=searchTxt]").val($("#searchTxt").val());
+                $("[name=toSort]").val($(this).attr("toSort"));
+                $("[name=sortDirection]").val($(this).attr("sortDirection"));
+                $("[name=form]").submit();
+            });
+
+            $("#sType").change(function(){
+                $("[name=searchType]").val($(this).val());
             });
         });
     </script>
@@ -41,8 +54,11 @@
     <div class="row-fluid">
         <form name="form">
             <input type="hidden" name="type" value="<?=$_REQUEST["type"]?>"/>
+            <input type="hidden" name="searchType" value="<?=$_REQUEST["searchType"]?>"/>
             <input type="hidden" name="searchTxt"/>
             <input type="hidden" name="page"/>
+            <input type="hidden" name="toSort" value="regDate"/>
+            <input type="hidden" name="sortDirection" value="DESC"/>
         </form>
 
         <div class="block">
@@ -52,19 +68,23 @@
             <div class="block-content collapse in">
                 <div class="span12">
                     <div class="searchArea" align="center">
-                        <input type="text" class="search-query" id="searchTxt" placeholder="등록자 아이디 검색" value="<?=$_REQUEST["searchTxt"]?>"> <button class="btn jSearch">검색</button>
+                        <select id="sType" style="width: 12%; margin-bottom: 0px;">
+                            <option value="0" <?=$_REQUEST["searchType"] == "0" ? "selected" : ""?>>아이디</option>
+                            <option value="1" <?=$_REQUEST["searchType"] == "1" ? "selected" : ""?>>이름</option>
+                        </select>
+                        <input type="text" class="search-query" id="searchTxt" placeholder="검색" value="<?=$_REQUEST["searchTxt"]?>"> <button class="btn jSearch">검색</button>
                     </div>
                     <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" >
                         <thead>
                         <tr>
-                            <th>등록자</th>
-                            <th>위치</th>
-                            <th>작업명</th>
-                            <th>시작일~종료일</th>
-                            <th>숙소제공</th>
-                            <th>단가</th>
-                            <th>타입</th>
-                            <th>등록일시</th>
+                            <th class="sortable" toSort="nm" sortDirection="ASC">등록자</th>
+                            <th class="sortable" toSort="sidoTxt, gugunTxt" sortDirection="ASC">위치</th>
+                            <th class="sortable" toSort="name" sortDirection="ASC">작업명</th>
+                            <th class="sortable" toSort="startDate" sortDirection="ASC">시작일~종료일</th>
+                            <th class="sortable" toSort="lodging" sortDirection="ASC">숙소제공</th>
+                            <th class="sortable" toSort="price" sortDirection="ASC">단가</th>
+                            <th class="sortable" toSort="type" sortDirection="ASC">타입</th>
+                            <th class="sortable" toSort="regDate" sortDirection="DESC">등록일시</th>
                         </tr>
                         </thead>
                         <tbody>

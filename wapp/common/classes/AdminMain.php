@@ -48,11 +48,13 @@ if(!class_exists("AdminMain")){
                 }
             }
 
+            $sort = $_REQUEST["toSort"] == "" ? "regDate" : $_REQUEST["toSort"];
+            $sortD = $_REQUEST["sortDirection"] == "" ? "DESC" : $_REQUEST["sortDirection"];
+
             $this->initPage();
             $sql = "
                 SELECT COUNT(*) as rowCnt
-                FROM tblUser WHERE status = 1 {$query}
-                ORDER BY regDate DESC;
+                FROM tblUser WHERE status = 1 {$query};
             ";
 
             $this->rownum = $this->getValue($sql, "rowCnt");
@@ -61,7 +63,7 @@ if(!class_exists("AdminMain")){
             $sql = "
                 SELECT * 
                 FROM tblUser WHERE status = 1 {$query}
-                ORDER BY regDate DESC
+                ORDER BY ${sort} ${sortD}
                 LIMIT {$this->startNum}, {$this->endNum};
             ";
             return $this->getArray($sql);
@@ -85,11 +87,13 @@ if(!class_exists("AdminMain")){
                 }
             }
 
+            $sort = $_REQUEST["toSort"] == "" ? "regDate" : $_REQUEST["toSort"];
+            $sortD = $_REQUEST["sortDirection"] == "" ? "DESC" : $_REQUEST["sortDirection"];
+
             $this->initPage();
             $sql = "
                 SELECT COUNT(*) as rowCnt
-                FROM tblUser WHERE status = 1 AND `type` = 'M' {$query}
-                ORDER BY regDate DESC;
+                FROM tblUser WHERE status = 1 AND `type` = 'M' {$query};
             ";
 
             $this->rownum = $this->getValue($sql, "rowCnt");
@@ -98,7 +102,7 @@ if(!class_exists("AdminMain")){
             $sql = "
                 SELECT * 
                 FROM tblUser WHERE status = 1 AND `type` = 'M' {$query}
-                ORDER BY regDate DESC
+                ORDER BY {$sort} {$sortD}
                 LIMIT {$this->startNum}, {$this->endNum};
             ";
             return $this->getArray($sql);
@@ -122,6 +126,9 @@ if(!class_exists("AdminMain")){
                 }
             }
 
+            $sort = $_REQUEST["toSort"] == "" ? "regDate" : $_REQUEST["toSort"];
+            $sortD = $_REQUEST["sortDirection"] == "" ? "DESC" : $_REQUEST["sortDirection"];
+
             $this->initPage();
             $sql = "
                 SELECT COUNT(*) as rowCnt
@@ -135,7 +142,7 @@ if(!class_exists("AdminMain")){
             $sql = "
                 SELECT * 
                 FROM tblUser WHERE status = 1 AND `type` = 'G' {$query}
-                ORDER BY regDate DESC
+                ORDER BY {$sort} {$sortD}
                 LIMIT {$this->startNum}, {$this->endNum};
             ";
             return $this->getArray($sql);
@@ -159,6 +166,9 @@ if(!class_exists("AdminMain")){
                 }
             }
 
+            $sort = $_REQUEST["toSort"] == "" ? "regDate" : $_REQUEST["toSort"];
+            $sortD = $_REQUEST["sortDirection"] == "" ? "DESC" : $_REQUEST["sortDirection"];
+
             $this->initPage();
             $sql = "
                 SELECT COUNT(*) as rowCnt
@@ -172,7 +182,7 @@ if(!class_exists("AdminMain")){
             $sql = "
                 SELECT * 
                 FROM tblUser WHERE status = 1 AND `type` = 'N' {$query}
-                ORDER BY regDate DESC
+                ORDER BY {$sort} {$sortD}
                 LIMIT {$this->startNum}, {$this->endNum};
             ";
             return $this->getArray($sql);
@@ -199,8 +209,19 @@ if(!class_exists("AdminMain")){
         function getSearchList(){
             $searchTxt = $_REQUEST["searchTxt"];
             $query = "";
-            if($searchTxt != "")
-                $query = "AND (SELECT account FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
+            $searchType = $_REQUEST["searchType"];
+            if($searchTxt != ""){
+                switch ($searchType){
+                    case 0:
+                        $query = "AND (SELECT account FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
+                        break;
+                    case 1:
+                        $query = "AND (SELECT name FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
+                        break;
+                    default:
+                        break;
+                }
+            }
 
             $this->initPage();
             $sql = "
@@ -211,6 +232,9 @@ if(!class_exists("AdminMain")){
             $this->rownum = $this->getValue($sql, "rowCnt");
             $this->setPage($this->rownum);
 
+            $sort = $_REQUEST["toSort"] == "" ? "regDate" : $_REQUEST["toSort"];
+            $sortD = $_REQUEST["sortDirection"] == "" ? "DESC" : $_REQUEST["sortDirection"];
+
             $sql = "
                 SELECT 
                   *, 
@@ -218,10 +242,9 @@ if(!class_exists("AdminMain")){
                   (SELECT `name` FROM tblUser U WHERE U.id = userId) as nm,
                   (SELECT description FROM tblZipGugun G WHERE G.gugunID = S.gugunId) as gugunTxt
                   ,(SELECT abbreviation FROM tblZipSido ZS WHERE ZS.sidoID = S.sidoId) as sidoTxt
-    
                 FROM tblSearch S
                 WHERE 1=1 {$query}
-                ORDER BY regDate DESC
+                ORDER BY {$sort} {$sortD}
                 LIMIT {$this->startNum}, {$this->endNum}
             ";
             return $this->getArray($sql);
@@ -230,9 +253,19 @@ if(!class_exists("AdminMain")){
         function getManSearchList(){
             $searchTxt = $_REQUEST["searchTxt"];
             $query = "";
-            if($searchTxt != "")
-                $query = " AND (SELECT account FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
-
+            $searchType = $_REQUEST["searchType"];
+            if($searchTxt != ""){
+                switch ($searchType){
+                    case 0:
+                        $query = "AND (SELECT account FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
+                        break;
+                    case 1:
+                        $query = "AND (SELECT name FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
+                        break;
+                    default:
+                        break;
+                }
+            }
             $this->initPage();
             $sql = "
                 SELECT COUNT(*) as rowCnt
@@ -241,6 +274,9 @@ if(!class_exists("AdminMain")){
             ";
             $this->rownum = $this->getValue($sql, "rowCnt");
             $this->setPage($this->rownum);
+
+            $sort = $_REQUEST["toSort"] == "" ? "regDate" : $_REQUEST["toSort"];
+            $sortD = $_REQUEST["sortDirection"] == "" ? "DESC" : $_REQUEST["sortDirection"];
 
             $sql = "
                 SELECT 
@@ -251,7 +287,7 @@ if(!class_exists("AdminMain")){
                   ,(SELECT abbreviation FROM tblZipSido ZS WHERE ZS.sidoID = S.sidoId) as sidoTxt
                 FROM tblSearch S
                 WHERE 1=1 AND `type` = 'M' {$query}
-                ORDER BY regDate DESC
+                ORDER BY {$sort} {$sortD}
                 LIMIT {$this->startNum}, {$this->endNum}
             ";
             return $this->getArray($sql);
@@ -260,8 +296,19 @@ if(!class_exists("AdminMain")){
         function getGearSearchList(){
             $searchTxt = $_REQUEST["searchTxt"];
             $query = "";
-            if($searchTxt != "")
-                $query = " AND (SELECT account FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
+            $searchType = $_REQUEST["searchType"];
+            if($searchTxt != ""){
+                switch ($searchType){
+                    case 0:
+                        $query = "AND (SELECT account FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
+                        break;
+                    case 1:
+                        $query = "AND (SELECT name FROM tblUser U WHERE U.id = userId) LIKE '%{$searchTxt}%'";
+                        break;
+                    default:
+                        break;
+                }
+            }
 
             $this->initPage();
             $sql = "
@@ -272,6 +319,9 @@ if(!class_exists("AdminMain")){
             $this->rownum = $this->getValue($sql, "rowCnt");
             $this->setPage($this->rownum);
 
+            $sort = $_REQUEST["toSort"] == "" ? "regDate" : $_REQUEST["toSort"];
+            $sortD = $_REQUEST["sortDirection"] == "" ? "DESC" : $_REQUEST["sortDirection"];
+
             $sql = "
                 SELECT 
                   *, 
@@ -281,7 +331,7 @@ if(!class_exists("AdminMain")){
                   ,(SELECT abbreviation FROM tblZipSido ZS WHERE ZS.sidoID = S.sidoId) as sidoTxt
                 FROM tblSearch S
                 WHERE 1=1 AND `type` = 'G' {$query}
-                ORDER BY regDate DESC
+                ORDER BY {$sort} {$sortD}
                 LIMIT {$this->startNum}, {$this->endNum}
             ";
             return $this->getArray($sql);

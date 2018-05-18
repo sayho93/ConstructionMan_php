@@ -194,6 +194,28 @@ if(! class_exists("WebUser") ){
             return $lastId;
         }
 
+        function deleteImg(){
+            $sql = "
+                UPDATE tblUser
+                SET imgPath = ''
+                WHERE `id` = '{$_REQUEST["id"]}' 
+            ";
+
+            $this->update($sql);
+            return $this->makeResultJson(1, "succ");
+        }
+
+        function updatePhone(){
+            $sql = "
+                UPDATE tblUser
+                set phone = '{$_REQUEST["phone"]}'
+                WHERE `id` = '{$_REQUEST["id"]}'
+            ";
+
+            $this->update($sql);
+            return $this->makeResultJson(1, "succ");
+        }
+
     }
 }
 ?>

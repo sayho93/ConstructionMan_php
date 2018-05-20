@@ -24,8 +24,15 @@
         $(".jAdd").click(function(){
             var ajax = new AjaxSender("/action_front.php?cmd=WebUser.usePoint", true, "json", new sehoMap());
             ajax.send(function(data){
-                if(data.returnCode === -9){
-                    alert("열 명 단위로 결제가 가능합니다.");
+                if(data.returnCode === 1){
+                    location.reload();
+                }
+                else if(data.returnCode === -9){
+                    alert("더 이상 결제할 목록이 없습니다.");
+                    return;
+                }
+                else if(data.returnCode === -11){
+                    alert("결제할 포인트가 부족합니다.");
                     return;
                 }
             });
@@ -56,6 +63,16 @@
             alert("< 금액(포인트) 충전 정보 안내 > \n 계좌번호(입금주 이행수(휴넵스))\n" +
             "- 국민은행 770601-00-1019919\n" +
             "- 농협 301-0231-1507-91");
+        });
+
+        $(".tel").click(function(){
+            var tel = $(this).attr("no");
+            if(tel.includes("*")){
+                return;
+            }
+            else{
+                location.href = "tel://" + tel;
+            }
         });
     });
 </script>
@@ -90,7 +107,7 @@
                     <td style="font-size: 1.0em" colspan="2"><?=$item->name . "(" . $item->age . "대)"?></td>
                     <td colspan="2">
                         <!--                    <img src="../../img/btn_email.png" style="width: 8vw; height: 8vw; float: right">-->
-                        <img src="../../img/btn_sms.png" style="width: 8vw; height: 8vw; float: right;">
+                        <img src="../../img/btn_sms.png" class="tel" no="<?=$item->phone?>" style="width: 8vw; height: 8vw; float: right;">
                     </td>
                 </tr>
                 <tr>

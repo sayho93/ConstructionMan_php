@@ -20,7 +20,7 @@ if(! class_exists("Constants") )
 //		var $con_domain				= "http://localhost:9880" ;	// 메일에서 사용되는 도메인
 //
 
-        var $serverRoot				= "http://localhost:10040/";
+        var $serverRoot				= "http://huneps.com:10040/";
 				
 //		var $fileSaveUrl			= "/upload_img/" ;
 //		var $fileSaveUrl_480		= "/480/" ;

@@ -42,11 +42,11 @@
 <div class="body">
     <br/><br/>
     <div style="margin:0vw 5vw 0vw 5vw">
-        <div style="position:absolute; left:5vw">
+        <div style="left:5vw; float: left;">
             <text style="color:#03A0CB; font-size: 1.0em;"><?=$userInfo->name?></text>
             <text style="color:#333333; font-size: 0.8em;">님의 결제내역입니다.</text>
         </div>
-        <div style="position:absolute; right:5vw">
+        <div style="right:5vw; float: right">
             <text style="color:#333333; font-size: 0.8em;">총 </text>
             <text style="color:#03A0CB; font-size: 0.8em;"><?=sizeof($list)?></text>
             <text style="color:#333333; font-size: 0.8em;"> 건</text>

@@ -25,10 +25,10 @@ if(! class_exists("Constants") )
 //		var $fileSaveUrl			= "/upload_img/" ;
 //		var $fileSaveUrl_480		= "/480/" ;
 
- 		var $dbHost					= "huneps.com";
+ 		var $dbHost					= "picklecode.co.kr";
  		var $dbName					= "ConstructionMan" ;
  		var $dbUser					= "root" ;
- 		var $dbPass					= "pickle" ;
+ 		var $dbPass					= "pickle!@#$" ;
  		var $charset				= "utf8" ;
 
  		var $IMG_DIR                = "http://huneps.com:9000/";

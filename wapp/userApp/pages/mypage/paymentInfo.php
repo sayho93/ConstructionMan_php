@@ -23,7 +23,7 @@
 
         $(".jDel").click(function(){
             var params = new sehoMap().put("id", $(this).attr("no"));
-            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.hidePointHistory", true, "json", params);
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.hideApplyList", true, "json", params);
             ajax.send(function(data){
                 if(data.returnCode === 1){
                     location.reload();
@@ -67,15 +67,17 @@
                                 <text style="color:#AAAAAA; font-size: 0.5em;"><?=$item->regDate?></text>
                             </td>
                             <td>
-                                <div style="padding: 4px 9px 4px 9px; text-align:center; color:#03A0CB; font-size: 0.5em; border: 1px solid #AAAAAA; background-color: #CCCCCC; border-radius: 5%">
-                                    &nbsp;결제완료&nbsp;
-                                </div>
+                                <?if($item->isPaid == 1){?>
+                                    <div style="padding: 4px 9px 4px 9px; text-align:center; color:#03A0CB; font-size: 0.5em; border: 1px solid #AAAAAA; background-color: #CCCCCC; border-radius: 5%">
+                                        &nbsp;결제완료&nbsp;
+                                    </div>
+                                <?}?>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div style="float:right; right:5vw">
-                    <a href="#"><img class="jDel" src="../../img/btn_del.png" style="height:7vw; width: 7vw;" no="<?=$item->id?>" /></a>
+                    <a href="#"><img class="jDel" src="../../img/btn_del.png" style="height:7vw; width: 7vw;" no="<?=$item->searchId?>" /></a>
                 </div>
             </div>
             <p><?=$item->comment?></p>

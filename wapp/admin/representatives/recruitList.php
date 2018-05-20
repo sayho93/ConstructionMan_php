@@ -63,7 +63,24 @@
 
         <div class="block">
             <div class="navbar navbar-inner block-header">
-                <div class="muted pull-left">구인 리스트</div>
+                <div class="muted pull-left">
+                    <?
+                        switch($_REQUEST["type"]){
+                            case "":
+                                echo "구인 리스트";
+                                break;
+                            case 0:
+                                echo "구인 리스트";
+                                break;
+                            case 1:
+                                echo "인력 구인 리스트";
+                                break;
+                            case 2:
+                                echo "장비 구인 리스트";
+                                break;
+                        }
+                    ?>
+                </div>
             </div>
             <div class="block-content collapse in">
                 <div class="span12">
@@ -96,7 +113,7 @@
                                 <td class="center"><?=$row["name"]?></td>
                                 <td class="center"><?=$row["startDate"] . " ~ " . $row["endDate"]?></td>
                                 <td class="center"><?=$row["lodging"] == "1" ? "Y" : "N"?></td>
-                                <td class="center"><?=$row["discussLater"]==0 ? $row["price"] : $row["price"] . "(추후협의)"?></td>
+                                <td class="center"><?=$row["price"]==0 ? "" : $row["price"] . "(추후협의)"?></td>
                                 <td class="center"><?=$row["type"] == "M" ? "인력" : "장비"?></td>
                                 <td class="center"><?=$row["regDate"]?></td>
                             </tr>

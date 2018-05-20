@@ -2,33 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a8eb9b7-06e9-4845-aa3b-c394c4333abb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/wapp/admin/representatives/recruitList.php" afterPath="$PROJECT_DIR$/wapp/admin/representatives/recruitList.php" />
       <change beforePath="$PROJECT_DIR$/wapp/admin/representatives/userList.php" afterPath="$PROJECT_DIR$/wapp/admin/representatives/userList.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/common/classes/AdminMain.php" afterPath="$PROJECT_DIR$/wapp/common/classes/AdminMain.php" />
       <change beforePath="$PROJECT_DIR$/wapp/common/classes/WebUser.php" afterPath="$PROJECT_DIR$/wapp/common/classes/WebUser.php" />
       <change beforePath="$PROJECT_DIR$/wapp/common/classes/comm/Constants.php" afterPath="$PROJECT_DIR$/wapp/common/classes/comm/Constants.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/css/style.css" afterPath="$PROJECT_DIR$/wapp/userApp/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/login.php" afterPath="$PROJECT_DIR$/wapp/userApp/login.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/findID.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/findID.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/findPW.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/findPW.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/joinComplete.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/joinComplete.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/joinGearStep1.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/joinGearStep1.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep1.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep1.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep2.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep2.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/memberJoin.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/memberJoin.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/phoneAuth.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/phoneAuth.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/policy.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/policy.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/Account/privacy.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/Account/privacy.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/mypage/applyInfo.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/applyInfo.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/mypage/setting.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/setting.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/search/searchGear.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/search/searchGear.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/search/searchGearType.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/search/searchGearType.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/search/searchMain.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/search/searchMain.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/search/searchMan.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/search/searchMan.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/search/searchManType.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/search/searchManType.php" />
-      <change beforePath="$PROJECT_DIR$/wapp/userApp/php/header.php" afterPath="$PROJECT_DIR$/wapp/userApp/php/header.php" />
+      <change beforePath="$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentInfo.php" afterPath="$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentInfo.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +17,78 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="userList.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wapp/admin/representatives/userList.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="139" column="38" lean-forward="false" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="38" />
+              <folding>
+                <marker date="1526634986016" expanded="true" signature="5688:5730" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recruitList.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wapp/admin/representatives/recruitList.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wapp/common/classes/comm/Constants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="45" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applyInfo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/applyInfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebUser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wapp/common/classes/WebUser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="176" column="34" lean-forward="true" selection-start-line="176" selection-start-column="34" selection-end-line="176" selection-end-column="56" />
+              <folding>
+                <marker date="1526633900544" expanded="true" signature="7374:7514" ph="INSERT INTO tblPayment... " />
+                <marker date="1526633900544" expanded="true" signature="7719:7752" ph="UPDATE tblUser... " />
+                <marker date="1526633900544" expanded="true" signature="7719:7763" ph="UPDATE tblUser... " />
+                <marker date="1526633900544" expanded="true" signature="7719:7815" ph="UPDATE tblUser... " />
+                <marker date="1526633900544" expanded="true" signature="7999:8043" ph="UPDATE tblUser... " />
+                <marker date="1526633900544" expanded="true" signature="7999:8064" ph="UPDATE tblUser... " />
+                <marker date="1526633900544" expanded="true" signature="7999:8113" ph="UPDATE tblUser... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paymentInfo.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentInfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="79" column="133" lean-forward="false" selection-start-line="79" selection-start-column="133" selection-end-line="79" selection-end-column="133" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -101,7 +151,6 @@
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/paidList.php" />
         <option value="$PROJECT_DIR$/wapp/admin/metaData.php" />
         <option value="$PROJECT_DIR$/wapp/admin/commons/navigator.php" />
-        <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentInfo.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/index.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentNoti.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/main.php" />
@@ -136,17 +185,18 @@
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/setting.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/search/searchManType.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageMain.php" />
-        <option value="$PROJECT_DIR$/wapp/common/classes/comm/Constants.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/php/header.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/search/searchGearType.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/Account/joinManStep1.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/Account/joinGearStep1.php" />
-        <option value="$PROJECT_DIR$/wapp/admin/representatives/userList.php" />
-        <option value="$PROJECT_DIR$/wapp/admin/representatives/recruitList.php" />
         <option value="$PROJECT_DIR$/wapp/common/classes/AdminMain.php" />
-        <option value="$PROJECT_DIR$/wapp/common/classes/WebUser.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php" />
         <option value="$PROJECT_DIR$/wapp/userApp/css/style.css" />
+        <option value="$PROJECT_DIR$/wapp/common/classes/WebUser.php" />
+        <option value="$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentInfo.php" />
+        <option value="$PROJECT_DIR$/wapp/admin/representatives/userList.php" />
+        <option value="$PROJECT_DIR$/wapp/admin/representatives/recruitList.php" />
+        <option value="$PROJECT_DIR$/wapp/common/classes/comm/Constants.php" />
       </list>
     </option>
   </component>
@@ -281,7 +331,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="WebUser&#9;FILE&#9;file:///usr/local/var/test/wapp/common/classes/WebUser.php&#10;style&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/css/style.css&#10;mypa&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;searchMa&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchManType.php&#10;mypage&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageMain.php&#10;setting&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/setting.php&#10;search&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchGear.php&#10;searchMan&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchMan.php&#10;style.css&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/css/style.css&#10;top&#9;FILE&#9;file:///usr/local/var/test/wapp/admin/commons/topNavigator.php&#10;seho&#9;FILE&#9;file:///usr/local/var/test/wapp/modules/sehoMap/sehoMap.js&#10;chatClient&#9;FILE&#9;file:///usr/local/var/test/chatManager/chatClient.php" />
+    <property name="SearchEverywhereHistoryKey" value="Con&#9;FILE&#9;file:///usr/local/var/test/wapp/common/classes/comm/Constants.php&#10;applyIn&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/applyInfo.php&#10;Const&#9;FILE&#9;file:///usr/local/var/test/wapp/common/classes/comm/Constants.php&#10;WebUser&#9;FILE&#9;file:///usr/local/var/test/wapp/common/classes/WebUser.php&#10;style&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/css/style.css&#10;mypa&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;searchMa&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchManType.php&#10;mypage&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageMain.php&#10;setting&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/setting.php&#10;search&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchGear.php&#10;searchMan&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchMan.php&#10;style.css&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/css/style.css&#10;top&#9;FILE&#9;file:///usr/local/var/test/wapp/admin/commons/topNavigator.php&#10;seho&#9;FILE&#9;file:///usr/local/var/test/wapp/modules/sehoMap/sehoMap.js&#10;chatClient&#9;FILE&#9;file:///usr/local/var/test/chatManager/chatClient.php" />
     <property name="nodejs_interpreter_path" value="node" />
   </component>
   <component name="RecentsManager">
@@ -346,12 +396,12 @@
       <workItem from="1526434697258" duration="3078000" />
       <workItem from="1526440371646" duration="3649000" />
       <workItem from="1526466285845" duration="11511000" />
-      <workItem from="1526616021606" duration="10219000" />
+      <workItem from="1526616021606" duration="14265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248703000" />
+    <option name="totallyTimeSpent" value="252749000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -492,13 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentNext.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="641">
@@ -552,14 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="51" column="41" lean-forward="false" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/applyInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="87" />
           <folding />
         </state>
       </provider>
@@ -693,14 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/common/classes/comm/Constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="63" lean-forward="false" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/php/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -753,24 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-685">
           <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/admin/representatives/userList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="91" column="12" lean-forward="false" selection-start-line="91" selection-start-column="12" selection-end-line="93" selection-end-column="15" />
-          <folding>
-            <marker date="1526625983614" expanded="true" signature="4945:4987" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/admin/representatives/recruitList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="71" column="86" lean-forward="true" selection-start-line="71" selection-start-column="86" selection-end-line="71" selection-end-column="86" />
           <folding />
         </state>
       </provider>
@@ -834,22 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wapp/common/classes/WebUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="215" column="52" lean-forward="false" selection-start-line="215" selection-start-column="52" selection-end-line="215" selection-end-column="52" />
-          <folding>
-            <marker date="1526629379055" expanded="true" signature="7123:7263" ph="INSERT INTO tblPayment... " />
-            <marker date="1526629379055" expanded="true" signature="7468:7501" ph="UPDATE tblUser... " />
-            <marker date="1526629379055" expanded="true" signature="7468:7512" ph="UPDATE tblUser... " />
-            <marker date="1526629379055" expanded="true" signature="7468:7564" ph="UPDATE tblUser... " />
-            <marker date="1526629379055" expanded="true" signature="7748:7792" ph="UPDATE tblUser... " />
-            <marker date="1526629379055" expanded="true" signature="7748:7813" ph="UPDATE tblUser... " />
-            <marker date="1526629379055" expanded="true" signature="7748:7862" ph="UPDATE tblUser... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/mypageInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -867,6 +860,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/admin/representatives/userList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="139" column="38" lean-forward="false" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="38" />
+          <folding>
+            <marker date="1526634986016" expanded="true" signature="5688:5730" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/admin/representatives/recruitList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/common/classes/comm/Constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="45" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/applyInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/common/classes/WebUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="176" column="34" lean-forward="true" selection-start-line="176" selection-start-column="34" selection-end-line="176" selection-end-column="56" />
+          <folding>
+            <marker date="1526633900544" expanded="true" signature="7374:7514" ph="INSERT INTO tblPayment... " />
+            <marker date="1526633900544" expanded="true" signature="7719:7752" ph="UPDATE tblUser... " />
+            <marker date="1526633900544" expanded="true" signature="7719:7763" ph="UPDATE tblUser... " />
+            <marker date="1526633900544" expanded="true" signature="7719:7815" ph="UPDATE tblUser... " />
+            <marker date="1526633900544" expanded="true" signature="7999:8043" ph="UPDATE tblUser... " />
+            <marker date="1526633900544" expanded="true" signature="7999:8064" ph="UPDATE tblUser... " />
+            <marker date="1526633900544" expanded="true" signature="7999:8113" ph="UPDATE tblUser... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wapp/userApp/pages/mypage/paymentInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="79" column="133" lean-forward="false" selection-start-line="79" selection-start-column="133" selection-end-line="79" selection-end-column="133" />
           <folding />
         </state>
       </provider>

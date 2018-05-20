@@ -158,14 +158,20 @@ if(! class_exists("WebUser") ){
         }
 
         function getPointHistory(){
-            $retVal = $this->get("/web/user/pointList/{$this->webUser->id}", null);
+            $retVal = $this->get("/web/user/myApplyList/{$this->webUser->id}", null);
+//            $retVal = $this->get("/web/user/pointList/{$this->webUser->id}", null);
             return $retVal;
         }
 
-        function hidePointHistory(){
-            $retVal = $this->post("/web/user/point/del/{$_REQUEST["id"]}", null);
+        function hideApplyList(){
+            $retVal = $this->post("/web/user/apply/del/{$_REQUEST["id"]}", null);
             return $retVal;
         }
+
+//        function hidePointHistory(){
+//            $retVal = $this->post("/web/user/point/del/{$_REQUEST["id"]}", null);
+//            return $retVal;
+//        }
 
         function getApplicationList(){
             $retVal = $this->get("/web/user/applications/{$this->webUser->id}", null);

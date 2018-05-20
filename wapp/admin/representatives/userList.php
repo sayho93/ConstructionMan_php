@@ -120,7 +120,28 @@ if($type == "3") $list = $obj->getNormalUserList();
 
         <div class="block">
             <div class="navbar navbar-inner block-header">
-                <div class="muted pull-left">유저 리스트</div>
+                <div class="muted pull-left">
+                    <?
+                        switch($_REQUEST["type"]){
+                            case "":
+                                echo "유저 리스트";
+                                break;
+                            case 0:
+                                echo "유저 리스트";
+                                break;
+                            case 1:
+                                echo "인력 회원";
+                                break;
+                            case 2:
+                                echo "장비 회원";
+                                break;
+                            case 3:
+                                echo "구인 회원";
+                                break;
+                        }
+
+                    ?>
+                </div>
             </div>
             <div class="block-content collapse in">
                 <div class="span12">

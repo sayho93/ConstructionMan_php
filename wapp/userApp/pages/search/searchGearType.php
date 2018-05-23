@@ -24,11 +24,18 @@
                 var text = $(this).find("text").html();
                 text = text.replace("<br>", "");
                 setFirst(text);
+                $(".second").trigger("click");
             }
         });
 
         $(".jClose").click(function(){
             $(".popBG").hide();
+
+            $(".first").html("");
+            $(".second").html("");
+            $(".third").html("");
+            $(".third").attr("no", "");
+            $(".attachment").empty();
         });
 
         $(".second").click(function(){
@@ -45,6 +52,7 @@
             var name = $(this).attr("name");
             setSecond(detail);
             $(".popBG").hide();
+            $(".third").trigger("click");
         });
 
         $(".third").click(function(){
@@ -86,8 +94,8 @@
                     $(".popHeader").html("옵션 선택");
                     for(var i=0; i<data.data.length; i++){
                         if(data.data[i].detail == "-") {
-                            alert("선택할 항목이 없습니다.");
                             setSecond("-");
+                            $(".third").trigger("click");
                             return;
                         }
                         else{
@@ -134,7 +142,7 @@
         function setAttachment(attachment){
             var arrAttachment = attachment.split(",");
             $(".attachment").empty();
-            $(".attachment").append("<p>어태치먼트</p>");
+            if(arrAttachment[0] != "-") $(".attachment").append("<p>어태치먼트</p>");
             for(var i=0; i<arrAttachment.length; i++){
                 console.log(arrAttachment[i]);
                 if(arrAttachment[i] == "-"){
@@ -242,7 +250,6 @@
     </div>
 
     <div class="attachment">
-        <p>어태치먼트</p>
     </div>
 
     <br/>

@@ -45,6 +45,7 @@
         $(".jModPhone").click(function(){
             $(".modifyFormPhone").fadeIn();
             $(".alterModifyFormPhone").hide();
+            $(".jHideModifyForm").trigger("click");
         });
 
         $(".jHideModifyFormPhone").click(function(){
@@ -87,6 +88,7 @@
         $(".jModName").click(function(){
             $(".modifyForm").fadeIn();
             $(".alterModifyForm").hide();
+            $(".jHideModifyFormPhone").trigger("click");
         });
 
         $(".jHideModifyForm").click(function(){
@@ -359,6 +361,10 @@
             regionArr = regionArr.join();
             if(regionArr == "") regionArr = "0";
             workArr = workArr.join();
+            if(workArr == ""){
+                alert("직종을 선택해 주시기 바랍니다.");
+                return;
+            }
             career = career.join();
 
             $("[name='regionArr']").val(regionArr);
@@ -411,6 +417,12 @@
 
 
         $(".gearItem").click(function(){
+            $(".first").html("");
+            $(".second").html("");
+            $(".third").html("");
+            $(".third").attr("no", "");
+            $(".attachment").empty();
+
             if($(this).hasClass("on"))
                 $(this).removeClass("on");
             else {
@@ -419,6 +431,7 @@
                 var text = $(this).find("text").html();
                 text = text.replace("<br>", "");
                 setFirst(text);
+                $(".second").trigger("click");
             }
         });
 
@@ -436,6 +449,7 @@
             var name = $(this).attr("name");
             setSecond(detail);
             $(".popBG").hide();
+            $(".third").trigger("click");
         });
 
         $(".third").click(function(){
@@ -486,8 +500,9 @@
                     $(".popHeader").html("옵션 선택");
                     for(var i=0; i<data.data.length; i++){
                         if(data.data[i].detail == "-") {
-                            alert("선택할 항목이 없습니다.");
+                            // alert("선택할 항목이 없습니다.");
                             setSecond("-");
+                            $(".third").trigger("click");
                             return;
                         }
                         else{
@@ -534,7 +549,7 @@
         function setAttachment(attachment){
             var arrAttachment = attachment.split(",");
             $(".attachment").empty();
-            $(".attachment").append("<p>어태치먼트</p>");
+            if(arrAttachment[0] != "-") $(".attachment").append("<p>어태치먼트</p>");
             for(var i=0; i<arrAttachment.length; i++){
                 console.log(arrAttachment[i]);
                 if(arrAttachment[i] == "-"){
@@ -810,8 +825,8 @@
 <div class="mypageTitleHeader">
     <table width="100%" height="100%">
         <tr class="tableRowInfo">
-            <td width="20%"><a class="subject">이름</a></td>
-            <td width="70%" class="alterModifyForm"><a class="content"><?=$userInfo->name?></a></td>
+            <td width="20%"><a class="subject" style="font-weight: bold">이름</a></td>
+            <td width="70%" class="alterModifyForm" style="font-weight: bold"><a class="content"><?=$userInfo->name?></a></td>
             <td width="70%" class="modifyForm"><input type="text" class="border nm" value="<?=$userInfo->name?>" /></td>
             <td width="10%" class="alterModifyForm"><img src="../../img/btn_edit.png" class="mod_btn jModName" style="float: right"></td>
             <td width="10%" class="modifyForm">
@@ -820,8 +835,8 @@
             </td>
         </tr>
         <tr class="tableRowInfo">
-            <td><a class="subject">전화번호</a></td>
-            <td class="alterModifyFormPhone"><a class="content"><?=$userInfo->phone?></a></td>
+            <td><a class="subject" style="font-weight: bold">전화번호</a></td>
+            <td class="alterModifyFormPhone" style="font-weight: bold"><a class="content"><?=$userInfo->phone?></a></td>
             <td width="10%" class="alterModifyFormPhone"><img src="../../img/btn_auth.png" class="auth_btn jModPhone" style="float: right"></td>
             <td width="70%" class="modifyFormPhone"><input type="number" class="border ph" /></td>
             <td width="70%" class="modifyFormPhoneNext"><input type="number" class="border" placeholder="인증번호" /></td>
@@ -832,6 +847,14 @@
             <td width="10%" class="modifyFormPhoneNext">
                 <input type="button" class="jSubmitPhone" value="확인" style="margin-top: 2vh!important;"/>
                 <input type="button" class="jHideModifyFormPhone" value="취소" style="margin-top: 2vh!important;"/>
+            </td>
+        </tr>
+        <tr class="tableRowInfo">
+            <td><a class="subject" style="font-weight: bold">성별</a></td>
+            <td class="" style="font-weight: bold">
+                <a class="content">
+                    <?=$userInfo->sex == "M" ? "남성" : "여성"?>
+                </a>
             </td>
         </tr>
     </table>
@@ -852,10 +875,10 @@
         <p>희망지역<span>(중복선택가능)</span></p>
         <div id="table">
             <ul>
-                <li class="regionItem" no="0" gugunId=""><text>전국</text></li>
                 <?for($i=0; $i<sizeof($regionList); $i++){?>
                     <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box">-</div></li>
                 <?}?>
+                <li class="regionItem" no="0" gugunId=""><text>전국</text></li>
             </ul>
         </div>
     </div>
@@ -947,7 +970,7 @@
 <!--    <input type="button" class="end jCareer" value="경력정보 선택" style="margin-top: 2vh!important;"/>-->
 
     <div class="career">
-        <p>경력정보 등록</p>
+        <p>현장정보 등록</p>
     </div>
 
     <input type="button" class="end jSubmitMan" value="저장하기" style="margin-top: 2vh!important;"/>
@@ -1006,7 +1029,7 @@
             </div>
 
             <div class="attachment" str="">
-                <p>어태치먼트</p>
+<!--                <p>어태치먼트</p>-->
             </div>
 
             <input class="recButton jAdd" type="button" value="추가"/>

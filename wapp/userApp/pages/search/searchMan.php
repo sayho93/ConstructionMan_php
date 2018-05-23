@@ -183,7 +183,7 @@
 
 
     <div class="career">
-        <p>경력정보 등록</p>
+        <p>현장정보 등록</p>
     </div>
 
     <div class="searchManWrapper">
@@ -191,14 +191,14 @@
 
         <p style="font-weight: bold">현장위치</p>
         <div class="wrapper">
-            <select class="selectBlue" id="sido" name="sidoId">
+            <select class="selectBlue" id="sido" name="sidoId" style="font-size: 2.0em">
                 <option value="">시/도</option>
                 <?for($i=0; $i<sizeof($regionList); $i++){?>
                     <option value="<?=$regionList[$i]->sidoID?>"><?=$regionList[$i]->abbreviation?></option>
                 <?}?>
             </select>
 
-            <select class="selectBlue" id="gugun" name="gugunId" style="margin-left: 3vw;">
+            <select class="selectBlue" id="gugun" name="gugunId" style="margin-left: 3vw; font-size: 2.0em">
                 <option value="">구/군</option>
             </select>
         </div>
@@ -210,8 +210,8 @@
 
         <p style="font-weight: bold">작업기간</p>
         <div class="wrapper">
-            <input type="text" name="startDate" placeholder="시작일" class="datepicker" readonly/>
-            <input type="text" name="endDate" placeholder="마감일" class="datepicker" readonly/>
+            <input type="text" name="startDate" placeholder="시작일" class="datepicker" readonly style="font-size: 2.0em"/>
+            <input type="text" name="endDate" placeholder="마감일" class="datepicker" readonly style="font-size: 2.0em"/>
         </div>
 
         <div class="wrapper" style="width: 80vw;">
@@ -222,7 +222,7 @@
 
         <p style="font-weight: bold">단가</p>
         <div class="wrapper">
-            <input type="number" name="price" class="inputBlueSmall"/> 원
+            <input type="number" name="price" class="inputBlueSmall" style="font-size: 2.0em"/> 원
             <input type="checkbox" class="discussLater" id="chk" style="margin-left: 8vw;"/>
             <label for="chk"></label>
             <h3>추후협의</h3>

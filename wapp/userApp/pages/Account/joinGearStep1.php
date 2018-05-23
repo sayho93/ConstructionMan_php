@@ -130,6 +130,13 @@ $regionList = json_decode($regionList)->data;
 
 
         $(".gearItem").click(function(){
+
+            $(".first").html("");
+            $(".second").html("");
+            $(".third").html("");
+            $(".third").attr("no", "");
+            $(".attachment").empty();
+
             if($(this).hasClass("on"))
                 $(this).removeClass("on");
             else {
@@ -138,6 +145,7 @@ $regionList = json_decode($regionList)->data;
                 var text = $(this).find("text").html();
                 text = text.replace("<br>", "");
                 setFirst(text);
+                $(".second").trigger("click");
             }
         });
 
@@ -155,6 +163,7 @@ $regionList = json_decode($regionList)->data;
             var name = $(this).attr("name");
             setSecond(detail);
             $(".popBG").hide();
+            $(".third").trigger("click");
         });
 
         $(".third").click(function(){
@@ -206,8 +215,9 @@ $regionList = json_decode($regionList)->data;
                     $(".popHeader").html("옵션 선택");
                     for(var i=0; i<data.data.length; i++){
                         if(data.data[i].detail == "-") {
-                            alert("선택할 항목이 없습니다.");
+                            // alert("선택할 항목이 없습니다.");
                             setSecond("-");
+                            $(".third").trigger("click");
                             return;
                         }
                         else{
@@ -254,7 +264,7 @@ $regionList = json_decode($regionList)->data;
         function setAttachment(attachment){
             var arrAttachment = attachment.split(",");
             $(".attachment").empty();
-            $(".attachment").append("<p>어태치먼트</p>");
+            if(arrAttachment[0] != "-") $(".attachment").append("<p>어태치먼트</p>");
             for(var i=0; i<arrAttachment.length; i++){
                 console.log(arrAttachment[i]);
                 if(arrAttachment[i] == "-"){

@@ -137,7 +137,7 @@
     </form>
 
     <div class="career">
-        <p>경력정보 등록</p>
+        <p>현장정보 등록</p>
     </div>
 
     <div style="text-align: center">

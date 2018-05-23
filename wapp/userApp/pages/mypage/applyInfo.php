@@ -15,11 +15,30 @@
     $list = json_decode($list)->data;
     $userInfo = $obj->getUserInfo();
     $userInfo = json_decode($userInfo)->data;
+
+    $byPush = $_REQUEST["byPush"];
+    $userId = $_REQUEST["userId"];
 ?>
 
 <script>
     $(document).ready(function(){
-        $(".jBack").click(function(){history.go(-1);});
+
+        var byPush = "<?=$byPush?>";
+        var user = "<?=$userId?>";
+
+        if(byPush === "1"){
+            var params = new sehoMap().put("userId", user);
+            var ajax = new AjaxSender("/action_front.php?cmd=WebUser.autoLogin", false, "json", params);
+            ajax.send(function(data){
+                if(data.returnCode === 1)
+                    location.href = "/userApp/pages/mypage/applyInfo.php";
+            });
+        }
+
+
+        $(".jBack").click(function(){
+            location.href = "/userApp/pages/mypage/mypageMain.php";
+        });
 
         $(".jAdd").click(function(){
             var ajax = new AjaxSender("/action_front.php?cmd=WebUser.usePoint", true, "json", new sehoMap());

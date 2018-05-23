@@ -38,6 +38,11 @@
         $("#next").click(function(){
             var workArr = collectWorkId();
             workArr = workArr.join();
+
+            if(workArr == ""){
+                alert("직종을 선택해 주시기 바랍니다.");
+                return;
+            }
             // alert(workArr);
 
             location.href = "searchMan.php?workArr=" + workArr;

@@ -27,6 +27,11 @@
            $("[name='age']").val(age);
         });
 
+        $("#sex").change(function(){
+            var sex = $("#sex").val();
+            $("[name=sex]").val(sex);
+        });
+
         $(".jSubmit").click(function(){
             var account = $("[name='account']").val();
             var password = $("[name='password']").val();
@@ -136,7 +141,8 @@
             <input type="text" name="account" placeholder="  아이디"/>
             <input type="text" name="password" placeholder="  비밀번호"/>
             <input type="text" name="name" placeholder="  본인 이름"/>
-            <input type="hidden" name="age" placeholder="  나이"/>
+            <input type="hidden" name="age"/>
+            <input type="hidden" name="sex"/>
 
             <select id="age">
                 <option value="">나이 선택</option>
@@ -147,6 +153,12 @@
                 <option value="50">50대</option>
                 <option value="60">60대</option>
                 <option value="70">70대</option>
+            </select>
+
+            <select id="sex">
+                <option value="">성별 선택</option>
+                <option value="M">남성</option>
+                <option value="F">여성</option>
             </select>
 
             <input type="text" name="residence" placeholder="  거주지"/>

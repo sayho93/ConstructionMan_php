@@ -151,6 +151,10 @@ $regionList = json_decode($regionList)->data;
             regionArr = regionArr.join();
             if(regionArr == "") regionArr = "0";
             workArr = workArr.join();
+            if(workArr == ""){
+                alert("직종을 선택해 주시기 바랍니다.");
+                return;
+            }
             $("[name='regionArr']").val(regionArr);
             $("[name='workArr']").val(workArr);
 
@@ -202,10 +206,10 @@ $regionList = json_decode($regionList)->data;
         <p>희망지역<span>(중복선택가능)</span></p>
         <div id="table">
             <ul>
-                <li class="regionItem" no="0" gugunId=""><text>전국</text></li>
                 <?for($i=0; $i<sizeof($regionList); $i++){?>
                     <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box">-</div></li>
                 <?}?>
+                <li class="regionItem" no="0" gugunId=""><text>전국</text></li>
             </ul>
         </div>
     </div>

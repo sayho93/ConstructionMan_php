@@ -32,7 +32,7 @@
             monthNames:['1월','2월','3월','4월','5월','6월','7 월','8월','9월','10월','11월','12월'],
             monthNamesShort:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
             showButtonPanel: true, currentText: '오늘 ' , closeText: '닫기',
-            onSelect: function(selectedDate) {
+            onSelect: function(selectedDate){
             }
         });
     });
@@ -53,7 +53,7 @@
             ajax.send(function(data){
                 if(data.returnCode === 1){
                     $("#gugun").empty();
-                    $("#gugun").append("<option value=\"\">구/군</option>")
+                    $("#gugun").append("<option value=\"\">구/군</option>");
                     for(var i=0; i<data.data.length; i++){
                         $("#gugun").append("<option value='" + data.data[i].gugunID + "'>" + data.data[i].description + "</option>")
                     }

@@ -77,11 +77,6 @@
             //        location.href = "/userApp/pages/mypage/payment.php?paymentId=" + data + "&userId=" + '<?//=$userInfo->id?>//';
             //    });
             //}
-
-
-            alert("< 금액(포인트) 충전 정보 안내 > \n 계좌번호(입금주 이행수(휴넵스))\n" +
-            "- 국민은행 770601-00-1019919\n" +
-            "- 농협 301-0231-1507-91");
         });
 
         $(".tel").click(function(){
@@ -93,12 +88,21 @@
                 location.href = "tel://" + tel;
             }
         });
+
+        $(".round_btn").click(function(){
+            alert("< 금액(포인트) 충전 정보 안내 > \n 계좌번호(입금주 이행수(휴넵스))\n" +
+                "- 국민은행 770601-00-1019919\n" +
+                "- 농협 301-0231-1507-91");
+        });
     });
 </script>
 
 <div class="header">
     <a class="tool_left"><img src="../../img/btn_prev.png" class="back_btn jBack"/></a>
-    <a class="tool_right wide"><p id="point"></p></a>
+    <a class="tool_right wide">
+        <p id="point"></p>
+        <div class="round_btn">금액 충전</div>
+    </a>
     <h2>구인리스트</h2>
 </div>
 

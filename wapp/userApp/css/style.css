@@ -225,7 +225,7 @@ input[type=text]{
 
 .mypageBody{
     z-index: 9998;
-    height: 45vh;
+    height: 47vh;
     overflow: scroll;
 }
 

@@ -68,7 +68,8 @@ if(! class_exists("WebUser") ){
             $retVal = $this->post("/web/user/join", Array("name" => $_REQUEST["name"], "account" => $_REQUEST["account"],
                 "password" => $_REQUEST["password"], "phone" => $_REQUEST["phone"], "age" => $_REQUEST["age"], "type" => $_REQUEST["type"],
                 "pushKey" => $_REQUEST["pushKey"], "region" => $_REQUEST["regionArr"], "work" => $_REQUEST["workArr"],
-                "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "gearInfo" => $_REQUEST["gearInfo"]));
+                "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "gearInfo" => $_REQUEST["gearInfo"],
+                "sex" => $_REQUEST["sex"]));
 
 
             LoginUtil::doWebLogin(json_decode($retVal)->data);

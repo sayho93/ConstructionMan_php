@@ -210,6 +210,12 @@
             var ajax = new AjaxSender("/action_front.php?cmd=WebUser.getGugunList", false, "json", params);
             ajax.send(function(data){
                 if(data.returnCode == 1){
+                    var template = $(".listTemplate").html();
+                    template = template.replace("#{no}", data.data[0].sidoID * -1);
+                    template = template.replace("#{text}", "전체");
+                    template = template.replace("#{prt}", data.data[0].sidoID);
+                    $(".popBody").append(template);
+
                     for(var i=0; i<data.data.length; i++){
                         var template = $(".listTemplate").html();
                         template = template.replace("#{no}", data.data[i].gugunID);

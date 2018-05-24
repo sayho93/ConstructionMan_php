@@ -91,6 +91,7 @@
                 if(data.returnCode === 1){
                     $("#gugun").empty();
                     $("#gugun").append("<option value=\"\">구/군</option>")
+                    $("#gugun").append("<option value='" + (sidoId * -1) + "'>" + "전체" + "</option>")
                     for(var i=0; i<data.data.length; i++){
                         $("#gugun").append("<option value='" + data.data[i].gugunID + "'>" + data.data[i].description + "</option>")
                     }

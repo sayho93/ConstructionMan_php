@@ -76,8 +76,14 @@
             dataType: "json",
             data: params,
             success: function(data){
-                console.log(data.data);
-                location.href = "/userApp/pages/Account/joinComplete.php";
+                if(data.returnCode === 1){
+                    console.log(data.data);
+                    location.href = "/userApp/pages/Account/joinComplete.php";
+                }
+                else{
+                    alert("가입 실패!");
+                }
+
                 // alert("가입 완료되었습니다.");
                 // location.href = "/userApp/pages/search/searchMain.php";
             }

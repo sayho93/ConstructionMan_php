@@ -67,6 +67,13 @@ $regionList = json_decode($regionList)->data;
             ajax.send(function(data){
                 if(data.returnCode == 1){
                     $(".popHeader").html("지역 선택");
+
+                    var template = $(".listTemplate").html();
+                    template = template.replace("#{no}", data.data[0].sidoID * -1);
+                    template = template.replace("#{text}", "전체");
+                    template = template.replace("#{prt}", data.data[0].sidoID);
+                    $(".popBody").append(template);
+
                     for(var i=0; i<data.data.length; i++){
                         var template = $(".listTemplate").html();
                         template = template.replace("#{no}", data.data[i].gugunID);
@@ -448,6 +455,7 @@ $regionList = json_decode($regionList)->data;
         <input type="hidden" name="password" value="<?=$_REQUEST["password"]?>"/>
         <input type="hidden" name="name" value="<?=$_REQUEST["name"]?>"/>
         <input type="hidden" name="age" value="<?=$_REQUEST["age"]?>"/>
+        <input type="hidden" name="sex" value="<?=$_REQUEST["sex"]?>"/>
         <input type="hidden" name="residence" value="<?=$_REQUEST["residence"]?>"/>
         <input type="hidden" name="phone" value="<?=$_REQUEST["phone"]?>"/>
         <input type="hidden" name="type" value="G"/>

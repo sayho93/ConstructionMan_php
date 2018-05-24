@@ -101,7 +101,7 @@
     <a class="tool_left"><img src="../../img/btn_prev.png" class="back_btn jBack"/></a>
     <a class="tool_right wide">
         <p id="point"></p>
-        <div class="round_btn">금액 충전</div>
+        <div class="round_btn">결제하기</div>
     </a>
     <h2>구인리스트</h2>
 </div>

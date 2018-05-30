@@ -21,11 +21,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mypageInfo.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mypageInfo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="880" column="40" lean-forward="true" selection-start-line="880" selection-start-column="40" selection-end-line="880" selection-end-column="40" />
+            <state relative-caret-position="547">
+              <caret line="1028" column="14" lean-forward="false" selection-start-line="1028" selection-start-column="14" selection-end-line="1028" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="joinGearStep1.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="joinGearStep1.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/userApp/pages/Account/joinGearStep1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="392" column="25" lean-forward="true" selection-start-line="392" selection-start-column="25" selection-end-line="392" selection-end-column="25" />
+            <state relative-caret-position="444">
+              <caret line="389" column="52" lean-forward="true" selection-start-line="389" selection-start-column="52" selection-end-line="389" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -55,11 +55,11 @@
         <entry file="file://$PROJECT_DIR$/common/classes/WebUser.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="71" column="117" lean-forward="false" selection-start-line="71" selection-start-column="117" selection-end-line="71" selection-end-column="117" />
+              <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
               <folding>
-                <marker date="1527667971352" expanded="true" signature="7466:7606" ph="INSERT INTO tblPayment... " />
-                <marker date="1527667971352" expanded="true" signature="7811:7907" ph="UPDATE tblUser... " />
-                <marker date="1527667971352" expanded="true" signature="8091:8205" ph="UPDATE tblUser... " />
+                <marker date="1527669872577" expanded="true" signature="7481:7621" ph="INSERT INTO tblPayment... " />
+                <marker date="1527669872577" expanded="true" signature="7826:7922" ph="UPDATE tblUser... " />
+                <marker date="1527669872577" expanded="true" signature="8106:8220" ph="UPDATE tblUser... " />
               </folding>
             </state>
           </provider>
@@ -74,6 +74,7 @@
       <find>mail</find>
       <find>비밀번호</find>
       <find>joinUser</find>
+      <find>updateUserInfo</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -86,10 +87,10 @@
         <option value="$PROJECT_DIR$/userApp/pages/mypage/paymentInfo.php" />
         <option value="$PROJECT_DIR$/userApp/pages/Account/joinRegionTest.php" />
         <option value="$PROJECT_DIR$/userApp/pages/Account/joinManStep1.php" />
-        <option value="$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php" />
         <option value="$PROJECT_DIR$/userApp/css/style.css" />
-        <option value="$PROJECT_DIR$/common/classes/WebUser.php" />
         <option value="$PROJECT_DIR$/userApp/pages/Account/joinGearStep1.php" />
+        <option value="$PROJECT_DIR$/common/classes/WebUser.php" />
+        <option value="$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php" />
       </list>
     </option>
   </component>
@@ -167,7 +168,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="WebU&#9;null&#9;null&#10;joinGear&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinGearStep1.php&#10;mypageIN&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;joinMan&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinManStep1.php&#10;paymentIn&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/paymentInfo.php&#10;ㅡㅛㅔㅁㅎㄷㅑ&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;ㅓㅐㅑㅜㅡㅁㅜ&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinManStep1.php&#10;searchManTy&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchManType.php&#10;findId&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/findID.php&#10;paymentI&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/paymentInfo.php&#10;applyIn&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/applyInfo.php&#10;mypageM&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageMain.php" />
+    <property name="SearchEverywhereHistoryKey" value="mypageI&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;WebU&#9;null&#9;null&#10;joinGear&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinGearStep1.php&#10;mypageIN&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;joinMan&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinManStep1.php&#10;paymentIn&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/paymentInfo.php&#10;ㅡㅛㅔㅁㅎㄷㅑ&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;ㅓㅐㅑㅜㅡㅁㅜ&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinManStep1.php&#10;searchManTy&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchManType.php&#10;findId&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/findID.php&#10;paymentI&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/paymentInfo.php&#10;applyIn&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/applyInfo.php&#10;mypageM&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageMain.php" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -194,12 +195,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527661421664</updated>
-      <workItem from="1527661422838" duration="4469000" />
+      <workItem from="1527661422838" duration="5352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4469000" />
+    <option name="totallyTimeSpent" value="5352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -284,14 +285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="880" column="40" lean-forward="true" selection-start-line="880" selection-start-column="40" selection-end-line="880" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userApp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -308,22 +301,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/userApp/pages/Account/joinGearStep1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="389" column="52" lean-forward="true" selection-start-line="389" selection-start-column="52" selection-end-line="389" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common/classes/WebUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="71" column="117" lean-forward="false" selection-start-line="71" selection-start-column="117" selection-end-line="71" selection-end-column="117" />
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding>
-            <marker date="1527667971352" expanded="true" signature="7466:7606" ph="INSERT INTO tblPayment... " />
-            <marker date="1527667971352" expanded="true" signature="7811:7907" ph="UPDATE tblUser... " />
-            <marker date="1527667971352" expanded="true" signature="8091:8205" ph="UPDATE tblUser... " />
+            <marker date="1527669872577" expanded="true" signature="7481:7621" ph="INSERT INTO tblPayment... " />
+            <marker date="1527669872577" expanded="true" signature="7826:7922" ph="UPDATE tblUser... " />
+            <marker date="1527669872577" expanded="true" signature="8106:8220" ph="UPDATE tblUser... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userApp/pages/Account/joinGearStep1.php">
+    <entry file="file://$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="392" column="25" lean-forward="true" selection-start-line="392" selection-start-column="25" selection-end-line="392" selection-end-column="25" />
+        <state relative-caret-position="547">
+          <caret line="1028" column="14" lean-forward="false" selection-start-line="1028" selection-start-column="14" selection-end-line="1028" selection-end-column="14" />
           <folding />
         </state>
       </provider>

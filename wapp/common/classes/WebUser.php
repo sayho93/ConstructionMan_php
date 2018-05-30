@@ -108,7 +108,7 @@ if(! class_exists("WebUser") ){
 
         function updateUserInfo(){
             $retVal = $this->post("/web/user/update/info/{$this->webUser->id}", Array("type" => $_REQUEST["type"], "region" => $_REQUEST["regionArr"],
-                "work" => $_REQUEST["workArr"], "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "gearInfo" => $_REQUEST["gearInfo"]));
+                "work" => $_REQUEST["workArr"], "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "gearInfo" => stripslashes($_REQUEST["gearInfo"]₩)));
             return $retVal;
         }
 

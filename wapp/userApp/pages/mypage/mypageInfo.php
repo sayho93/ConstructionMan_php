@@ -1006,9 +1006,24 @@
             <p>희망지역<span>(중복선택가능)</span></p>
             <div id="table">
                 <ul>
-                    <?for($i=0; $i<sizeof($regionList); $i++){?>
+                    <?for($i=0; $i<5; $i++){?>
                         <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box">-</div></li>
                     <?}?>
+
+                </ul>
+                <ul>
+                    <?for($i=5; $i<10; $i++){?>
+                        <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box">-</div></li>
+                    <?}?>
+                </ul>
+                <ul>
+                    <?for($i=10; $i<15; $i++){?>
+                        <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box">-</div></li>
+                    <?}?>
+                </ul>
+                <ul>
+                    <li class="regionItem" no="<?=$regionList[15]->sidoID?>" gugunId=""><text><?=$regionList[15]->abbreviation?></text><div id="box">-</div></li>
+                    <li class="regionItem" no="0" gugunId=""><text>전국</text></li>
                 </ul>
             </div>
         </div>

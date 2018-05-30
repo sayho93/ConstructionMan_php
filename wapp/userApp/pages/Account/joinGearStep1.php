@@ -467,9 +467,24 @@ $regionList = json_decode($regionList)->data;
         <p>희망지역<span>(중복선택가능)</span></p>
         <div id="table">
             <ul>
-                <?for($i=0; $i<sizeof($regionList); $i++){?>
+                <?for($i=0; $i<5; $i++){?>
                     <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box">-</div></li>
                 <?}?>
+
+            </ul>
+            <ul>
+                <?for($i=5; $i<10; $i++){?>
+                    <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box">-</div></li>
+                <?}?>
+            </ul>
+            <ul>
+                <?for($i=10; $i<15; $i++){?>
+                    <li class="regionItem" no="<?=$regionList[$i]->sidoID?>" gugunId=""><text><?=$regionList[$i]->abbreviation?></text><div id="box">-</div></li>
+                <?}?>
+            </ul>
+            <ul>
+                <li class="regionItem" no="<?=$regionList[15]->sidoID?>" gugunId=""><text><?=$regionList[15]->abbreviation?></text><div id="box">-</div></li>
+                <li class="regionItem" no="0" gugunId=""><text>전국</text></li>
             </ul>
         </div>
     </div>
@@ -524,7 +539,7 @@ $regionList = json_decode($regionList)->data;
         <br>
         <p>특허 제 10-1705485 호 / 사업자등록번호 461-14-00804</p>
         <p>직업정보제공사업신고번호 J1700020180005호 / 통신판매업신고 제 2018-대전유성-0240 호</p>
-        <p>mail : huneps71@gmail.com / tel : </p>
+        <p>mail : huneps71@gmail.com / Tel. 010-9719-1105 </p>
         <br>
         <p>ⓒ 휴넵스 All rights reserved.</p>
     </div>

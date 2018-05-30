@@ -44,7 +44,7 @@
     <div style="margin:0vw 5vw 0vw 5vw">
         <div style="left:5vw; float: left;">
             <text style="color:#03A0CB; font-size: 1.0em;"><?=$userInfo->name?></text>
-            <text style="color:#333333; font-size: 0.8em;">님의 결제내역입니다.</text>
+            <text style="color:#333333; font-size: 0.8em;">님의 결제 및 신청 내역입니다.</text>
         </div>
         <div style="right:5vw; float: right">
             <text style="color:#333333; font-size: 0.8em;">총 </text>
@@ -80,7 +80,10 @@
                     <a href="#"><img class="jDel" src="../../img/btn_del.png" style="height:7vw; width: 7vw;" no="<?=$item->searchId?>" /></a>
                 </div>
             </div>
-            <p><?=$item->comment?></p>
+            <p>
+                <?=$item->type == "M" ? "[인력]" : "[장비]"?>
+                <?=$item->comment?>
+            </p>
         </div>
     <?}?>
 
@@ -89,7 +92,7 @@
         <br>
         <p>특허 제 10-1705485 호 / 사업자등록번호 461-14-00804</p>
         <p>직업정보제공사업신고번호 J1700020180005호 / 통신판매업신고 제 2018-대전유성-0240 호</p>
-        <p>mail : huneps71@gmail.com / tel : </p>
+        <p>mail : huneps71@gmail.com / Tel. 010-9719-1105 </p>
         <br>
         <p>ⓒ 휴넵스 All rights reserved.</p>
     </div>

@@ -13,7 +13,11 @@
     $obj = new WebUser($_REQUEST);
     $userInfo = $obj->getUserInfo();
     $userInfo = json_decode($userInfo)->data;
-    $regionInfo = $userInfo->userRegion;
+
+//    $regionInfo = $userInfo->userRegion;
+    $regionInfo = $obj->getUserRegion();
+    $regionInfo = json_decode($regionInfo)->data;
+
     $workInfo = $userInfo->workInfo;
     $name = $userInfo->name;
     $type = $userInfo->type;
@@ -80,19 +84,20 @@
 <div class="mypageTitleHeader">
     <table width="100%" height="100%">
         <tr class="tableRowInfo">
-            <td width="20%"><a class="subject">희망지역</a></td>
-            <td width="30%">
-                <a class="content">
-                    <?
+            <?if($type == "M" || $type == "G"){?>
+                <td width="20%"><a class="subject">희망지역</a></td>
+                <td width="30%">
+                    <a class="content">
+                        <?
                         for($i=0; $i<sizeof($regionInfo); $i++){
                             echo $regionInfo[$i]->gugunTxt;
                             if($i != sizeof($regionInfo) - 1) echo ", ";
                         }
-                    ?>
+                        ?>
 
-                </a>
-            </td>
-
+                    </a>
+                </td>
+            <?}?>
             <?if($type == "M"){?>
             <td width="20%"><a class="subject">직종</a></td>
             <td width="30%">

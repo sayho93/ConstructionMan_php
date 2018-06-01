@@ -40,9 +40,10 @@
             var residence = $("[name='residence']").val();
             var phone = $("[name='phone']").val();
             var isChecked = $("#chk").prop("checked");
+            var sex =$("[name=sex]").val();
 
-            var invalidIndex = getEmptyIndex([account, password, name, age, residence, phone]);
-            var nameArray = ["아이디", "패스워드", "이름", "나이", "거주지", "휴대폰 번호"];
+            var invalidIndex = getEmptyIndex([account, password, name, age, residence, phone, sex]);
+            var nameArray = ["아이디", "패스워드", "이름", "나이", "거주지", "휴대폰 번호", "성별"];
 
             if(invalidIndex != -1){
                 alert(nameArray[invalidIndex] + "(을)를 입력해주세요.");

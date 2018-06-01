@@ -106,9 +106,14 @@ if(! class_exists("WebUser") ){
             return $retVal;
         }
 
+        function getUserRegion(){
+            $retVal = $this->get("/web/user/region/{$this->webUser->id}", null);
+            return $retVal;
+        }
+
         function updateUserInfo(){
             $retVal = $this->post("/web/user/update/info/{$this->webUser->id}", Array("type" => $_REQUEST["type"], "region" => $_REQUEST["regionArr"],
-                "work" => $_REQUEST["workArr"], "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "gearInfo" => stripslashes($_REQUEST["gearInfo"]₩)));
+                "work" => $_REQUEST["workArr"], "career" => $_REQUEST["careerArr"], "welderType" => $_REQUEST["welderType"], "gearInfo" => stripslashes($_REQUEST["gearInfo"])));
             return $retVal;
         }
 
@@ -160,13 +165,15 @@ if(! class_exists("WebUser") ){
         }
 
         function getPointHistory(){
-            $retVal = $this->get("/web/user/myApplyList/{$this->webUser->id}", null);
+            $retVal = $this->get("/web/user/paid/{$this->webUser->id}", null);
+//            $retVal = $this->get("/web/user/myApplyList/{$this->webUser->id}", null);
 //            $retVal = $this->get("/web/user/pointList/{$this->webUser->id}", null);
             return $retVal;
         }
 
         function hideApplyList(){
-            $retVal = $this->post("/web/user/apply/del/{$_REQUEST["id"]}", null);
+            $retVal = $this->post("/web/user/paid/del/{$_REQUEST["id"]}", null);
+//            $retVal = $this->post("/web/user/apply/del/{$_REQUEST["id"]}", null);
             return $retVal;
         }
 

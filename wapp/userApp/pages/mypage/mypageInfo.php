@@ -1023,7 +1023,7 @@
                 </ul>
                 <ul>
                     <li class="regionItem" no="<?=$regionList[15]->sidoID?>" gugunId=""><text><?=$regionList[15]->abbreviation?></text><div id="box">-</div></li>
-                    <li class="regionItem" no="0" gugunId=""><text>전국</text></li>
+<!--                    <li class="regionItem" no="0" gugunId=""><text>전국</text></li>-->
                 </ul>
             </div>
         </div>

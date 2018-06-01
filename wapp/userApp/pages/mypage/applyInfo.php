@@ -108,7 +108,7 @@
 
 <div class="body">
     <div class="listWrapper">
-        <input class="recButton jAdd" type="button" value="포인트를 사용하여 더보기"/>
+        <input class="recButton jAdd" type="button" value="결제하여 지원자의 연락처 확인"/>
 
         <?foreach($list as $item){?>
             <table width="100%" border="0" cellpadding="0" cellspacing="6vw" class="doorlist" style="border-bottom: 1px solid gray; margin-top: 2vh;">

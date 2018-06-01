@@ -45,7 +45,7 @@
 
 </script>
 
-<body style="background-color: #222222">
+<body style="background-color: #222222; overflow: scroll!important;">
 <div class="main_page">
     <div class="main">
         <a href="#" class="join"></a>

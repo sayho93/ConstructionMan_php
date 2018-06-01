@@ -16,7 +16,7 @@
 ?>
 
 <style>
-    .ui-datepicker{ font-size: 0.8em; width: 60vw;}
+    .ui-datepicker{ font-size: 0.8em; width: 60vw; position: relative; z-index: 100000;}
     .ui-datepicker select.ui-datepicker-month{ width:30%; font-size: 1.0em; }
     .ui-datepicker select.ui-datepicker-year{ width:40%; font-size: 1.0em; }
 </style>
@@ -25,7 +25,7 @@
     $(function(){
         $(".datepicker").datepicker({
             showMonthAfterYear:true,
-            inline: true,
+            // inline: true,
             changeMonth: true,
             changeYear: true,
             dateFormat : 'yy-mm-dd',
@@ -210,8 +210,8 @@
 
         <p style="font-weight: bold">작업기간</p>
         <div class="wrapper">
-            <input type="text" name="startDate" placeholder="시작일" class="datepicker" readonly style="font-size: 2.0em"/>
-            <input type="text" name="endDate" placeholder="마감일" class="datepicker" readonly style="font-size: 2.0em"/>
+            <input type="text" name="startDate" placeholder="시작일" class="datepicker" readonly style="font-size: 2.0em;position: relative; z-index: 100000"/>
+            <input type="text" name="endDate" placeholder="마감일" class="datepicker" readonly style="font-size: 2.0em;position: relative; z-index: 100000"/>
         </div>
 
         <div class="wrapper" style="width: 80vw;">

@@ -68,7 +68,7 @@
                             </td>
                             <td>
                                 <?if($item->isPaid == 1){?>
-                                    <div style="padding: 4px 9px 4px 9px; text-align:center; color:#03A0CB; font-size: 0.5em; border: 1px solid #AAAAAA; background-color: #CCCCCC; border-radius: 5%">
+                                    <div style="padding: 4px 9px 4px 9px; text-align:center; color:#03A0CB; font-size: 0.4em; border: 1px solid #AAAAAA; background-color: #CCCCCC; border-radius: 5%; width:12vw;">
                                         &nbsp;결제완료&nbsp;
                                     </div>
                                 <?}?>

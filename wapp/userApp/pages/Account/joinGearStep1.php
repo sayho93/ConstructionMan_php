@@ -491,7 +491,7 @@ $regionList = json_decode($regionList)->data;
 
     <div class="addGearForm">
         <div style="text-align: center; vertical-align:middle;border: 1px solid #777777;">
-            <p class="addGear">+ 장비추가</p>
+            <p class="addGear">+ 장비등록</p>
         </div>
         <div class="gearList">
         </div>

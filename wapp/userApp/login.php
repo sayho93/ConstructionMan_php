@@ -15,6 +15,8 @@
 
 <script>
     $(document).ready(function(){
+        $("#chk").prop("checked", true);
+
         $("#findID").click(function(){
             location.href="/userApp/pages/Account/findID.php";
         });

@@ -366,6 +366,14 @@
 
             regionArr = regionArr.join();
             if(regionArr == "") regionArr = "0";
+
+
+            if(workArr.indexOf(16) < 0 && $("[name=welderType]").val() == ""){
+                alert("용접공 종류를 입력해 주세요");
+                return;
+            }
+
+
             workArr = workArr.join();
             if(workArr == ""){
                 alert("직종을 선택해 주시기 바랍니다.");
@@ -583,6 +591,7 @@
 
         $(".addGear").click(function(){
             showForm();
+            $(".jSubmitGear").val("2.저장하기")
         });
 
         function resetForm(){
@@ -621,6 +630,8 @@
 
             var added = addForm(name, detail, size, no, attachment);
             if(added) hideForm();
+
+            $(".jSubmitGear").val("저장하기");
         });
 
         function convert(selector, marks, contents){
@@ -859,7 +870,11 @@
             <td><a class="subject" style="font-weight: bold">성별</a></td>
             <td class="" style="font-weight: bold">
                 <a class="content">
-                    <?=$userInfo->sex == "M" ? "남성" : "여성"?>
+                    <?
+                        if($userInfo->sex == "M") echo "남성";
+                        else if($userInfo->sex == "F") echo "여성";
+                        else echo "오류";
+                    ?>
                 </a>
             </td>
         </tr>
@@ -1067,7 +1082,7 @@
 <!--                <p>어태치먼트</p>-->
             </div>
 
-            <input class="recButton jAdd" type="button" value="추가"/>
+            <input class="recButton jAdd" type="button" value="1.추가"/>
         </div>
 
         <input type="button" class="end jSubmitGear" value="저장하기" style="margin-top: 2vh!important;"/>

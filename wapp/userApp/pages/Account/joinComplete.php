@@ -9,6 +9,8 @@
 <? include $_SERVER["DOCUMENT_ROOT"] . "/userApp/php/header.php" ;?>
 <script>
     $(document).ready(function(){
+        alert("최초 가입시 로그아웃 후 로그인 하세요");
+
        $(".done").click(function(){
            location.href = "/userApp/pages/search/searchMain.php";
        });

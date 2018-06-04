@@ -47,6 +47,10 @@
                 toRet.push(value);
 
                 if(no == "16"){
+                    if($(".welderType").eq(1).val() == ""){
+                        alert("용접공 종류를 입력해 주세요");
+                        return;
+                    }
                     $("[name='welderType']").val($(".welderType").eq(1).val());
                 }
             }
@@ -56,6 +60,8 @@
         $(".end").click(function(){
             $("[name='careerArr']").val(collectCareer());
             var pushKey = getPushKey();
+
+
         });
 
         function getPushKey(){

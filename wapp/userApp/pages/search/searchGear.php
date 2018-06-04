@@ -16,7 +16,7 @@
 ?>
 
 <style>
-    .ui-datepicker{ font-size: 0.8em; width: 60vw;}
+    .ui-datepicker{ font-size: 0.8em; width: 60vw; position: relative; z-index: 100000;}
     .ui-datepicker select.ui-datepicker-month{ width:30%; font-size: 1.0em; }
     .ui-datepicker select.ui-datepicker-year{ width:40%; font-size: 1.0em; }
 </style>
@@ -115,8 +115,8 @@
 
             <p>작업기간</p>
             <div class="wrapper">
-                <input type="text" name="startDate" class="datepicker" placeholder="시작일" readonly/>
-                <input type="text" name="endDate" class="datepicker" placeholder="마감일" readonly/>
+                <input type="text" name="startDate" class="datepicker" placeholder="시작일" readonly style="font-size: 2.0em;position: relative; z-index: 100000"/>
+                <input type="text" name="endDate" class="datepicker" placeholder="마감일" readonly style="font-size: 2.0em;position: relative; z-index: 100000"/>
             </div>
 
             <input type="button" class="searchBtn jAdd" value="신청하기"/>

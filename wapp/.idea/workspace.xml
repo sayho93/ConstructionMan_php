@@ -11,22 +11,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mypageInfo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php">
+      <file leaf-file-name="searchMan.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/userApp/pages/search/searchMan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="371" column="16" lean-forward="false" selection-start-line="371" selection-start-column="16" selection-end-line="372" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="joinManStep2.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/userApp/pages/Account/joinManStep2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
-              <folding />
+            <state relative-caret-position="605">
+              <caret line="125" column="13" lean-forward="true" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+              <folding>
+                <element signature="e#6#91#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#1;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#1;n#div#1;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#3;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#3;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#4;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#3;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#5;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#5;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,6 +55,9 @@
       <find>jSubmitMan</find>
       <find>welderType</find>
       <find>alert</find>
+      <find>숙소제공</find>
+      <find>jAdd</find>
+      <find>lodging</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -61,7 +71,6 @@
         <option value="$PROJECT_DIR$/userApp/css/style.css" />
         <option value="$PROJECT_DIR$/userApp/pages/mypage/paymentInfo.php" />
         <option value="$PROJECT_DIR$/common/classes/WebUser.php" />
-        <option value="$PROJECT_DIR$/userApp/pages/search/searchMan.php" />
         <option value="$PROJECT_DIR$/userApp/pages/Account/phoneAuth.php" />
         <option value="$PROJECT_DIR$/userApp/login.php" />
         <option value="$PROJECT_DIR$/userApp/pages/mypage/mypageMain.php" />
@@ -71,6 +80,7 @@
         <option value="$PROJECT_DIR$/userApp/pages/Account/joinGearStep1.php" />
         <option value="$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php" />
         <option value="$PROJECT_DIR$/userApp/pages/Account/joinManStep2.php" />
+        <option value="$PROJECT_DIR$/userApp/pages/search/searchMan.php" />
       </list>
     </option>
   </component>
@@ -100,8 +110,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -137,12 +145,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="joinMans&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinManStep2.php&#10;mypageI&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;mypageIn&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;joinG&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinGearStep1.php&#10;searchG&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchGear.php&#10;searchMan&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchMan.php&#10;mypageM&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageMain.php&#10;applyI&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/applyInfo.php&#10;applyIn&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/applyInfo.php&#10;phon&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/phoneAuth.php&#10;searchM&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchMan.php&#10;applyInfo&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/applyInfo.php&#10;ㅈㄷㅠ&#9;FILE&#9;file:///usr/local/var/test/wapp/common/classes/WebUser.php&#10;paymentI&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/paymentInfo.php&#10;paymentInfo&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/paymentInfo.php&#10;join&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinGearStep1.php&#10;mypage&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;WebU&#9;null&#9;null&#10;joinGear&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinGearStep1.php&#10;mypageIN&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;joinMan&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinManStep1.php&#10;paymentIn&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/paymentInfo.php&#10;ㅡㅛㅔㅁㅎㄷㅑ&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;ㅓㅐㅑㅜㅡㅁㅜ&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinManStep1.php&#10;searchManTy&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchManType.php&#10;findId&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/findID.php" />
+    <property name="SearchEverywhereHistoryKey" value="searchMan&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchMan.php&#10;joinMans&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinManStep2.php&#10;mypageI&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;mypageIn&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;joinG&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinGearStep1.php&#10;searchG&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchGear.php&#10;mypageM&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageMain.php&#10;applyI&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/applyInfo.php&#10;applyIn&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/applyInfo.php&#10;phon&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/phoneAuth.php&#10;searchM&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchMan.php&#10;applyInfo&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/applyInfo.php&#10;ㅈㄷㅠ&#9;FILE&#9;file:///usr/local/var/test/wapp/common/classes/WebUser.php&#10;paymentI&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/paymentInfo.php&#10;paymentInfo&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/paymentInfo.php&#10;join&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinGearStep1.php&#10;mypage&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;WebU&#9;null&#9;null&#10;joinGear&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinGearStep1.php&#10;mypageIN&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;joinMan&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinManStep1.php&#10;paymentIn&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/paymentInfo.php&#10;ㅡㅛㅔㅁㅎㄷㅑ&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/mypage/mypageInfo.php&#10;ㅓㅐㅑㅜㅡㅁㅜ&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/joinManStep1.php&#10;searchManTy&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/search/searchManType.php&#10;findId&#9;FILE&#9;file:///usr/local/var/test/wapp/userApp/pages/Account/findID.php" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -171,11 +181,12 @@
       <updated>1527661421664</updated>
       <workItem from="1527661422838" duration="5392000" />
       <workItem from="1527726515673" duration="11610000" />
+      <workItem from="1528348500688" duration="545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17002000" />
+    <option name="totallyTimeSpent" value="17547000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -212,11 +223,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5565">
+          <caret line="371" column="16" lean-forward="false" selection-start-line="371" selection-start-column="16" selection-end-line="372" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userApp/pages/Account/joinManStep2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/userApp/pages/Account/joinManStep1.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3180">
           <caret line="212" column="4" lean-forward="false" selection-start-line="212" selection-start-column="4" selection-end-line="236" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -232,7 +258,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5835">
           <caret line="389" column="52" lean-forward="true" selection-start-line="389" selection-start-column="52" selection-end-line="389" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -281,7 +306,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3105">
           <caret line="212" column="4" lean-forward="false" selection-start-line="212" selection-start-column="4" selection-end-line="236" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -317,11 +341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -353,7 +372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
           <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -361,7 +379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
           <caret line="73" column="54" lean-forward="false" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -369,18 +386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userApp/pages/search/searchMan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="213" column="99" lean-forward="true" selection-start-line="213" selection-start-column="99" selection-end-line="213" selection-end-column="99" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#3;n#div#1;n#form#0;n#div#3;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#1;n#div#3;n#div#1;n#form#0;n#div#3;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -388,10 +393,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
           <caret line="118" column="96" lean-forward="false" selection-start-line="118" selection-start-column="96" selection-end-line="118" selection-end-column="96" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#form#0;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#1;n#div#2;n#div#0;n#form#0;n#div#1;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -399,13 +400,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="503" column="60" lean-forward="true" selection-start-line="503" selection-start-column="60" selection-end-line="503" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
+        <state relative-caret-position="5490">
           <caret line="371" column="16" lean-forward="false" selection-start-line="371" selection-start-column="16" selection-end-line="372" selection-end-column="23" />
           <folding />
         </state>
@@ -413,9 +413,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/userApp/pages/Account/joinManStep2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="273">
           <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userApp/pages/search/searchMan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="125" column="13" lean-forward="true" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#1;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#div#1;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#3;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#3;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#4;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#5;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#5;n#div#1;n#form#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

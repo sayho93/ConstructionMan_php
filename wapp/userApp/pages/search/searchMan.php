@@ -118,6 +118,13 @@
         $(".jAdd").click(function(){
             $("[name='careerArr']").val(collectCareer());
             var params = $("[name='form']").serialize();
+
+            var lodging = $("[name=lodging]:checked").val();
+            if(lodging == undefined){
+                alert("숙소제공을 선택해 주세요");
+                return;
+            }
+
             $.ajax({
                 url: "/action_front.php?cmd=WebUser.registerSearch",
                 async: false,

@@ -157,6 +157,7 @@ $regionList = json_decode($regionList)->data;
 
             regionArr = regionArr.join();
             if(regionArr == "") regionArr = "0";
+
             workArr = workArr.join();
             if(workArr == ""){
                 alert("직종을 선택해 주시기 바랍니다.");

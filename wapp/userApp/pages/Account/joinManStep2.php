@@ -139,6 +139,7 @@
         <input type="hidden" name="password" value="<?=$_REQUEST["password"]?>"/>
         <input type="hidden" name="name" value="<?=$_REQUEST["name"]?>"/>
         <input type="hidden" name="age" value="<?=$_REQUEST["age"]?>"/>
+        <input type="hidden" name="sex" value="<?=$_REQUEST["sex"]?>"/>
         <input type="hidden" name="residence" value="<?=$_REQUEST["residence"]?>"/>
         <input type="hidden" name="phone" value="<?=$_REQUEST["phone"]?>"/>
         <input type="hidden" name="regionArr" value="<?=$_REQUEST["regionArr"]?>"/>

@@ -295,6 +295,14 @@
             workArr = workArr.join();
             getWorkList(workArr);
 
+            for(var i=0; i<workList.length; i++){
+                // $(".listValue").eq(i + 2).find("[value='" + workList[i].career + "']").prop("selected", true);
+
+                if(workList[i].id === 16){
+                    $(".welderType").eq(1).val(workList[i].welderType);
+                }
+            }
+
             $(".career").show();
             $(".jSubmitMan").show();
             // $(this).hide();
@@ -366,9 +374,7 @@
 
             regionArr = regionArr.join();
             if(regionArr == "") regionArr = "0";
-
-
-            if(workArr.indexOf(16) < 0 && $("[name=welderType]").val() == ""){
+            if(workArr.indexOf('16') > 0 && $("[name=welderType]").val() == ""){
                 alert("용접공 종류를 입력해 주세요");
                 return;
             }

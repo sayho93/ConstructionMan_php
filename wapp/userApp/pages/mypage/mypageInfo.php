@@ -374,7 +374,12 @@
 
             regionArr = regionArr.join();
             if(regionArr == "") regionArr = "0";
-            if(workArr.indexOf('16') > 0 && $("[name=welderType]").val() == ""){
+
+
+            console.log("workArr::");
+            console.log(workArr);
+            console.log("check:::" + workArr.indexOf('16') + ":::" + $("[name=welderType]").val());
+            if(workArr.indexOf('16') >= 0 && $("[name=welderType]").val() == ""){
                 alert("용접공 종류를 입력해 주세요");
                 return;
             }

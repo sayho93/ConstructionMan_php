@@ -11,21 +11,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mypageInfo.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mypageInfo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="375" column="12" lean-forward="false" selection-start-line="375" selection-start-column="12" selection-end-line="379" selection-end-column="13" />
+            <state relative-caret-position="261">
+              <caret line="381" column="39" lean-forward="false" selection-start-line="381" selection-start-column="39" selection-end-line="381" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="joinManStep2.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="joinManStep2.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/userApp/pages/Account/joinManStep2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+            <state relative-caret-position="293">
+              <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -86,8 +86,8 @@
         <option value="$PROJECT_DIR$/userApp/pages/Account/joinGearStep1.php" />
         <option value="$PROJECT_DIR$/userApp/pages/search/searchMan.php" />
         <option value="$PROJECT_DIR$/userApp/pages/Account/joinManStep2.php" />
-        <option value="$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php" />
         <option value="$PROJECT_DIR$/userApp/pages/Account/joinManStep1.php" />
+        <option value="$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php" />
       </list>
     </option>
   </component>
@@ -190,12 +190,12 @@
       <workItem from="1527726515673" duration="11610000" />
       <workItem from="1528348500688" duration="1039000" />
       <workItem from="1528780411136" duration="161000" />
-      <workItem from="1528940538098" duration="1742000" />
+      <workItem from="1528940538098" duration="3453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19944000" />
+    <option name="totallyTimeSpent" value="21655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -495,14 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="375" column="12" lean-forward="false" selection-start-line="375" selection-start-column="12" selection-end-line="379" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userApp/pages/Account/joinManStep1.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -513,8 +505,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/userApp/pages/Account/joinManStep2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+        <state relative-caret-position="293">
+          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userApp/pages/mypage/mypageInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="381" column="39" lean-forward="false" selection-start-line="381" selection-start-column="39" selection-end-line="381" selection-end-column="39" />
           <folding />
         </state>
       </provider>
